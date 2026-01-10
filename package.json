@@ -12,6 +12,7 @@
     "@astrojs/svelte": "^7.2.5",
     "astro": "^5.16.8",
     "firebase": "^12.7.0",
+    "sass": "^1.97.2",
     "svelte": "^5.46.1",
     "typescript": "^5.9.3"
   }

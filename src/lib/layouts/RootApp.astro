@@ -1,0 +1,26 @@
+---
+import Header from '$lib/components/layout/Header.astro';
+import Footer from '$lib/components/layout/Footer.astro';
+
+import '$lib/styles/globals.scss';
+---
+
+<html lang="ja">
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+  </head>
+  <body class="root">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style lang='scss'>
+  .root {
+    margin: 0;
+    padding: 0;
+  }
+</style>
