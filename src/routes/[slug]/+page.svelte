@@ -5,9 +5,7 @@
 
   import { itemStore } from '$lib/data/list.svelte';
 
-  const targetItem = $derived(
-        itemStore.items.find(i => i.id === targetId)
-    );
+  const targetItem = $derived(itemStore.items.find((i) => i.id === targetId));
 </script>
 
 <div>
