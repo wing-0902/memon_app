@@ -45,6 +45,13 @@
       }
     }
   }
+
+  let wordEditing = $state(0);
+
+  async function handleRemoveItem(id: string) {
+    wordEditing = 0;
+    wordStore.removeWord(id);
+  }
 </script>
 
 <div class="root">
@@ -97,9 +104,16 @@
         {#each wordStore.words as word, i}
           <tr class="list">
             <td><span class="number">#{i + 1}</span></td>
+            {#if wordEditing !== i+1}
             <td><strong class="front">{word.front}</strong></td>
             <td><span class="back">{word.back}</span></td>
-            <td><button>edit</button></td>
+            <td colspan='2'><button onclick={() => wordEditing = i+1}>edit</button></td>
+            {:else}
+              <td><input bind:value={word.front} type='text' /></td>
+              <td><input bind:value={word.back} type='text' /></td>
+              <td><button onclick={() => wordEditing = 0}>edit_off</button></td>
+              <td><button onclick={() => handleRemoveItem(word.id)}>delete</button></td>
+            {/if}
           </tr>
         {/each}
       </tbody>

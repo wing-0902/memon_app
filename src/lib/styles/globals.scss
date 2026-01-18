@@ -24,7 +24,7 @@ $themes: (
 
   // グローバルスタイル
   color: var(--foreground);
-  background-color: var(--background);  
+  background-color: var(--background);
 }
 @media (prefers-color-scheme: dark) {
   :root {
