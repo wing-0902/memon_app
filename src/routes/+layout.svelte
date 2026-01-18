@@ -12,6 +12,7 @@
 
   // レイアウト
   import Header from '$lib/components/layouts/Header.svelte';
+  import Footer from '$lib/components/layouts/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -24,8 +25,6 @@
 <div class="root">
   <Header />
   {@render children()}
-  <footer>
-    Memon v{__APP_VERSION__}
-  </footer>
+  <Footer />
   <SetDisplayName />
 </div>
