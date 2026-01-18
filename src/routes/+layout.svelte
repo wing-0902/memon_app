@@ -24,7 +24,17 @@
 
 <div class="root">
   <Header />
-  {@render children()}
+  <div class='slot'>
+    {@render children()}
+  </div>
   <Footer />
   <SetDisplayName />
 </div>
+
+<style lang="scss">
+  .root {
+    .slot {
+      margin: auto 13px;
+    }
+  }
+</style>
