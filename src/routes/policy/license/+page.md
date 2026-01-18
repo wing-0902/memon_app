@@ -1,7 +1,7 @@
 ---
-
 ---
 
 <svelte:head>
-    <title>LICENSE | Memon</title>
+
+<title>LICENSE | Memon</title>
 </svelte:head>

@@ -51,6 +51,7 @@
   "dependencies": {
     "@fontsource/material-icons-round": "^5.2.6",
     "@fontsource/zen-kaku-gothic-new": "^5.2.7",
-    "@fontsource/zen-maru-gothic": "^5.2.8"
+    "@fontsource/zen-maru-gothic": "^5.2.8",
+    "localforage": "^1.10.0"
   }
 }
