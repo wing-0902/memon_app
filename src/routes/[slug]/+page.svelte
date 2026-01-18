@@ -103,16 +103,16 @@
         </tr>
         {#each wordStore.words as word, i}
           <tr class="list">
-            <td><span class="number">#{i + 1}</span></td>
+            <td class='l1'><span class="number">#{i + 1}</span></td>
             {#if wordEditing !== i+1}
-            <td><strong class="front">{word.front}</strong></td>
-            <td><span class="back">{word.back}</span></td>
-            <td colspan='2'><button onclick={() => wordEditing = i+1}>edit</button></td>
+            <td class='l2'><strong class="front">{word.front}</strong></td>
+            <td class='l2'><span class="back">{word.back}</span></td>
+            <td class='l3' colspan='2'><button onclick={() => wordEditing = i+1}>edit</button></td>
             {:else}
               <td><input bind:value={word.front} type='text' /></td>
               <td><input bind:value={word.back} type='text' /></td>
-              <td><button onclick={() => wordEditing = 0}>edit_off</button></td>
-              <td><button onclick={() => handleRemoveItem(word.id)}>delete</button></td>
+              <td class='l4'><button onclick={() => wordEditing = 0}>edit_off</button></td>
+              <td class='l5'><button onclick={() => handleRemoveItem(word.id)}>delete</button></td>
             {/if}
           </tr>
         {/each}
@@ -157,6 +157,20 @@
           border-bottom: 0.1px solid var(--foreground);
           button {
             font-family: 'Material Icons Round', sans-serif;
+          }
+        }
+        &.list {
+          .l1 {
+            width: 60px;
+          }
+          .l2 {
+            width: calc(50% - 105px);
+          }
+          .l3 {
+            width: 150px;
+          }
+          .l4, .l5 {
+            width: 75px;
           }
         }
       }
