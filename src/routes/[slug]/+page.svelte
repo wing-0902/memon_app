@@ -19,6 +19,7 @@
     <ul>
       <li>作成日時：{new Date(targetItem.createdAt).toLocaleString()}</li>
       <li>最終利用：{new Date(targetItem.lastUsed).toLocaleString()}</li>
+      <li><label><input type='checkbox' bind:checked={targetItem.is双方向}/>双方向に出題</label></li>
     </ul>
   {/if}
 </div>
