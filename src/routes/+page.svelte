@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Welcome to Memon</title>
+  <title>Welcome to Memon</title>
 </svelte:head>
 
 <h1>Welcome to SvelteKit</h1>

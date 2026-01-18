@@ -24,3 +24,4 @@ vite.config.ts.timestamp-*
 
 # Rollup
 static/OSS-LICENSES.txt
+src/lib/data/oss-licenses.json

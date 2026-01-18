@@ -1,0 +1,41 @@
+// 色のリストを作成
+$themes: (
+  light: (
+    foreground: rgb(16,16,16),
+    background: rgb(246,244,233),
+    theme: rgb(0, 108, 0)
+  ),
+  dark: (
+    foreground: rgb(246,244,233),
+    background: rgb(6,23,47),
+    theme: rgb(0, 228, 0)
+  )
+);
+
+:root {
+  // CSS変数に展開
+  @each $name, $value in map-get($themes, light) {
+    --#{$name}: #{$value};
+  }
+
+  // グローバルスタイル
+  color: var(--foreground);
+  background-color: var(--background);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $value in map-get($themes, dark) {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  color: var(--theme);
+}
