@@ -13,18 +13,25 @@
   }
 </script>
 
-<div class='root'>
+<div class="root">
   {#if targetItem}
     <h2>{targetItem.displayName}</h2>
     <ul>
       <li>作成日時：{new Date(targetItem.createdAt).toLocaleString()}</li>
       <li>最終利用：{new Date(targetItem.lastUsed).toLocaleString()}</li>
-      <li><label><input type='checkbox' bind:checked={targetItem.is双方向}/>双方向に出題</label></li>
+      <li>
+        <label
+          ><input
+            type="checkbox"
+            bind:checked={targetItem.is双方向}
+          />双方向に出題</label
+        >
+      </li>
     </ul>
   {/if}
 </div>
 
-<style lang='scss'>
+<style lang="scss">
   .root {
     ul {
       list-style: none;

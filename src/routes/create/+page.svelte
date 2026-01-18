@@ -30,9 +30,12 @@
     bind:value={newName}
   /><br />
   <label>
-    <input bind:checked={dual} type='checkbox' />
+    <input
+      bind:checked={dual}
+      type="checkbox"
+    />
     双方向に出題
-  </label><br/>
+  </label><br />
   <button
     disabled={!newName}
     onclick={() => handleClick()}

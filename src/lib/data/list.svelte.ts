@@ -30,7 +30,7 @@ class ItemManager {
         this.items = saved;
       }
     } catch (e) {
-      console.error("Failed to load items:", e);
+      console.error('Failed to load items:', e);
     } finally {
       this.isInitialized = true;
     }
@@ -58,7 +58,7 @@ class ItemManager {
       displayName: name,
       id: crypto.randomUUID(),
       createdAt: Date.now(),
-      is双方向: dual,
+      is双方向: dual
     });
   }
 
