@@ -17,7 +17,7 @@ const config = {
   extensions: ['.svelte', '.md'],
   preprocess: [
     mdsvex({
-      extension: '.md'
+      extension: '.md',
     })
   ]
 };

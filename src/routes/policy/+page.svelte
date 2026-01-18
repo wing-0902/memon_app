@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>利用規約 | Memon</title>
+  <title>規約一覧 | Memon</title>
 </svelte:head>
 
 <div class="root">
