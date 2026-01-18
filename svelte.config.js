@@ -14,10 +14,10 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter()
   },
-  extensions: [".svelte", ".md"],
+  extensions: ['.svelte', '.md'],
   preprocess: [
     mdsvex({
-      extension: '.md',
+      extension: '.md'
     })
   ]
 };

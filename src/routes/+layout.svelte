@@ -9,6 +9,7 @@
   // フォント
   import '@fontsource/zen-kaku-gothic-new';
   import '@fontsource/zen-maru-gothic';
+  import '@fontsource/material-icons-round';
 
   // レイアウト
   import Header from '$lib/components/layouts/Header.svelte';
@@ -24,7 +25,7 @@
 
 <div class="root">
   <Header />
-  <div class='slot'>
+  <div class="slot">
     {@render children()}
   </div>
   <Footer />

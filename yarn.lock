@@ -289,6 +289,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/material-icons-round@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/material-icons-round@npm:5.2.6"
+  checksum: 10c0/4c5d487e2f23c5cc8c343eed5b7ee192e47ab01708b2877671a3b7cc38b663b49d9326f21568bfb27ae8cb77a1444e4dfa8fedaeaaf4602ef2580bfb27d78f18
+  languageName: node
+  linkType: hard
+
 "@fontsource/zen-kaku-gothic-new@npm:^5.2.7":
   version: 5.2.7
   resolution: "@fontsource/zen-kaku-gothic-new@npm:5.2.7"
@@ -2007,6 +2014,7 @@ __metadata:
   dependencies:
     "@eslint/compat": "npm:^1.4.0"
     "@eslint/js": "npm:^9.39.1"
+    "@fontsource/material-icons-round": "npm:^5.2.6"
     "@fontsource/zen-kaku-gothic-new": "npm:^5.2.7"
     "@fontsource/zen-maru-gothic": "npm:^5.2.8"
     "@sveltejs/adapter-static": "npm:^3.0.10"
