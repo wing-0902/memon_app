@@ -11,6 +11,8 @@
   if (!targetItem) {
     goto('/');
   }
+
+  import { wordStore } from '$lib/data/words.svelte';
 </script>
 
 <div class="root">
@@ -18,7 +20,11 @@
     <h2>{targetItem.displayName}</h2>
     <ul>
       <li>作成日時：{new Date(targetItem.createdAt).toLocaleString()}</li>
-      <li>最終利用：{new Date(targetItem.lastUsed).toLocaleString()}</li>
+      {#if targetItem.lastUsed}
+        <li>最終利用：{new Date(targetItem.lastUsed).toLocaleString()}</li>
+      {:else}
+        <li>最終利用：未使用</li>
+      {/if}
       <li>
         <label
           ><input
