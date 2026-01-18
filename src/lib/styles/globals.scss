@@ -12,6 +12,10 @@ $themes: (
   )
 );
 
+@function get-color($theme, $key) {
+  @return map-get(map-get($themes, $theme), $key);
+}
+
 :root {
   // CSS変数に展開
   @each $name, $value in map-get($themes, light) {

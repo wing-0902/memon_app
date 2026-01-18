@@ -2,8 +2,8 @@
   let showing = $state('');
 </script>
 
-<header>
-  <h1>Memon</h1>
+<header class='header'>
+  <h1><a href='/'>Memon</a></h1>
   <nav>
     <ul>
       <li><a href='/create/'>単語帳を作成</a></li>
@@ -14,12 +14,21 @@
 </header>
 
 <style lang="scss">
-  header {
+  .header {
     display: flex;
     margin: 0 10px;
     justify-content: space-between;
     h1 {
       margin: 0;
+      a {
+        text-decoration: none;
+        color: var(--foreground);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: var(--theme);
+          opacity: 0.7;
+        }
+      }
     }
     nav {
       ul {
