@@ -34,6 +34,18 @@
         >
       </li>
     </ul>
+    <h3>単語帳</h3>
+    <ul>
+      <li>
+        <input type='text' />
+      </li>
+      {#each wordStore.words as word}
+        <li>
+          <strong>{word.front}</strong>
+          <span>{word.back}</span>
+        </li>
+      {/each}
+    </ul>
   {/if}
 </div>
 
