@@ -160,6 +160,7 @@
           }
         }
         &.list {
+          width: 100%;
           .l1 {
             width: 60px;
           }
