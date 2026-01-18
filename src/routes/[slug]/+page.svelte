@@ -8,6 +8,12 @@
 
   const targetItem = $derived(itemStore.items.find((i) => i.id === targetId));
 
+  $effect(() => {
+    if (targetId) {
+      wordStore.load(targetId); // 初期化
+    }
+  });
+
   if (!targetItem) {
     goto('/');
   }
@@ -67,7 +73,7 @@
           type="text"
           placeholder="おもて（問）"
           bind:value={omoteWord}
-          bind:this={omoteInput}
+          bind:this={frontInputEl}
         />
         <input
           type="text"
