@@ -7,7 +7,7 @@ import pkg from './package.json' assert { type: 'json' };
 export default defineConfig({
   plugins: [
     sveltekit(),
-    // 1回目：テキストファイルの出力用
+    /*// 1回目：テキストファイルの出力用
     license({
       thirdParty: {
         output: {
@@ -28,7 +28,7 @@ export default defineConfig({
         },
         includePrivate: true
       }
-    })
+    })*/
   ],
   define: {
     __APP_NAME__: JSON.stringify(pkg.name),
