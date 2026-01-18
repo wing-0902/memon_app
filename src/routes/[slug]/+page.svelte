@@ -36,8 +36,10 @@
     </ul>
     <h3>単語帳</h3>
     <ul>
-      <li>
-        <input type='text' />
+      <li class='addNew'>
+        <input type='text' placeholder='おもて（問）' />
+        <input type='text' placeholder='うら（答）' />
+        <button>add</button>
       </li>
       {#each wordStore.words as word}
         <li>
@@ -51,9 +53,29 @@
 
 <style lang="scss">
   .root {
+    width: 100%;
     ul {
       list-style: none;
       padding: 0;
+      width: 100%;
+    }
+    li {
+      &.addNew {
+        display: flex;
+        justify-content: center;
+        input {
+          max-width: calc(50% - 60px);
+        }
+        button {
+          font-family: 'Material Icons Round', sans-serif;
+          font-size: 24px;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
   }
 </style>
