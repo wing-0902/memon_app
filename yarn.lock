@@ -2054,6 +2054,7 @@ __metadata:
     mdsvex: "npm:^0.12.6"
     prettier: "npm:^3.7.4"
     prettier-plugin-svelte: "npm:^3.4.0"
+    rollup: "npm:^4.55.1"
     rollup-plugin-license: "npm:^3.6.0"
     sass: "npm:^1.97.2"
     svelte: "npm:^5.45.6"
@@ -2518,7 +2519,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.43.0":
+"rollup@npm:^4.43.0, rollup@npm:^4.55.1":
   version: 4.55.1
   resolution: "rollup@npm:4.55.1"
   dependencies:

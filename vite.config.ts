@@ -11,7 +11,7 @@ export default defineConfig({
     license({
       thirdParty: {
         output: {
-          file: path.resolve(__dirname, './build/OSS-LICENSES.txt'),
+          file: path.resolve(__dirname, './static/OSS-LICENSES.txt'),
           encoding: 'utf-8'
         },
         includePrivate: false
