@@ -86,13 +86,22 @@
         >
       </li>
     </ul>
-    {#each wordStore.words as word, i}
-      <li class="list">
-        <span class="number">#{i + 1}</span>
-        <strong class="front">{word.front}</strong>
-        <span class="back">{word.back}</span>
-      </li>
-    {/each}
+    <table class="listT">
+      <tbody>
+        <tr>
+          <th>No.</th>
+          <th>おもて</th>
+          <th>うら</th>
+        </tr>
+        {#each wordStore.words as word, i}
+          <tr class="list">
+            <td><span class="number">#{i + 1}</span></td>
+            <td><strong class="front">{word.front}</strong></td>
+            <td><span class="back">{word.back}</span></td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
   {/if}
 </div>
 
@@ -103,22 +112,26 @@
       list-style: none;
       padding: 0;
       width: 100%;
-    }
-    li.addNew {
-      display: flex;
-      justify-content: center;
-      input {
-        max-width: calc(50% - 60px);
-      }
-      button {
-        font-family: 'Material Icons Round', sans-serif;
-        font-size: 24px;
-        height: 40px;
-        width: 40px;
+
+      li.addNew {
         display: flex;
         justify-content: center;
-        align-items: center;
+        input {
+          max-width: calc(50% - 60px);
+        }
+        button {
+          font-family: 'Material Icons Round', sans-serif;
+          font-size: 24px;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
+    }
+    .listT {
+      width: 100%;
     }
   }
 </style>
