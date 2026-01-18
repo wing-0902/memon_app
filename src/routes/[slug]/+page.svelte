@@ -13,9 +13,21 @@
   }
 </script>
 
-<div>
+<div class='root'>
   {#if targetItem}
     <h2>{targetItem.displayName}</h2>
-    <small>現在のID：{targetId}</small>
+    <ul>
+      <li>作成日時：{new Date(targetItem.createdAt).toLocaleString()}</li>
+      <li>最終利用：{new Date(targetItem.lastUsed).toLocaleString()}</li>
+    </ul>
   {/if}
 </div>
+
+<style lang='scss'>
+  .root {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+</style>

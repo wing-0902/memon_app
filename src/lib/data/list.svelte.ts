@@ -1,15 +1,19 @@
 import localforage from 'localforage';
 import { browser } from '$app/environment';
+import { untrack } from 'svelte';
 
-// データの型定義
 export interface Item {
   displayName: string;
-  id: string; // id01, id02など
+  id: string;
+  createdAt: number;
+  is双方向: boolean;
+  lastUsed?: number;
 }
 
 class ItemManager {
-  // 1. 配列全体を $state で管理
   items = $state<Item[]>([]);
+  // 初期化完了フラグ
+  isInitialized = $state(false);
 
   constructor() {
     if (browser) {
@@ -18,30 +22,44 @@ class ItemManager {
   }
 
   private async init() {
-    // 2. IndexedDBからデータを読み込み
-    const saved = await localforage.getItem<Item[]>('my_items_list');
-    if (saved) {
-      this.items = saved;
+    try {
+      const saved = await localforage.getItem<Item[]>('my_items_list');
+      if (saved) {
+        // 初期データ注入時は保存処理を走らせないために untrack を検討するか、
+        // 単に代入してからフラグを立てる
+        this.items = saved;
+      }
+    } catch (e) {
+      console.error("Failed to load items:", e);
+    } finally {
+      this.isInitialized = true;
     }
 
-    // 3. 配列の変更を検知して自動保存
-    // items 配列の中身（追加・削除・プロパティ変更）を自動で監視します
+    // 保存用のエフェクト
     $effect.root(() => {
       $effect(() => {
-        // items にアクセスすることで依存関係として登録される
+        if (!this.isInitialized) return;
+
+        // itemsの変更を購読
         const data = $state.snapshot(this.items);
-        localforage.setItem('my_items_list', data).catch(console.error);
+
+        // デバウンス処理（簡易版）
+        const timer = setTimeout(() => {
+          localforage.setItem('my_items_list', data);
+        }, 500);
+
+        return () => clearTimeout(timer);
       });
     });
   }
 
-  // 操作用メソッド
-  addItem(name: string) {
-    const newItem = {
+  addItem(name: string, dual: boolean) {
+    this.items.push({
       displayName: name,
-      id: crypto.randomUUID() // ユニークIDを生成
-    };
-    this.items.push(newItem);
+      id: crypto.randomUUID(),
+      createdAt: Date.now(),
+      is双方向: dual,
+    });
   }
 
   removeItem(id: string) {

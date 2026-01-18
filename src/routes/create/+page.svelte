@@ -3,11 +3,11 @@
   import { itemStore } from '$lib/data/list.svelte';
   import { goto } from '$app/navigation';
 
-  let alreadyTrouble = $state(false);
+  let dual = $state(false);
 
   function handleClick() {
     if (newName) {
-      itemStore.addItem(newName);
+      itemStore.addItem(newName, dual);
       goto('/');
     } else {
       alert('作成に失敗しました．');
@@ -29,6 +29,10 @@
     type="text"
     bind:value={newName}
   /><br />
+  <label>
+    <input bind:checked={dual} type='checkbox' />
+    双方向に出題
+  </label><br/>
   <button
     disabled={!newName}
     onclick={() => handleClick()}
