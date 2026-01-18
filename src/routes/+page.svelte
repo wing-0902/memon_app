@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { goto } from '$app/navigation';
   import { itemStore } from '$lib/data/list.svelte';
+
   let isEditing: string = $state('');
 </script>
 
@@ -32,7 +34,7 @@
         <span class="title">{item.displayName}</span>
         <div class="buttonSlot">
           <button onclick={() => (isEditing = item.id)}>edit</button>
-          <button>play_arrow</button>
+          <button onclick={() => goto(`/${item.id}/`)}>play_arrow</button>
         </div>
       {/if}
     </li>
