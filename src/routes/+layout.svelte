@@ -1,14 +1,11 @@
 <script lang="ts">
-  import favicon from '$lib/assets/favicon.svg';
-
   let { children } = $props();
+
+  import { VERSION as SVELTEKIT_VERSION } from '@sveltejs/kit';
 </script>
 
 <svelte:head>
-  <link
-    rel="icon"
-    href={favicon}
-  />
+  <meta name='generator' content='SvelteKit {SVELTEKIT_VERSION}' />
 </svelte:head>
 
 {@render children()}

@@ -2,6 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import license from 'rollup-plugin-license';
 import path from 'path';
+import pkg from './package.json' assert { type: 'json' };
 
 export default defineConfig({
   plugins: [
@@ -28,5 +29,9 @@ export default defineConfig({
         includePrivate: true
       }
     })
-  ]
+  ],
+  define: {
+    __APP_NAME__: JSON.stringify(pkg.name),
+    __APP_VERSION__: JSON.stringify(pkg.version), 
+  }
 });
