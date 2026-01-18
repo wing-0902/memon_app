@@ -2,9 +2,13 @@ import localforage from 'localforage';
 
 export interface Word {
   id: string;
-  front: string; // 表（単語）
-  back: string; // 裏（意味）
+  front: string;
+  back: string;
   createdAt: number;
+  lastSeen?: number; // 最後にこの問題を見た日時
+  lastResult?: boolean | null; // true: 正解, false: 不正解, null: 未回答
+  tryTimes: number; // 挑戦回数
+  successTimes: number; // 正解回数
 }
 
 class WordManager {
@@ -38,7 +42,10 @@ class WordManager {
       id: crypto.randomUUID(),
       front,
       back,
-      createdAt: Date.now()
+      createdAt: Date.now(),
+      tryTimes: 0,
+      successTimes: 0,
+      lastResult: null // 初期状態は未回答
     };
 
     this.words.push(newWord);
@@ -62,6 +69,20 @@ class WordManager {
   clear() {
     this.words = [];
     this.currentDeckId = null;
+  }
+
+  // 正誤を記録
+  async recordResult(wordId: string, isCorrect: boolean) {
+    const word = this.words.find((w) => w.id === wordId);
+    if (word) {
+      word.lastSeen = Date.now();
+      word.lastResult = isCorrect;
+      word.tryTimes += 1;
+      if (isCorrect) {
+        word.successTimes += 1;
+      }
+      await this.save();
+    }
   }
 }
 
