@@ -6,7 +6,7 @@ import pkg from './package.json' assert { type: 'json' };
 
 export default defineConfig({
   plugins: [
-    sveltekit(),
+    sveltekit()
     /*// 1回目：テキストファイルの出力用
     license({
       thirdParty: {

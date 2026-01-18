@@ -2,9 +2,7 @@
   "MIT": [
     {
       "name": "@esbuild/linux-x64",
-      "versions": [
-        "0.27.2"
-      ],
+      "versions": ["0.27.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@esbuild+linux-x64@0.27.2/node_modules/@esbuild/linux-x64"
       ],
@@ -14,9 +12,7 @@
     },
     {
       "name": "@eslint-community/eslint-utils",
-      "versions": [
-        "4.9.1"
-      ],
+      "versions": ["4.9.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint-community+eslint-utils@4.9.1_eslint@9.39.2/node_modules/@eslint-community/eslint-utils"
       ],
@@ -27,9 +23,7 @@
     },
     {
       "name": "@eslint-community/regexpp",
-      "versions": [
-        "4.12.2"
-      ],
+      "versions": ["4.12.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint-community+regexpp@4.12.2/node_modules/@eslint-community/regexpp"
       ],
@@ -40,9 +34,7 @@
     },
     {
       "name": "@eslint/eslintrc",
-      "versions": [
-        "3.3.3"
-      ],
+      "versions": ["3.3.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+eslintrc@3.3.3/node_modules/@eslint/eslintrc"
       ],
@@ -53,9 +45,7 @@
     },
     {
       "name": "@eslint/js",
-      "versions": [
-        "9.39.2"
-      ],
+      "versions": ["9.39.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+js@9.39.2/node_modules/@eslint/js"
       ],
@@ -65,9 +55,7 @@
     },
     {
       "name": "@jridgewell/gen-mapping",
-      "versions": [
-        "0.3.13"
-      ],
+      "versions": ["0.3.13"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+gen-mapping@0.3.13/node_modules/@jridgewell/gen-mapping"
       ],
@@ -78,9 +66,7 @@
     },
     {
       "name": "@jridgewell/remapping",
-      "versions": [
-        "2.3.5"
-      ],
+      "versions": ["2.3.5"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+remapping@2.3.5/node_modules/@jridgewell/remapping"
       ],
@@ -91,9 +77,7 @@
     },
     {
       "name": "@jridgewell/resolve-uri",
-      "versions": [
-        "3.1.2"
-      ],
+      "versions": ["3.1.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+resolve-uri@3.1.2/node_modules/@jridgewell/resolve-uri"
       ],
@@ -104,9 +88,7 @@
     },
     {
       "name": "@jridgewell/sourcemap-codec",
-      "versions": [
-        "1.5.5"
-      ],
+      "versions": ["1.5.5"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+sourcemap-codec@1.5.5/node_modules/@jridgewell/sourcemap-codec"
       ],
@@ -117,9 +99,7 @@
     },
     {
       "name": "@jridgewell/trace-mapping",
-      "versions": [
-        "0.3.31"
-      ],
+      "versions": ["0.3.31"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+trace-mapping@0.3.31/node_modules/@jridgewell/trace-mapping"
       ],
@@ -130,9 +110,7 @@
     },
     {
       "name": "@parcel/watcher",
-      "versions": [
-        "2.5.4"
-      ],
+      "versions": ["2.5.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@parcel+watcher@2.5.4/node_modules/@parcel/watcher"
       ],
@@ -142,9 +120,7 @@
     },
     {
       "name": "@parcel/watcher-linux-x64-glibc",
-      "versions": [
-        "2.5.4"
-      ],
+      "versions": ["2.5.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@parcel+watcher-linux-x64-glibc@2.5.4/node_modules/@parcel/watcher-linux-x64-glibc"
       ],
@@ -154,9 +130,7 @@
     },
     {
       "name": "@parcel/watcher-linux-x64-musl",
-      "versions": [
-        "2.5.4"
-      ],
+      "versions": ["2.5.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@parcel+watcher-linux-x64-musl@2.5.4/node_modules/@parcel/watcher-linux-x64-musl"
       ],
@@ -166,9 +140,7 @@
     },
     {
       "name": "@polka/url",
-      "versions": [
-        "1.0.0-next.29"
-      ],
+      "versions": ["1.0.0-next.29"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@polka+url@1.0.0-next.29/node_modules/@polka/url"
       ],
@@ -179,9 +151,7 @@
     },
     {
       "name": "@rollup/rollup-linux-x64-gnu",
-      "versions": [
-        "4.55.1"
-      ],
+      "versions": ["4.55.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@rollup+rollup-linux-x64-gnu@4.55.1/node_modules/@rollup/rollup-linux-x64-gnu"
       ],
@@ -192,9 +162,7 @@
     },
     {
       "name": "@rollup/rollup-linux-x64-musl",
-      "versions": [
-        "4.55.1"
-      ],
+      "versions": ["4.55.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@rollup+rollup-linux-x64-musl@4.55.1/node_modules/@rollup/rollup-linux-x64-musl"
       ],
@@ -205,9 +173,7 @@
     },
     {
       "name": "@standard-schema/spec",
-      "versions": [
-        "1.1.0"
-      ],
+      "versions": ["1.1.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@standard-schema+spec@1.1.0/node_modules/@standard-schema/spec"
       ],
@@ -218,9 +184,7 @@
     },
     {
       "name": "@sveltejs/acorn-typescript",
-      "versions": [
-        "1.0.8"
-      ],
+      "versions": ["1.0.8"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+acorn-typescript@1.0.8_acorn@8.15.0/node_modules/@sveltejs/acorn-typescript"
       ],
@@ -231,9 +195,7 @@
     },
     {
       "name": "@sveltejs/adapter-static",
-      "versions": [
-        "3.0.10"
-      ],
+      "versions": ["3.0.10"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+adapter-static@3.0.10_@sveltejs+kit@2.50.0_@sveltejs+vite-plugin-svelte@6.2.4_7bafe223dab06f767d080dccd10688d7/node_modules/@sveltejs/adapter-static"
       ],
@@ -243,9 +205,7 @@
     },
     {
       "name": "@sveltejs/kit",
-      "versions": [
-        "2.50.0"
-      ],
+      "versions": ["2.50.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+kit@2.50.0_@sveltejs+vite-plugin-svelte@6.2.4_svelte@5.46.4_vite@7.3.1_@types_4bd822d563cf41335b3894a4a0dc4e3d/node_modules/@sveltejs/kit"
       ],
@@ -255,9 +215,7 @@
     },
     {
       "name": "@sveltejs/vite-plugin-svelte",
-      "versions": [
-        "6.2.4"
-      ],
+      "versions": ["6.2.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+vite-plugin-svelte@6.2.4_svelte@5.46.4_vite@7.3.1_@types+node@24.10.9_sass@1.97.2_/node_modules/@sveltejs/vite-plugin-svelte"
       ],
@@ -267,9 +225,7 @@
     },
     {
       "name": "@sveltejs/vite-plugin-svelte-inspector",
-      "versions": [
-        "5.0.2"
-      ],
+      "versions": ["5.0.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+vite-plugin-svelte-inspector@5.0.2_@sveltejs+vite-plugin-svelte@6.2.4_svelte@_d9dd9de5f005deffcabbe7ad400fb47a/node_modules/@sveltejs/vite-plugin-svelte-inspector"
       ],
@@ -279,9 +235,7 @@
     },
     {
       "name": "@types/cookie",
-      "versions": [
-        "0.6.0"
-      ],
+      "versions": ["0.6.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@types+cookie@0.6.0/node_modules/@types/cookie"
       ],
@@ -291,9 +245,7 @@
     },
     {
       "name": "@types/estree",
-      "versions": [
-        "1.0.8"
-      ],
+      "versions": ["1.0.8"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@types+estree@1.0.8/node_modules/@types/estree"
       ],
@@ -303,9 +255,7 @@
     },
     {
       "name": "@types/json-schema",
-      "versions": [
-        "7.0.15"
-      ],
+      "versions": ["7.0.15"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@types+json-schema@7.0.15/node_modules/@types/json-schema"
       ],
@@ -315,9 +265,7 @@
     },
     {
       "name": "@types/mdast",
-      "versions": [
-        "4.0.4"
-      ],
+      "versions": ["4.0.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@types+mdast@4.0.4/node_modules/@types/mdast"
       ],
@@ -327,9 +275,7 @@
     },
     {
       "name": "@types/node",
-      "versions": [
-        "24.10.9"
-      ],
+      "versions": ["24.10.9"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@types+node@24.10.9/node_modules/@types/node"
       ],
@@ -339,9 +285,7 @@
     },
     {
       "name": "@types/unist",
-      "versions": [
-        "2.0.11"
-      ],
+      "versions": ["2.0.11"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@types+unist@2.0.11/node_modules/@types/unist"
       ],
@@ -351,9 +295,7 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.53.0_@typescript-eslint+parser@8.53.0_eslint@9.39.2__38c2b7dec4ddbcc926b825441bb32ab1/node_modules/@typescript-eslint/eslint-plugin"
       ],
@@ -363,9 +305,7 @@
     },
     {
       "name": "@typescript-eslint/parser",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+parser@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/@typescript-eslint/parser"
       ],
@@ -375,9 +315,7 @@
     },
     {
       "name": "@typescript-eslint/project-service",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+project-service@8.53.0_typescript@5.9.3/node_modules/@typescript-eslint/project-service"
       ],
@@ -387,9 +325,7 @@
     },
     {
       "name": "@typescript-eslint/scope-manager",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+scope-manager@8.53.0/node_modules/@typescript-eslint/scope-manager"
       ],
@@ -399,9 +335,7 @@
     },
     {
       "name": "@typescript-eslint/tsconfig-utils",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+tsconfig-utils@8.53.0_typescript@5.9.3/node_modules/@typescript-eslint/tsconfig-utils"
       ],
@@ -411,9 +345,7 @@
     },
     {
       "name": "@typescript-eslint/type-utils",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+type-utils@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/@typescript-eslint/type-utils"
       ],
@@ -423,9 +355,7 @@
     },
     {
       "name": "@typescript-eslint/types",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+types@8.53.0/node_modules/@typescript-eslint/types"
       ],
@@ -435,9 +365,7 @@
     },
     {
       "name": "@typescript-eslint/typescript-estree",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+typescript-estree@8.53.0_typescript@5.9.3/node_modules/@typescript-eslint/typescript-estree"
       ],
@@ -447,9 +375,7 @@
     },
     {
       "name": "@typescript-eslint/utils",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+utils@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/@typescript-eslint/utils"
       ],
@@ -459,9 +385,7 @@
     },
     {
       "name": "@typescript-eslint/visitor-keys",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+visitor-keys@8.53.0/node_modules/@typescript-eslint/visitor-keys"
       ],
@@ -471,21 +395,15 @@
     },
     {
       "name": "acorn",
-      "versions": [
-        "8.15.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn"
-      ],
+      "versions": ["8.15.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn"],
       "license": "MIT",
       "homepage": "https://github.com/acornjs/acorn",
       "description": "ECMAScript parser"
     },
     {
       "name": "acorn-jsx",
-      "versions": [
-        "5.3.2"
-      ],
+      "versions": ["5.3.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/acorn-jsx@5.3.2_acorn@8.15.0/node_modules/acorn-jsx"
       ],
@@ -495,12 +413,8 @@
     },
     {
       "name": "ajv",
-      "versions": [
-        "6.12.6"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/ajv@6.12.6/node_modules/ajv"
-      ],
+      "versions": ["6.12.6"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/ajv@6.12.6/node_modules/ajv"],
       "license": "MIT",
       "author": "Evgeny Poberezkin",
       "homepage": "https://github.com/ajv-validator/ajv",
@@ -508,9 +422,7 @@
     },
     {
       "name": "ansi-styles",
-      "versions": [
-        "4.3.0"
-      ],
+      "versions": ["4.3.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/ansi-styles@4.3.0/node_modules/ansi-styles"
       ],
@@ -521,9 +433,7 @@
     },
     {
       "name": "array-find-index",
-      "versions": [
-        "1.0.2"
-      ],
+      "versions": ["1.0.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/array-find-index@1.0.2/node_modules/array-find-index"
       ],
@@ -534,9 +444,7 @@
     },
     {
       "name": "balanced-match",
-      "versions": [
-        "1.0.2"
-      ],
+      "versions": ["1.0.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/balanced-match@1.0.2/node_modules/balanced-match"
       ],
@@ -547,10 +455,7 @@
     },
     {
       "name": "brace-expansion",
-      "versions": [
-        "1.1.12",
-        "2.0.2"
-      ],
+      "versions": ["1.1.12", "2.0.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/brace-expansion@1.1.12/node_modules/brace-expansion",
         "/workspaces/memon_app/node_modules/.pnpm/brace-expansion@2.0.2/node_modules/brace-expansion"
@@ -562,12 +467,8 @@
     },
     {
       "name": "callsites",
-      "versions": [
-        "3.1.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/callsites@3.1.0/node_modules/callsites"
-      ],
+      "versions": ["3.1.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/callsites@3.1.0/node_modules/callsites"],
       "license": "MIT",
       "author": "Sindre Sorhus",
       "homepage": "https://github.com/sindresorhus/callsites#readme",
@@ -575,24 +476,16 @@
     },
     {
       "name": "chalk",
-      "versions": [
-        "4.1.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/chalk@4.1.2/node_modules/chalk"
-      ],
+      "versions": ["4.1.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/chalk@4.1.2/node_modules/chalk"],
       "license": "MIT",
       "homepage": "https://github.com/chalk/chalk#readme",
       "description": "Terminal string styling done right"
     },
     {
       "name": "chokidar",
-      "versions": [
-        "4.0.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/chokidar@4.0.3/node_modules/chokidar"
-      ],
+      "versions": ["4.0.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/chokidar@4.0.3/node_modules/chokidar"],
       "license": "MIT",
       "author": "Paul Miller",
       "homepage": "https://github.com/paulmillr/chokidar",
@@ -600,12 +493,8 @@
     },
     {
       "name": "clsx",
-      "versions": [
-        "2.1.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx"
-      ],
+      "versions": ["2.1.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/clsx#readme",
@@ -613,9 +502,7 @@
     },
     {
       "name": "color-convert",
-      "versions": [
-        "2.0.1"
-      ],
+      "versions": ["2.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/color-convert@2.0.1/node_modules/color-convert"
       ],
@@ -626,9 +513,7 @@
     },
     {
       "name": "color-name",
-      "versions": [
-        "1.1.4"
-      ],
+      "versions": ["1.1.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/color-name@1.1.4/node_modules/color-name"
       ],
@@ -639,9 +524,7 @@
     },
     {
       "name": "commenting",
-      "versions": [
-        "1.1.0"
-      ],
+      "versions": ["1.1.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/commenting@1.1.0/node_modules/commenting"
       ],
@@ -652,9 +535,7 @@
     },
     {
       "name": "concat-map",
-      "versions": [
-        "0.0.1"
-      ],
+      "versions": ["0.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/concat-map@0.0.1/node_modules/concat-map"
       ],
@@ -665,12 +546,8 @@
     },
     {
       "name": "cookie",
-      "versions": [
-        "0.6.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/cookie@0.6.0/node_modules/cookie"
-      ],
+      "versions": ["0.6.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/cookie@0.6.0/node_modules/cookie"],
       "license": "MIT",
       "author": "Roman Shtylman",
       "homepage": "https://github.com/jshttp/cookie#readme",
@@ -678,9 +555,7 @@
     },
     {
       "name": "cross-spawn",
-      "versions": [
-        "7.0.6"
-      ],
+      "versions": ["7.0.6"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/cross-spawn@7.0.6/node_modules/cross-spawn"
       ],
@@ -691,12 +566,8 @@
     },
     {
       "name": "cssesc",
-      "versions": [
-        "3.0.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/cssesc@3.0.0/node_modules/cssesc"
-      ],
+      "versions": ["3.0.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/cssesc@3.0.0/node_modules/cssesc"],
       "license": "MIT",
       "author": "Mathias Bynens",
       "homepage": "https://mths.be/cssesc",
@@ -704,12 +575,8 @@
     },
     {
       "name": "debug",
-      "versions": [
-        "4.4.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/debug@4.4.3/node_modules/debug"
-      ],
+      "versions": ["4.4.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/debug@4.4.3/node_modules/debug"],
       "license": "MIT",
       "author": "Josh Junon",
       "homepage": "https://github.com/debug-js/debug#readme",
@@ -717,12 +584,8 @@
     },
     {
       "name": "deep-is",
-      "versions": [
-        "0.1.4"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/deep-is@0.1.4/node_modules/deep-is"
-      ],
+      "versions": ["0.1.4"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/deep-is@0.1.4/node_modules/deep-is"],
       "license": "MIT",
       "author": "Thorsten Lorenz",
       "homepage": "https://github.com/thlorenz/deep-is#readme",
@@ -730,45 +593,31 @@
     },
     {
       "name": "deepmerge",
-      "versions": [
-        "4.3.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/deepmerge@4.3.1/node_modules/deepmerge"
-      ],
+      "versions": ["4.3.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/deepmerge@4.3.1/node_modules/deepmerge"],
       "license": "MIT",
       "homepage": "https://github.com/TehShrike/deepmerge",
       "description": "A library for deep (recursive) merging of Javascript objects"
     },
     {
       "name": "devalue",
-      "versions": [
-        "5.6.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/devalue@5.6.2/node_modules/devalue"
-      ],
+      "versions": ["5.6.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/devalue@5.6.2/node_modules/devalue"],
       "license": "MIT",
       "homepage": "https://github.com/sveltejs/devalue#readme",
       "description": "Gets the job done when JSON.stringify can't"
     },
     {
       "name": "esbuild",
-      "versions": [
-        "0.27.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild"
-      ],
+      "versions": ["0.27.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild"],
       "license": "MIT",
       "homepage": "https://github.com/evanw/esbuild#readme",
       "description": "An extremely fast JavaScript and CSS bundler and minifier."
     },
     {
       "name": "escape-string-regexp",
-      "versions": [
-        "4.0.0"
-      ],
+      "versions": ["4.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/escape-string-regexp@4.0.0/node_modules/escape-string-regexp"
       ],
@@ -779,12 +628,8 @@
     },
     {
       "name": "eslint",
-      "versions": [
-        "9.39.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/eslint@9.39.2/node_modules/eslint"
-      ],
+      "versions": ["9.39.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/eslint@9.39.2/node_modules/eslint"],
       "license": "MIT",
       "author": "Nicholas C. Zakas",
       "homepage": "https://eslint.org",
@@ -792,9 +637,7 @@
     },
     {
       "name": "eslint-config-prettier",
-      "versions": [
-        "10.1.8"
-      ],
+      "versions": ["10.1.8"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/eslint-config-prettier@10.1.8_eslint@9.39.2/node_modules/eslint-config-prettier"
       ],
@@ -805,9 +648,7 @@
     },
     {
       "name": "eslint-plugin-svelte",
-      "versions": [
-        "3.14.0"
-      ],
+      "versions": ["3.14.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/eslint-plugin-svelte@3.14.0_eslint@9.39.2_svelte@5.46.4/node_modules/eslint-plugin-svelte"
       ],
@@ -818,33 +659,23 @@
     },
     {
       "name": "esm-env",
-      "versions": [
-        "1.2.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/esm-env@1.2.2/node_modules/esm-env"
-      ],
+      "versions": ["1.2.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/esm-env@1.2.2/node_modules/esm-env"],
       "license": "MIT",
       "author": "Ben McCann",
       "homepage": "https://github.com/benmccann/esm-env"
     },
     {
       "name": "esrap",
-      "versions": [
-        "2.2.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/esrap@2.2.1/node_modules/esrap"
-      ],
+      "versions": ["2.2.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/esrap@2.2.1/node_modules/esrap"],
       "license": "MIT",
       "homepage": "https://github.com/sveltejs/esrap#readme",
       "description": "Parse in reverse"
     },
     {
       "name": "fast-deep-equal",
-      "versions": [
-        "3.1.3"
-      ],
+      "versions": ["3.1.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/fast-deep-equal@3.1.3/node_modules/fast-deep-equal"
       ],
@@ -855,9 +686,7 @@
     },
     {
       "name": "fast-json-stable-stringify",
-      "versions": [
-        "2.1.0"
-      ],
+      "versions": ["2.1.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/fast-json-stable-stringify@2.1.0/node_modules/fast-json-stable-stringify"
       ],
@@ -868,9 +697,7 @@
     },
     {
       "name": "fast-levenshtein",
-      "versions": [
-        "2.0.6"
-      ],
+      "versions": ["2.0.6"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/fast-levenshtein@2.0.6/node_modules/fast-levenshtein"
       ],
@@ -881,9 +708,7 @@
     },
     {
       "name": "fdir",
-      "versions": [
-        "6.5.0"
-      ],
+      "versions": ["6.5.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/fdir@6.5.0_picomatch@4.0.3/node_modules/fdir"
       ],
@@ -894,9 +719,7 @@
     },
     {
       "name": "file-entry-cache",
-      "versions": [
-        "8.0.0"
-      ],
+      "versions": ["8.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/file-entry-cache@8.0.0/node_modules/file-entry-cache"
       ],
@@ -907,12 +730,8 @@
     },
     {
       "name": "find-up",
-      "versions": [
-        "5.0.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/find-up@5.0.0/node_modules/find-up"
-      ],
+      "versions": ["5.0.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/find-up@5.0.0/node_modules/find-up"],
       "license": "MIT",
       "author": "Sindre Sorhus",
       "homepage": "https://github.com/sindresorhus/find-up#readme",
@@ -920,9 +739,7 @@
     },
     {
       "name": "flat-cache",
-      "versions": [
-        "4.0.1"
-      ],
+      "versions": ["4.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/flat-cache@4.0.1/node_modules/flat-cache"
       ],
@@ -933,10 +750,7 @@
     },
     {
       "name": "globals",
-      "versions": [
-        "14.0.0",
-        "16.5.0"
-      ],
+      "versions": ["14.0.0", "16.5.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/globals@14.0.0/node_modules/globals",
         "/workspaces/memon_app/node_modules/.pnpm/globals@16.5.0/node_modules/globals"
@@ -948,12 +762,8 @@
     },
     {
       "name": "has-flag",
-      "versions": [
-        "4.0.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/has-flag@4.0.0/node_modules/has-flag"
-      ],
+      "versions": ["4.0.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/has-flag@4.0.0/node_modules/has-flag"],
       "license": "MIT",
       "author": "Sindre Sorhus",
       "homepage": "https://github.com/sindresorhus/has-flag#readme",
@@ -961,10 +771,7 @@
     },
     {
       "name": "ignore",
-      "versions": [
-        "5.3.2",
-        "7.0.5"
-      ],
+      "versions": ["5.3.2", "7.0.5"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/ignore@5.3.2/node_modules/ignore",
         "/workspaces/memon_app/node_modules/.pnpm/ignore@7.0.5/node_modules/ignore"
@@ -976,24 +783,16 @@
     },
     {
       "name": "immediate",
-      "versions": [
-        "3.0.6"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/immediate@3.0.6/node_modules/immediate"
-      ],
+      "versions": ["3.0.6"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/immediate@3.0.6/node_modules/immediate"],
       "license": "MIT",
       "homepage": "https://github.com/calvinmetcalf/immediate#readme",
       "description": "A cross browser microtask library"
     },
     {
       "name": "immutable",
-      "versions": [
-        "5.1.4"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/immutable@5.1.4/node_modules/immutable"
-      ],
+      "versions": ["5.1.4"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/immutable@5.1.4/node_modules/immutable"],
       "license": "MIT",
       "author": "Lee Byron",
       "homepage": "https://immutable-js.com",
@@ -1001,9 +800,7 @@
     },
     {
       "name": "import-fresh",
-      "versions": [
-        "3.3.1"
-      ],
+      "versions": ["3.3.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/import-fresh@3.3.1/node_modules/import-fresh"
       ],
@@ -1014,9 +811,7 @@
     },
     {
       "name": "imurmurhash",
-      "versions": [
-        "0.1.4"
-      ],
+      "versions": ["0.1.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/imurmurhash@0.1.4/node_modules/imurmurhash"
       ],
@@ -1027,9 +822,7 @@
     },
     {
       "name": "is-extglob",
-      "versions": [
-        "2.1.1"
-      ],
+      "versions": ["2.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/is-extglob@2.1.1/node_modules/is-extglob"
       ],
@@ -1040,12 +833,8 @@
     },
     {
       "name": "is-glob",
-      "versions": [
-        "4.0.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/is-glob@4.0.3/node_modules/is-glob"
-      ],
+      "versions": ["4.0.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/is-glob@4.0.3/node_modules/is-glob"],
       "license": "MIT",
       "author": "Jon Schlinkert",
       "homepage": "https://github.com/micromatch/is-glob",
@@ -1053,9 +842,7 @@
     },
     {
       "name": "is-reference",
-      "versions": [
-        "3.0.3"
-      ],
+      "versions": ["3.0.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/is-reference@3.0.3/node_modules/is-reference"
       ],
@@ -1066,12 +853,8 @@
     },
     {
       "name": "js-yaml",
-      "versions": [
-        "4.1.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/js-yaml@4.1.1/node_modules/js-yaml"
-      ],
+      "versions": ["4.1.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/js-yaml@4.1.1/node_modules/js-yaml"],
       "license": "MIT",
       "author": "Vladimir Zapparov",
       "homepage": "https://github.com/nodeca/js-yaml#readme",
@@ -1079,9 +862,7 @@
     },
     {
       "name": "json-buffer",
-      "versions": [
-        "3.0.1"
-      ],
+      "versions": ["3.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/json-buffer@3.0.1/node_modules/json-buffer"
       ],
@@ -1092,9 +873,7 @@
     },
     {
       "name": "json-schema-traverse",
-      "versions": [
-        "0.4.1"
-      ],
+      "versions": ["0.4.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/json-schema-traverse@0.4.1/node_modules/json-schema-traverse"
       ],
@@ -1105,9 +884,7 @@
     },
     {
       "name": "json-stable-stringify-without-jsonify",
-      "versions": [
-        "1.0.1"
-      ],
+      "versions": ["1.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/json-stable-stringify-without-jsonify@1.0.1/node_modules/json-stable-stringify-without-jsonify"
       ],
@@ -1118,12 +895,8 @@
     },
     {
       "name": "keyv",
-      "versions": [
-        "4.5.4"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/keyv@4.5.4/node_modules/keyv"
-      ],
+      "versions": ["4.5.4"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/keyv@4.5.4/node_modules/keyv"],
       "license": "MIT",
       "author": "Jared Wray",
       "homepage": "https://github.com/jaredwray/keyv",
@@ -1131,12 +904,8 @@
     },
     {
       "name": "kleur",
-      "versions": [
-        "4.1.5"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/kleur@4.1.5/node_modules/kleur"
-      ],
+      "versions": ["4.1.5"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/kleur@4.1.5/node_modules/kleur"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/kleur#readme",
@@ -1144,9 +913,7 @@
     },
     {
       "name": "known-css-properties",
-      "versions": [
-        "0.37.0"
-      ],
+      "versions": ["0.37.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/known-css-properties@0.37.0/node_modules/known-css-properties"
       ],
@@ -1157,12 +924,8 @@
     },
     {
       "name": "levn",
-      "versions": [
-        "0.4.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/levn@0.4.1/node_modules/levn"
-      ],
+      "versions": ["0.4.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/levn@0.4.1/node_modules/levn"],
       "license": "MIT",
       "author": "George Zahariev",
       "homepage": "https://github.com/gkz/levn",
@@ -1170,24 +933,16 @@
     },
     {
       "name": "lie",
-      "versions": [
-        "3.1.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/lie@3.1.1/node_modules/lie"
-      ],
+      "versions": ["3.1.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/lie@3.1.1/node_modules/lie"],
       "license": "MIT",
       "homepage": "https://github.com/calvinmetcalf/lie#readme",
       "description": "A basic but performant promise implementation"
     },
     {
       "name": "lilconfig",
-      "versions": [
-        "2.1.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/lilconfig@2.1.0/node_modules/lilconfig"
-      ],
+      "versions": ["2.1.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/lilconfig@2.1.0/node_modules/lilconfig"],
       "license": "MIT",
       "author": "antonk52",
       "homepage": "https://github.com/antonk52/lilconfig#readme",
@@ -1195,9 +950,7 @@
     },
     {
       "name": "locate-character",
-      "versions": [
-        "3.0.0"
-      ],
+      "versions": ["3.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/locate-character@3.0.0/node_modules/locate-character"
       ],
@@ -1208,9 +961,7 @@
     },
     {
       "name": "locate-path",
-      "versions": [
-        "6.0.0"
-      ],
+      "versions": ["6.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/locate-path@6.0.0/node_modules/locate-path"
       ],
@@ -1221,12 +972,8 @@
     },
     {
       "name": "lodash",
-      "versions": [
-        "4.17.21"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/lodash@4.17.21/node_modules/lodash"
-      ],
+      "versions": ["4.17.21"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/lodash@4.17.21/node_modules/lodash"],
       "license": "MIT",
       "author": "John-David Dalton",
       "homepage": "https://lodash.com/",
@@ -1234,9 +981,7 @@
     },
     {
       "name": "lodash.merge",
-      "versions": [
-        "4.6.2"
-      ],
+      "versions": ["4.6.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/lodash.merge@4.6.2/node_modules/lodash.merge"
       ],
@@ -1247,9 +992,7 @@
     },
     {
       "name": "magic-string",
-      "versions": [
-        "0.30.21"
-      ],
+      "versions": ["0.30.21"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/magic-string@0.30.21/node_modules/magic-string"
       ],
@@ -1260,9 +1003,7 @@
     },
     {
       "name": "mdsvex",
-      "versions": [
-        "0.12.6"
-      ],
+      "versions": ["0.12.6"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/mdsvex@0.12.6_svelte@5.46.4/node_modules/mdsvex"
       ],
@@ -1273,12 +1014,8 @@
     },
     {
       "name": "moment",
-      "versions": [
-        "2.30.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/moment@2.30.1/node_modules/moment"
-      ],
+      "versions": ["2.30.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/moment@2.30.1/node_modules/moment"],
       "license": "MIT",
       "author": "Iskren Ivov Chernev",
       "homepage": "https://momentjs.com",
@@ -1286,12 +1023,8 @@
     },
     {
       "name": "mri",
-      "versions": [
-        "1.2.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/mri@1.2.0/node_modules/mri"
-      ],
+      "versions": ["1.2.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/mri@1.2.0/node_modules/mri"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/mri#readme",
@@ -1299,12 +1032,8 @@
     },
     {
       "name": "mrmime",
-      "versions": [
-        "2.0.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/mrmime@2.0.1/node_modules/mrmime"
-      ],
+      "versions": ["2.0.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/mrmime@2.0.1/node_modules/mrmime"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/mrmime#readme",
@@ -1312,24 +1041,16 @@
     },
     {
       "name": "ms",
-      "versions": [
-        "2.1.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/ms@2.1.3/node_modules/ms"
-      ],
+      "versions": ["2.1.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/ms@2.1.3/node_modules/ms"],
       "license": "MIT",
       "homepage": "https://github.com/vercel/ms#readme",
       "description": "Tiny millisecond conversion utility"
     },
     {
       "name": "nanoid",
-      "versions": [
-        "3.3.11"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/nanoid@3.3.11/node_modules/nanoid"
-      ],
+      "versions": ["3.3.11"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/nanoid@3.3.11/node_modules/nanoid"],
       "license": "MIT",
       "author": "Andrey Sitnik",
       "homepage": "https://github.com/ai/nanoid#readme",
@@ -1337,9 +1058,7 @@
     },
     {
       "name": "natural-compare",
-      "versions": [
-        "1.4.0"
-      ],
+      "versions": ["1.4.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/natural-compare@1.4.0/node_modules/natural-compare"
       ],
@@ -1350,9 +1069,7 @@
     },
     {
       "name": "node-addon-api",
-      "versions": [
-        "7.1.1"
-      ],
+      "versions": ["7.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/node-addon-api@7.1.1/node_modules/node-addon-api"
       ],
@@ -1362,12 +1079,8 @@
     },
     {
       "name": "obug",
-      "versions": [
-        "2.1.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/obug@2.1.1/node_modules/obug"
-      ],
+      "versions": ["2.1.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/obug@2.1.1/node_modules/obug"],
       "license": "MIT",
       "author": "Kevin Deng",
       "homepage": "https://github.com/sxzz/obug#readme",
@@ -1375,9 +1088,7 @@
     },
     {
       "name": "optionator",
-      "versions": [
-        "0.9.4"
-      ],
+      "versions": ["0.9.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/optionator@0.9.4/node_modules/optionator"
       ],
@@ -1388,12 +1099,8 @@
     },
     {
       "name": "p-limit",
-      "versions": [
-        "3.1.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/p-limit@3.1.0/node_modules/p-limit"
-      ],
+      "versions": ["3.1.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/p-limit@3.1.0/node_modules/p-limit"],
       "license": "MIT",
       "author": "Sindre Sorhus",
       "homepage": "https://github.com/sindresorhus/p-limit#readme",
@@ -1401,12 +1108,8 @@
     },
     {
       "name": "p-locate",
-      "versions": [
-        "5.0.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/p-locate@5.0.0/node_modules/p-locate"
-      ],
+      "versions": ["5.0.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/p-locate@5.0.0/node_modules/p-locate"],
       "license": "MIT",
       "author": "Sindre Sorhus",
       "homepage": "https://github.com/sindresorhus/p-locate#readme",
@@ -1414,9 +1117,7 @@
     },
     {
       "name": "package-name-regex",
-      "versions": [
-        "2.0.6"
-      ],
+      "versions": ["2.0.6"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/package-name-regex@2.0.6/node_modules/package-name-regex"
       ],
@@ -1427,9 +1128,7 @@
     },
     {
       "name": "parent-module",
-      "versions": [
-        "1.0.1"
-      ],
+      "versions": ["1.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/parent-module@1.0.1/node_modules/parent-module"
       ],
@@ -1440,9 +1139,7 @@
     },
     {
       "name": "path-exists",
-      "versions": [
-        "4.0.0"
-      ],
+      "versions": ["4.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/path-exists@4.0.0/node_modules/path-exists"
       ],
@@ -1453,12 +1150,8 @@
     },
     {
       "name": "path-key",
-      "versions": [
-        "3.1.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/path-key@3.1.1/node_modules/path-key"
-      ],
+      "versions": ["3.1.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/path-key@3.1.1/node_modules/path-key"],
       "license": "MIT",
       "author": "Sindre Sorhus",
       "homepage": "https://github.com/sindresorhus/path-key#readme",
@@ -1466,12 +1159,8 @@
     },
     {
       "name": "picomatch",
-      "versions": [
-        "4.0.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/picomatch@4.0.3/node_modules/picomatch"
-      ],
+      "versions": ["4.0.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/picomatch@4.0.3/node_modules/picomatch"],
       "license": "MIT",
       "author": "Jon Schlinkert",
       "homepage": "https://github.com/micromatch/picomatch",
@@ -1479,12 +1168,8 @@
     },
     {
       "name": "postcss",
-      "versions": [
-        "8.5.6"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/postcss@8.5.6/node_modules/postcss"
-      ],
+      "versions": ["8.5.6"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/postcss@8.5.6/node_modules/postcss"],
       "license": "MIT",
       "author": "Andrey Sitnik",
       "homepage": "https://postcss.org/",
@@ -1492,9 +1177,7 @@
     },
     {
       "name": "postcss-load-config",
-      "versions": [
-        "3.1.4"
-      ],
+      "versions": ["3.1.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/postcss-load-config@3.1.4_postcss@8.5.6/node_modules/postcss-load-config"
       ],
@@ -1505,9 +1188,7 @@
     },
     {
       "name": "postcss-safe-parser",
-      "versions": [
-        "7.0.1"
-      ],
+      "versions": ["7.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/postcss-safe-parser@7.0.1_postcss@8.5.6/node_modules/postcss-safe-parser"
       ],
@@ -1518,9 +1199,7 @@
     },
     {
       "name": "postcss-scss",
-      "versions": [
-        "4.0.9"
-      ],
+      "versions": ["4.0.9"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/postcss-scss@4.0.9_postcss@8.5.6/node_modules/postcss-scss"
       ],
@@ -1531,9 +1210,7 @@
     },
     {
       "name": "postcss-selector-parser",
-      "versions": [
-        "7.1.1"
-      ],
+      "versions": ["7.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/postcss-selector-parser@7.1.1/node_modules/postcss-selector-parser"
       ],
@@ -1542,9 +1219,7 @@
     },
     {
       "name": "prelude-ls",
-      "versions": [
-        "1.2.1"
-      ],
+      "versions": ["1.2.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/prelude-ls@1.2.1/node_modules/prelude-ls"
       ],
@@ -1555,12 +1230,8 @@
     },
     {
       "name": "prettier",
-      "versions": [
-        "3.8.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/prettier@3.8.0/node_modules/prettier"
-      ],
+      "versions": ["3.8.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/prettier@3.8.0/node_modules/prettier"],
       "license": "MIT",
       "author": "James Long",
       "homepage": "https://prettier.io",
@@ -1568,9 +1239,7 @@
     },
     {
       "name": "prettier-plugin-svelte",
-      "versions": [
-        "3.4.1"
-      ],
+      "versions": ["3.4.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/prettier-plugin-svelte@3.4.1_prettier@3.8.0_svelte@5.46.4/node_modules/prettier-plugin-svelte"
       ],
@@ -1581,9 +1250,7 @@
     },
     {
       "name": "prism-svelte",
-      "versions": [
-        "0.4.7"
-      ],
+      "versions": ["0.4.7"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/prism-svelte@0.4.7/node_modules/prism-svelte"
       ],
@@ -1594,12 +1261,8 @@
     },
     {
       "name": "prismjs",
-      "versions": [
-        "1.30.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/prismjs@1.30.0/node_modules/prismjs"
-      ],
+      "versions": ["1.30.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/prismjs@1.30.0/node_modules/prismjs"],
       "license": "MIT",
       "author": "Lea Verou",
       "homepage": "https://github.com/PrismJS/prism#readme",
@@ -1607,12 +1270,8 @@
     },
     {
       "name": "punycode",
-      "versions": [
-        "2.3.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/punycode@2.3.1/node_modules/punycode"
-      ],
+      "versions": ["2.3.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/punycode@2.3.1/node_modules/punycode"],
       "license": "MIT",
       "author": "Mathias Bynens",
       "homepage": "https://mths.be/punycode",
@@ -1620,12 +1279,8 @@
     },
     {
       "name": "readdirp",
-      "versions": [
-        "4.1.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/readdirp@4.1.2/node_modules/readdirp"
-      ],
+      "versions": ["4.1.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/readdirp@4.1.2/node_modules/readdirp"],
       "license": "MIT",
       "author": "Thorsten Lorenz",
       "homepage": "https://github.com/paulmillr/readdirp",
@@ -1633,9 +1288,7 @@
     },
     {
       "name": "resolve-from",
-      "versions": [
-        "4.0.0"
-      ],
+      "versions": ["4.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/resolve-from@4.0.0/node_modules/resolve-from"
       ],
@@ -1646,12 +1299,8 @@
     },
     {
       "name": "rollup",
-      "versions": [
-        "4.55.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/rollup@4.55.1/node_modules/rollup"
-      ],
+      "versions": ["4.55.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/rollup@4.55.1/node_modules/rollup"],
       "license": "MIT",
       "author": "Rich Harris",
       "homepage": "https://rollupjs.org/",
@@ -1659,9 +1308,7 @@
     },
     {
       "name": "rollup-plugin-license",
-      "versions": [
-        "3.6.0"
-      ],
+      "versions": ["3.6.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/rollup-plugin-license@3.6.0_picomatch@4.0.3_rollup@4.55.1/node_modules/rollup-plugin-license"
       ],
@@ -1672,12 +1319,8 @@
     },
     {
       "name": "sade",
-      "versions": [
-        "1.8.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/sade@1.8.1/node_modules/sade"
-      ],
+      "versions": ["1.8.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/sade@1.8.1/node_modules/sade"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/sade#readme",
@@ -1685,12 +1328,8 @@
     },
     {
       "name": "sass",
-      "versions": [
-        "1.97.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/sass@1.97.2/node_modules/sass"
-      ],
+      "versions": ["1.97.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/sass@1.97.2/node_modules/sass"],
       "license": "MIT",
       "author": "Natalie Weizenbaum",
       "homepage": "https://github.com/sass/dart-sass",
@@ -1698,9 +1337,7 @@
     },
     {
       "name": "set-cookie-parser",
-      "versions": [
-        "2.7.2"
-      ],
+      "versions": ["2.7.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/set-cookie-parser@2.7.2/node_modules/set-cookie-parser"
       ],
@@ -1711,9 +1348,7 @@
     },
     {
       "name": "shebang-command",
-      "versions": [
-        "2.0.0"
-      ],
+      "versions": ["2.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/shebang-command@2.0.0/node_modules/shebang-command"
       ],
@@ -1724,9 +1359,7 @@
     },
     {
       "name": "shebang-regex",
-      "versions": [
-        "3.0.0"
-      ],
+      "versions": ["3.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/shebang-regex@3.0.0/node_modules/shebang-regex"
       ],
@@ -1737,12 +1370,8 @@
     },
     {
       "name": "sirv",
-      "versions": [
-        "3.0.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/sirv@3.0.2/node_modules/sirv"
-      ],
+      "versions": ["3.0.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/sirv@3.0.2/node_modules/sirv"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/sirv#readme",
@@ -1750,9 +1379,7 @@
     },
     {
       "name": "spdx-compare",
-      "versions": [
-        "1.0.0"
-      ],
+      "versions": ["1.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-compare@1.0.0/node_modules/spdx-compare"
       ],
@@ -1763,9 +1390,7 @@
     },
     {
       "name": "spdx-expression-parse",
-      "versions": [
-        "3.0.1"
-      ],
+      "versions": ["3.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-expression-parse@3.0.1/node_modules/spdx-expression-parse"
       ],
@@ -1776,9 +1401,7 @@
     },
     {
       "name": "spdx-satisfies",
-      "versions": [
-        "5.0.1"
-      ],
+      "versions": ["5.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-satisfies@5.0.1/node_modules/spdx-satisfies"
       ],
@@ -1789,9 +1412,7 @@
     },
     {
       "name": "strip-json-comments",
-      "versions": [
-        "3.1.1"
-      ],
+      "versions": ["3.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/strip-json-comments@3.1.1/node_modules/strip-json-comments"
       ],
@@ -1802,9 +1423,7 @@
     },
     {
       "name": "supports-color",
-      "versions": [
-        "7.2.0"
-      ],
+      "versions": ["7.2.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/supports-color@7.2.0/node_modules/supports-color"
       ],
@@ -1815,21 +1434,15 @@
     },
     {
       "name": "svelte",
-      "versions": [
-        "5.46.4"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/svelte@5.46.4/node_modules/svelte"
-      ],
+      "versions": ["5.46.4"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/svelte@5.46.4/node_modules/svelte"],
       "license": "MIT",
       "homepage": "https://svelte.dev",
       "description": "Cybernetically enhanced web apps"
     },
     {
       "name": "svelte-check",
-      "versions": [
-        "4.3.5"
-      ],
+      "versions": ["4.3.5"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/svelte-check@4.3.5_picomatch@4.0.3_svelte@5.46.4_typescript@5.9.3/node_modules/svelte-check"
       ],
@@ -1840,9 +1453,7 @@
     },
     {
       "name": "svelte-eslint-parser",
-      "versions": [
-        "1.4.1"
-      ],
+      "versions": ["1.4.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/svelte-eslint-parser@1.4.1_svelte@5.46.4/node_modules/svelte-eslint-parser"
       ],
@@ -1853,9 +1464,7 @@
     },
     {
       "name": "tinyglobby",
-      "versions": [
-        "0.2.15"
-      ],
+      "versions": ["0.2.15"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/tinyglobby@0.2.15/node_modules/tinyglobby"
       ],
@@ -1866,12 +1475,8 @@
     },
     {
       "name": "totalist",
-      "versions": [
-        "3.0.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/totalist@3.0.1/node_modules/totalist"
-      ],
+      "versions": ["3.0.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/totalist@3.0.1/node_modules/totalist"],
       "license": "MIT",
       "author": "Luke Edwards",
       "homepage": "https://github.com/lukeed/totalist#readme",
@@ -1879,9 +1484,7 @@
     },
     {
       "name": "ts-api-utils",
-      "versions": [
-        "2.4.0"
-      ],
+      "versions": ["2.4.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/ts-api-utils@2.4.0_typescript@5.9.3/node_modules/ts-api-utils"
       ],
@@ -1892,9 +1495,7 @@
     },
     {
       "name": "type-check",
-      "versions": [
-        "0.4.0"
-      ],
+      "versions": ["0.4.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/type-check@0.4.0/node_modules/type-check"
       ],
@@ -1905,9 +1506,7 @@
     },
     {
       "name": "typescript-eslint",
-      "versions": [
-        "8.53.0"
-      ],
+      "versions": ["8.53.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/typescript-eslint@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/typescript-eslint"
       ],
@@ -1917,9 +1516,7 @@
     },
     {
       "name": "undici-types",
-      "versions": [
-        "7.16.0"
-      ],
+      "versions": ["7.16.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/undici-types@7.16.0/node_modules/undici-types"
       ],
@@ -1929,9 +1526,7 @@
     },
     {
       "name": "unist-util-is",
-      "versions": [
-        "4.1.0"
-      ],
+      "versions": ["4.1.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/unist-util-is@4.1.0/node_modules/unist-util-is"
       ],
@@ -1942,9 +1537,7 @@
     },
     {
       "name": "unist-util-stringify-position",
-      "versions": [
-        "2.0.3"
-      ],
+      "versions": ["2.0.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/unist-util-stringify-position@2.0.3/node_modules/unist-util-stringify-position"
       ],
@@ -1955,9 +1548,7 @@
     },
     {
       "name": "unist-util-visit",
-      "versions": [
-        "2.0.3"
-      ],
+      "versions": ["2.0.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/unist-util-visit@2.0.3/node_modules/unist-util-visit"
       ],
@@ -1968,9 +1559,7 @@
     },
     {
       "name": "unist-util-visit-parents",
-      "versions": [
-        "3.1.1"
-      ],
+      "versions": ["3.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/unist-util-visit-parents@3.1.1/node_modules/unist-util-visit-parents"
       ],
@@ -1981,9 +1570,7 @@
     },
     {
       "name": "util-deprecate",
-      "versions": [
-        "1.0.2"
-      ],
+      "versions": ["1.0.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/util-deprecate@1.0.2/node_modules/util-deprecate"
       ],
@@ -1994,9 +1581,7 @@
     },
     {
       "name": "vfile-message",
-      "versions": [
-        "2.0.4"
-      ],
+      "versions": ["2.0.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/vfile-message@2.0.4/node_modules/vfile-message"
       ],
@@ -2007,9 +1592,7 @@
     },
     {
       "name": "vite",
-      "versions": [
-        "7.3.1"
-      ],
+      "versions": ["7.3.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/vite@7.3.1_@types+node@24.10.9_sass@1.97.2/node_modules/vite"
       ],
@@ -2020,9 +1603,7 @@
     },
     {
       "name": "vitefu",
-      "versions": [
-        "1.1.1"
-      ],
+      "versions": ["1.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/vitefu@1.1.1_vite@7.3.1_@types+node@24.10.9_sass@1.97.2_/node_modules/vitefu"
       ],
@@ -2032,12 +1613,8 @@
     },
     {
       "name": "word-wrap",
-      "versions": [
-        "1.2.5"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/word-wrap@1.2.5/node_modules/word-wrap"
-      ],
+      "versions": ["1.2.5"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/word-wrap@1.2.5/node_modules/word-wrap"],
       "license": "MIT",
       "author": "Jon Schlinkert",
       "homepage": "https://github.com/jonschlinkert/word-wrap",
@@ -2045,9 +1622,7 @@
     },
     {
       "name": "yocto-queue",
-      "versions": [
-        "0.1.0"
-      ],
+      "versions": ["0.1.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/yocto-queue@0.1.0/node_modules/yocto-queue"
       ],
@@ -2058,9 +1633,7 @@
     },
     {
       "name": "zimmerframe",
-      "versions": [
-        "1.1.4"
-      ],
+      "versions": ["1.1.4"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/zimmerframe@1.1.4/node_modules/zimmerframe"
       ],
@@ -2072,9 +1645,7 @@
   "Apache-2.0": [
     {
       "name": "@eslint/compat",
-      "versions": [
-        "1.4.1"
-      ],
+      "versions": ["1.4.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+compat@1.4.1_eslint@9.39.2/node_modules/@eslint/compat"
       ],
@@ -2085,9 +1656,7 @@
     },
     {
       "name": "@eslint/config-array",
-      "versions": [
-        "0.21.1"
-      ],
+      "versions": ["0.21.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+config-array@0.21.1/node_modules/@eslint/config-array"
       ],
@@ -2098,9 +1667,7 @@
     },
     {
       "name": "@eslint/config-helpers",
-      "versions": [
-        "0.4.2"
-      ],
+      "versions": ["0.4.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+config-helpers@0.4.2/node_modules/@eslint/config-helpers"
       ],
@@ -2110,9 +1677,7 @@
     },
     {
       "name": "@eslint/core",
-      "versions": [
-        "0.17.0"
-      ],
+      "versions": ["0.17.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+core@0.17.0/node_modules/@eslint/core"
       ],
@@ -2123,9 +1688,7 @@
     },
     {
       "name": "@eslint/object-schema",
-      "versions": [
-        "2.1.7"
-      ],
+      "versions": ["2.1.7"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+object-schema@2.1.7/node_modules/@eslint/object-schema"
       ],
@@ -2136,9 +1699,7 @@
     },
     {
       "name": "@eslint/plugin-kit",
-      "versions": [
-        "0.4.1"
-      ],
+      "versions": ["0.4.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@eslint+plugin-kit@0.4.1/node_modules/@eslint/plugin-kit"
       ],
@@ -2149,9 +1710,7 @@
     },
     {
       "name": "@humanfs/core",
-      "versions": [
-        "0.19.1"
-      ],
+      "versions": ["0.19.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@humanfs+core@0.19.1/node_modules/@humanfs/core"
       ],
@@ -2162,9 +1721,7 @@
     },
     {
       "name": "@humanfs/node",
-      "versions": [
-        "0.16.7"
-      ],
+      "versions": ["0.16.7"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@humanfs+node@0.16.7/node_modules/@humanfs/node"
       ],
@@ -2175,9 +1732,7 @@
     },
     {
       "name": "@humanwhocodes/module-importer",
-      "versions": [
-        "1.0.1"
-      ],
+      "versions": ["1.0.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@humanwhocodes+module-importer@1.0.1/node_modules/@humanwhocodes/module-importer"
       ],
@@ -2188,9 +1743,7 @@
     },
     {
       "name": "@humanwhocodes/retry",
-      "versions": [
-        "0.4.3"
-      ],
+      "versions": ["0.4.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@humanwhocodes+retry@0.4.3/node_modules/@humanwhocodes/retry"
       ],
@@ -2201,9 +1754,7 @@
     },
     {
       "name": "aria-query",
-      "versions": [
-        "5.3.2"
-      ],
+      "versions": ["5.3.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/aria-query@5.3.2/node_modules/aria-query"
       ],
@@ -2214,9 +1765,7 @@
     },
     {
       "name": "axobject-query",
-      "versions": [
-        "4.1.0"
-      ],
+      "versions": ["4.1.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/axobject-query@4.1.0/node_modules/axobject-query"
       ],
@@ -2227,9 +1776,7 @@
     },
     {
       "name": "detect-libc",
-      "versions": [
-        "2.1.2"
-      ],
+      "versions": ["2.1.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/detect-libc@2.1.2/node_modules/detect-libc"
       ],
@@ -2240,10 +1787,7 @@
     },
     {
       "name": "eslint-visitor-keys",
-      "versions": [
-        "3.4.3",
-        "4.2.1"
-      ],
+      "versions": ["3.4.3", "4.2.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/eslint-visitor-keys@3.4.3/node_modules/eslint-visitor-keys",
         "/workspaces/memon_app/node_modules/.pnpm/eslint-visitor-keys@4.2.1/node_modules/eslint-visitor-keys"
@@ -2255,9 +1799,7 @@
     },
     {
       "name": "localforage",
-      "versions": [
-        "1.10.0"
-      ],
+      "versions": ["1.10.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/localforage@1.10.0/node_modules/localforage"
       ],
@@ -2268,9 +1810,7 @@
     },
     {
       "name": "typescript",
-      "versions": [
-        "5.9.3"
-      ],
+      "versions": ["5.9.3"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/typescript@5.9.3/node_modules/typescript"
       ],
@@ -2283,9 +1823,7 @@
   "OFL-1.1": [
     {
       "name": "@fontsource/material-icons-round",
-      "versions": [
-        "5.2.6"
-      ],
+      "versions": ["5.2.6"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@fontsource+material-icons-round@5.2.6/node_modules/@fontsource/material-icons-round"
       ],
@@ -2296,9 +1834,7 @@
     },
     {
       "name": "@fontsource/zen-kaku-gothic-new",
-      "versions": [
-        "5.2.7"
-      ],
+      "versions": ["5.2.7"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@fontsource+zen-kaku-gothic-new@5.2.7/node_modules/@fontsource/zen-kaku-gothic-new"
       ],
@@ -2309,9 +1845,7 @@
     },
     {
       "name": "@fontsource/zen-maru-gothic",
-      "versions": [
-        "5.2.8"
-      ],
+      "versions": ["5.2.8"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/@fontsource+zen-maru-gothic@5.2.8/node_modules/@fontsource/zen-maru-gothic"
       ],
@@ -2324,12 +1858,8 @@
   "Python-2.0": [
     {
       "name": "argparse",
-      "versions": [
-        "2.0.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/argparse@2.0.1/node_modules/argparse"
-      ],
+      "versions": ["2.0.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/argparse@2.0.1/node_modules/argparse"],
       "license": "Python-2.0",
       "homepage": "https://github.com/nodeca/argparse#readme",
       "description": "CLI arguments parser. Native port of python's argparse."
@@ -2338,9 +1868,7 @@
   "BSD-2-Clause": [
     {
       "name": "eslint-scope",
-      "versions": [
-        "8.4.0"
-      ],
+      "versions": ["8.4.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/eslint-scope@8.4.0/node_modules/eslint-scope"
       ],
@@ -2350,12 +1878,8 @@
     },
     {
       "name": "espree",
-      "versions": [
-        "10.4.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/espree@10.4.0/node_modules/espree"
-      ],
+      "versions": ["10.4.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/espree@10.4.0/node_modules/espree"],
       "license": "BSD-2-Clause",
       "author": "Nicholas C. Zakas",
       "homepage": "https://github.com/eslint/js/blob/main/packages/espree/README.md",
@@ -2363,21 +1887,15 @@
     },
     {
       "name": "esrecurse",
-      "versions": [
-        "4.3.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/esrecurse@4.3.0/node_modules/esrecurse"
-      ],
+      "versions": ["4.3.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/esrecurse@4.3.0/node_modules/esrecurse"],
       "license": "BSD-2-Clause",
       "homepage": "https://github.com/estools/esrecurse",
       "description": "ECMAScript AST recursive visitor"
     },
     {
       "name": "estraverse",
-      "versions": [
-        "5.3.0"
-      ],
+      "versions": ["5.3.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/estraverse@5.3.0/node_modules/estraverse"
       ],
@@ -2387,24 +1905,16 @@
     },
     {
       "name": "esutils",
-      "versions": [
-        "2.0.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/esutils@2.0.3/node_modules/esutils"
-      ],
+      "versions": ["2.0.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/esutils@2.0.3/node_modules/esutils"],
       "license": "BSD-2-Clause",
       "homepage": "https://github.com/estools/esutils",
       "description": "utility box for ECMAScript language tools"
     },
     {
       "name": "uri-js",
-      "versions": [
-        "4.4.1"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/uri-js@4.4.1/node_modules/uri-js"
-      ],
+      "versions": ["4.4.1"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/uri-js@4.4.1/node_modules/uri-js"],
       "license": "BSD-2-Clause",
       "author": "Gary Court",
       "homepage": "https://github.com/garycourt/uri-js",
@@ -2414,12 +1924,8 @@
   "BSD-3-Clause": [
     {
       "name": "esquery",
-      "versions": [
-        "1.7.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/esquery@1.7.0/node_modules/esquery"
-      ],
+      "versions": ["1.7.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/esquery@1.7.0/node_modules/esquery"],
       "license": "BSD-3-Clause",
       "author": "Joel Feenstra",
       "homepage": "https://github.com/estools/esquery/",
@@ -2427,9 +1933,7 @@
     },
     {
       "name": "source-map-js",
-      "versions": [
-        "1.2.1"
-      ],
+      "versions": ["1.2.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/source-map-js@1.2.1/node_modules/source-map-js"
       ],
@@ -2442,12 +1946,8 @@
   "ISC": [
     {
       "name": "flatted",
-      "versions": [
-        "3.3.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted"
-      ],
+      "versions": ["3.3.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted"],
       "license": "ISC",
       "author": "Andrea Giammarchi",
       "homepage": "https://github.com/WebReflection/flatted#readme",
@@ -2455,9 +1955,7 @@
     },
     {
       "name": "glob-parent",
-      "versions": [
-        "6.0.2"
-      ],
+      "versions": ["6.0.2"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/glob-parent@6.0.2/node_modules/glob-parent"
       ],
@@ -2468,12 +1966,8 @@
     },
     {
       "name": "isexe",
-      "versions": [
-        "2.0.0"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/isexe@2.0.0/node_modules/isexe"
-      ],
+      "versions": ["2.0.0"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/isexe@2.0.0/node_modules/isexe"],
       "license": "ISC",
       "author": "Isaac Z. Schlueter",
       "homepage": "https://github.com/isaacs/isexe#readme",
@@ -2481,10 +1975,7 @@
     },
     {
       "name": "minimatch",
-      "versions": [
-        "3.1.2",
-        "9.0.5"
-      ],
+      "versions": ["3.1.2", "9.0.5"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/minimatch@3.1.2/node_modules/minimatch",
         "/workspaces/memon_app/node_modules/.pnpm/minimatch@9.0.5/node_modules/minimatch"
@@ -2496,9 +1987,7 @@
     },
     {
       "name": "picocolors",
-      "versions": [
-        "1.1.1"
-      ],
+      "versions": ["1.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors"
       ],
@@ -2509,12 +1998,8 @@
     },
     {
       "name": "semver",
-      "versions": [
-        "7.7.3"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/semver@7.7.3/node_modules/semver"
-      ],
+      "versions": ["7.7.3"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/semver@7.7.3/node_modules/semver"],
       "license": "ISC",
       "author": "GitHub Inc.",
       "homepage": "https://github.com/npm/node-semver#readme",
@@ -2522,12 +2007,8 @@
     },
     {
       "name": "which",
-      "versions": [
-        "2.0.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/which@2.0.2/node_modules/which"
-      ],
+      "versions": ["2.0.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/which@2.0.2/node_modules/which"],
       "license": "ISC",
       "author": "Isaac Z. Schlueter",
       "homepage": "https://github.com/isaacs/node-which#readme",
@@ -2535,12 +2016,8 @@
     },
     {
       "name": "yaml",
-      "versions": [
-        "1.10.2"
-      ],
-      "paths": [
-        "/workspaces/memon_app/node_modules/.pnpm/yaml@1.10.2/node_modules/yaml"
-      ],
+      "versions": ["1.10.2"],
+      "paths": ["/workspaces/memon_app/node_modules/.pnpm/yaml@1.10.2/node_modules/yaml"],
       "license": "ISC",
       "author": "Eemeli Aro",
       "homepage": "https://eemeli.org/yaml/v1/",
@@ -2550,9 +2027,7 @@
   "CC-BY-3.0": [
     {
       "name": "spdx-exceptions",
-      "versions": [
-        "2.5.0"
-      ],
+      "versions": ["2.5.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-exceptions@2.5.0/node_modules/spdx-exceptions"
       ],
@@ -2565,9 +2040,7 @@
   "(MIT AND CC-BY-3.0)": [
     {
       "name": "spdx-expression-validate",
-      "versions": [
-        "2.0.0"
-      ],
+      "versions": ["2.0.0"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-expression-validate@2.0.0/node_modules/spdx-expression-validate"
       ],
@@ -2578,9 +2051,7 @@
     },
     {
       "name": "spdx-ranges",
-      "versions": [
-        "2.1.1"
-      ],
+      "versions": ["2.1.1"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-ranges@2.1.1/node_modules/spdx-ranges"
       ],
@@ -2593,9 +2064,7 @@
   "CC0-1.0": [
     {
       "name": "spdx-license-ids",
-      "versions": [
-        "3.0.22"
-      ],
+      "versions": ["3.0.22"],
       "paths": [
         "/workspaces/memon_app/node_modules/.pnpm/spdx-license-ids@3.0.22/node_modules/spdx-license-ids"
       ],
