@@ -289,6 +289,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/zen-kaku-gothic-new@npm:^5.2.7":
+  version: 5.2.7
+  resolution: "@fontsource/zen-kaku-gothic-new@npm:5.2.7"
+  checksum: 10c0/ab918a743f1291ce30431975d3dd42180af4fe597257b388646cb9ce7faef371ab3390a63c7c833068be1cfb40f08d5b23eedffbd4bbd115ab0a96088ada5330
+  languageName: node
+  linkType: hard
+
+"@fontsource/zen-maru-gothic@npm:^5.2.8":
+  version: 5.2.8
+  resolution: "@fontsource/zen-maru-gothic@npm:5.2.8"
+  checksum: 10c0/9800019f15600cd627fde2998e257b64eaad3402b6d613d96aa43ad631913c78ab4757eedeb69d7716c970c5af7c13e6ecc1b710c85dc287cacdcca8d6fef766
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -1954,6 +1968,8 @@ __metadata:
   dependencies:
     "@eslint/compat": "npm:^1.4.0"
     "@eslint/js": "npm:^9.39.1"
+    "@fontsource/zen-kaku-gothic-new": "npm:^5.2.7"
+    "@fontsource/zen-maru-gothic": "npm:^5.2.8"
     "@sveltejs/adapter-static": "npm:^3.0.10"
     "@sveltejs/kit": "npm:^2.49.1"
     "@sveltejs/vite-plugin-svelte": "npm:^6.2.1"

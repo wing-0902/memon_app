@@ -1,13 +1,13 @@
 // 色のリストを作成
 $themes: (
   light: (
-    foreground: rgb(16,16,16),
-    background: rgb(246,244,233),
+    foreground: rgb(16, 16, 16),
+    background: rgb(246, 244, 233),
     theme: rgb(0, 108, 0)
   ),
   dark: (
-    foreground: rgb(246,244,233),
-    background: rgb(6,23,47),
+    foreground: rgb(246, 244, 233),
+    background: rgb(6, 23, 47),
     theme: rgb(0, 228, 0)
   )
 );
@@ -34,6 +34,10 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  input, textarea {
+    font-family: 'Zen Maru Gothic', sans-serif;
+  }
 }
 
 a {
