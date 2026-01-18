@@ -99,20 +99,34 @@
           <th>No.</th>
           <th>おもて</th>
           <th>うら</th>
-          <th colspan='2'></th>
+          <th colspan="2"></th>
         </tr>
         {#each wordStore.words as word, i}
           <tr class="list">
-            <td class='l1'><span class="number">#{i + 1}</span></td>
-            {#if wordEditing !== i+1}
-            <td class='l2'><strong class="front">{word.front}</strong></td>
-            <td class='l2'><span class="back">{word.back}</span></td>
-            <td class='l3' colspan='2'><button onclick={() => wordEditing = i+1}>edit</button></td>
+            <td class="l1"><span class="number">#{i + 1}</span></td>
+            {#if wordEditing !== i + 1}
+              <td class="l2"><strong class="front">{word.front}</strong></td>
+              <td class="l2"><span class="back">{word.back}</span></td>
+              <td
+                class="l3"
+                colspan="2"><button onclick={() => (wordEditing = i + 1)}>edit</button></td
+              >
             {:else}
-              <td><input bind:value={word.front} type='text' /></td>
-              <td><input bind:value={word.back} type='text' /></td>
-              <td class='l4'><button onclick={() => wordEditing = 0}>edit_off</button></td>
-              <td class='l5'><button onclick={() => handleRemoveItem(word.id)}>delete</button></td>
+              <td
+              class='l6'
+                ><input
+                  bind:value={word.front}
+                  type="text"
+                /></td
+              >
+              <td class='l6'
+                ><input
+                  bind:value={word.back}
+                  type="text"
+                /></td
+              >
+              <td class="l4"><button onclick={() => (wordEditing = 0)}>edit_off</button></td>
+              <td class="l5"><button onclick={() => handleRemoveItem(word.id)}>delete</button></td>
             {/if}
           </tr>
         {/each}
@@ -165,13 +179,19 @@
             width: 60px;
           }
           .l2 {
-            width: calc(50% - 105px);
+            width: calc(50vw - 140px);
           }
           .l3 {
             width: 150px;
           }
-          .l4, .l5 {
+          .l4,
+          .l5 {
             width: 75px;
+          }
+          .l6 {
+            input {
+              max-width: calc(50vw - 40px);
+            }
           }
         }
       }
