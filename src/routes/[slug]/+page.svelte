@@ -132,6 +132,14 @@
     }
     .listT {
       width: 100%;
+      tr {
+        th {
+          border-bottom: 2px solid var(--foreground);
+        }
+        td {
+          border-bottom: 0.1px solid var(--foreground);
+        }
+      }
     }
   }
 </style>
