@@ -1,5 +1,7 @@
 {
   "name": "memon-app",
+  "description": "Memon is the best way to memorize something such as English words. Memory On your Memo.",
+  "homepage": "https://memon.cards",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -13,7 +15,6 @@
     "email": "wing@me.wing.osaka",
     "url": "https://wing.osaka/"
   },
-
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
