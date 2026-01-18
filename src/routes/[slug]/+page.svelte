@@ -92,12 +92,14 @@
           <th>No.</th>
           <th>おもて</th>
           <th>うら</th>
+          <th colspan='2'></th>
         </tr>
         {#each wordStore.words as word, i}
           <tr class="list">
             <td><span class="number">#{i + 1}</span></td>
             <td><strong class="front">{word.front}</strong></td>
             <td><span class="back">{word.back}</span></td>
+            <td><button>edit</button></td>
           </tr>
         {/each}
       </tbody>
@@ -133,11 +135,15 @@
     .listT {
       width: 100%;
       tr {
+        height: 40px;
         th {
           border-bottom: 2px solid var(--foreground);
         }
         td {
           border-bottom: 0.1px solid var(--foreground);
+          button {
+            font-family: 'Material Icons Round', sans-serif;
+          }
         }
       }
     }
