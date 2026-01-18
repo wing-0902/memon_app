@@ -4,11 +4,14 @@
   import { VERSION as SVELTEKIT_VERSION } from '@sveltejs/kit';
   import '$lib/styles/globals.scss';
 
-  import Start from '$lib/components/state/start.svelte';
+  import SetDisplayName from '$lib/components/state/setDisplayName.svelte';
 
   // フォント
   import '@fontsource/zen-kaku-gothic-new';
   import '@fontsource/zen-maru-gothic';
+
+  // レイアウト
+  import Header from '$lib/components/layouts/Header.svelte';
 </script>
 
 <svelte:head>
@@ -19,6 +22,10 @@
 </svelte:head>
 
 <div class="root">
-  <Start />
+  <Header />
   {@render children()}
+  <footer>
+    Memon v{__APP_VERSION__}
+  </footer>
+  <SetDisplayName />
 </div>
