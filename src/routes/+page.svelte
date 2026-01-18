@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { itemStore } from '$lib/data/list.svelte.ts';
+  import { itemStore } from '$lib/data/list.svelte';
 </script>
 
 <svelte:head>

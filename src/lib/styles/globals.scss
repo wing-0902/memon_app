@@ -42,7 +42,18 @@ body {
   input,
   textarea {
     font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 20px;
+    color: var(--foreground);
+    background: transparent;
+    border: 3px solid transparent;
+    border-bottom-color: var(--foregroumd);
+    outline: none;
+    &:focus {
+      color: var(--theme);
+      border-bottom-color: var(--theme);
+    }
   }
+  text-align: center;
 }
 
 .icon {
@@ -51,4 +62,13 @@ body {
 
 a {
   color: var(--theme);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 17px;
 }
