@@ -14,7 +14,7 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter(),
     prerender: {
-      handlehttperror: ({ path, referrer, message }) => {
+      handleHttpError: ({ path, referrer, message }) => {
         console.warn(`Prerender Warning: ${message} at ${path} (linked from ${referrer})`);
         return;
       }
