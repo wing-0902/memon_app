@@ -1,0 +1,2608 @@
+{
+  "MIT": [
+    {
+      "name": "@esbuild/linux-x64",
+      "versions": [
+        "0.27.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@esbuild+linux-x64@0.27.2/node_modules/@esbuild/linux-x64"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/evanw/esbuild#readme",
+      "description": "The Linux 64-bit binary for esbuild, a JavaScript bundler."
+    },
+    {
+      "name": "@eslint-community/eslint-utils",
+      "versions": [
+        "4.9.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint-community+eslint-utils@4.9.1_eslint@9.39.2/node_modules/@eslint-community/eslint-utils"
+      ],
+      "license": "MIT",
+      "author": "Toru Nagashima",
+      "homepage": "https://github.com/eslint-community/eslint-utils#readme",
+      "description": "Utilities for ESLint plugins."
+    },
+    {
+      "name": "@eslint-community/regexpp",
+      "versions": [
+        "4.12.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint-community+regexpp@4.12.2/node_modules/@eslint-community/regexpp"
+      ],
+      "license": "MIT",
+      "author": "Toru Nagashima",
+      "homepage": "https://github.com/eslint-community/regexpp#readme",
+      "description": "Regular expression parser for ECMAScript."
+    },
+    {
+      "name": "@eslint/eslintrc",
+      "versions": [
+        "3.3.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+eslintrc@3.3.3/node_modules/@eslint/eslintrc"
+      ],
+      "license": "MIT",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/eslintrc#readme",
+      "description": "The legacy ESLintRC config file format for ESLint"
+    },
+    {
+      "name": "@eslint/js",
+      "versions": [
+        "9.39.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+js@9.39.2/node_modules/@eslint/js"
+      ],
+      "license": "MIT",
+      "homepage": "https://eslint.org",
+      "description": "ESLint JavaScript language implementation"
+    },
+    {
+      "name": "@jridgewell/gen-mapping",
+      "versions": [
+        "0.3.13"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+gen-mapping@0.3.13/node_modules/@jridgewell/gen-mapping"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/gen-mapping",
+      "description": "Generate source maps"
+    },
+    {
+      "name": "@jridgewell/remapping",
+      "versions": [
+        "2.3.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+remapping@2.3.5/node_modules/@jridgewell/remapping"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/remapping",
+      "description": "Remap sequential sourcemaps through transformations to point at the original source code"
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "versions": [
+        "3.1.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+resolve-uri@3.1.2/node_modules/@jridgewell/resolve-uri"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/resolve-uri#readme",
+      "description": "Resolve a URI relative to an optional base URI"
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "versions": [
+        "1.5.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+sourcemap-codec@1.5.5/node_modules/@jridgewell/sourcemap-codec"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/sourcemap-codec",
+      "description": "Encode/decode sourcemap mappings"
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "versions": [
+        "0.3.31"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@jridgewell+trace-mapping@0.3.31/node_modules/@jridgewell/trace-mapping"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/trace-mapping",
+      "description": "Trace the original position through a source map"
+    },
+    {
+      "name": "@parcel/watcher",
+      "versions": [
+        "2.5.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@parcel+watcher@2.5.4/node_modules/@parcel/watcher"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/parcel-bundler/watcher#readme",
+      "description": "A native C++ Node module for querying and subscribing to filesystem events. Used by Parcel 2."
+    },
+    {
+      "name": "@parcel/watcher-linux-x64-glibc",
+      "versions": [
+        "2.5.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@parcel+watcher-linux-x64-glibc@2.5.4/node_modules/@parcel/watcher-linux-x64-glibc"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/parcel-bundler/watcher#readme",
+      "description": "A native C++ Node module for querying and subscribing to filesystem events. Used by Parcel 2."
+    },
+    {
+      "name": "@parcel/watcher-linux-x64-musl",
+      "versions": [
+        "2.5.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@parcel+watcher-linux-x64-musl@2.5.4/node_modules/@parcel/watcher-linux-x64-musl"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/parcel-bundler/watcher#readme",
+      "description": "A native C++ Node module for querying and subscribing to filesystem events. Used by Parcel 2."
+    },
+    {
+      "name": "@polka/url",
+      "versions": [
+        "1.0.0-next.29"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@polka+url@1.0.0-next.29/node_modules/@polka/url"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/polka#readme",
+      "description": "Super fast, memoized `req.url` parser"
+    },
+    {
+      "name": "@rollup/rollup-linux-x64-gnu",
+      "versions": [
+        "4.55.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@rollup+rollup-linux-x64-gnu@4.55.1/node_modules/@rollup/rollup-linux-x64-gnu"
+      ],
+      "license": "MIT",
+      "author": "Lukas Taegert-Atkinson",
+      "homepage": "https://rollupjs.org/",
+      "description": "Native bindings for Rollup"
+    },
+    {
+      "name": "@rollup/rollup-linux-x64-musl",
+      "versions": [
+        "4.55.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@rollup+rollup-linux-x64-musl@4.55.1/node_modules/@rollup/rollup-linux-x64-musl"
+      ],
+      "license": "MIT",
+      "author": "Lukas Taegert-Atkinson",
+      "homepage": "https://rollupjs.org/",
+      "description": "Native bindings for Rollup"
+    },
+    {
+      "name": "@standard-schema/spec",
+      "versions": [
+        "1.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@standard-schema+spec@1.1.0/node_modules/@standard-schema/spec"
+      ],
+      "license": "MIT",
+      "author": "Colin McDonnell",
+      "homepage": "https://standardschema.dev",
+      "description": "A family of specs for interoperable TypeScript"
+    },
+    {
+      "name": "@sveltejs/acorn-typescript",
+      "versions": [
+        "1.0.8"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+acorn-typescript@1.0.8_acorn@8.15.0/node_modules/@sveltejs/acorn-typescript"
+      ],
+      "license": "MIT",
+      "author": "tyrealhu and the Svelte team",
+      "homepage": "https://github.com/sveltejs/acorn-typescript#readme",
+      "description": "Acorn plugin that parses TypeScript"
+    },
+    {
+      "name": "@sveltejs/adapter-static",
+      "versions": [
+        "3.0.10"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+adapter-static@3.0.10_@sveltejs+kit@2.50.0_@sveltejs+vite-plugin-svelte@6.2.4_7bafe223dab06f767d080dccd10688d7/node_modules/@sveltejs/adapter-static"
+      ],
+      "license": "MIT",
+      "homepage": "https://svelte.dev/docs/kit/adapter-static",
+      "description": "Adapter for SvelteKit apps that prerenders your entire site as a collection of static files"
+    },
+    {
+      "name": "@sveltejs/kit",
+      "versions": [
+        "2.50.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+kit@2.50.0_@sveltejs+vite-plugin-svelte@6.2.4_svelte@5.46.4_vite@7.3.1_@types_4bd822d563cf41335b3894a4a0dc4e3d/node_modules/@sveltejs/kit"
+      ],
+      "license": "MIT",
+      "homepage": "https://svelte.dev",
+      "description": "SvelteKit is the fastest way to build Svelte apps"
+    },
+    {
+      "name": "@sveltejs/vite-plugin-svelte",
+      "versions": [
+        "6.2.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+vite-plugin-svelte@6.2.4_svelte@5.46.4_vite@7.3.1_@types+node@24.10.9_sass@1.97.2_/node_modules/@sveltejs/vite-plugin-svelte"
+      ],
+      "license": "MIT",
+      "author": "dominikg",
+      "homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme"
+    },
+    {
+      "name": "@sveltejs/vite-plugin-svelte-inspector",
+      "versions": [
+        "5.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@sveltejs+vite-plugin-svelte-inspector@5.0.2_@sveltejs+vite-plugin-svelte@6.2.4_svelte@_d9dd9de5f005deffcabbe7ad400fb47a/node_modules/@sveltejs/vite-plugin-svelte-inspector"
+      ],
+      "license": "MIT",
+      "author": "dominikg",
+      "homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme"
+    },
+    {
+      "name": "@types/cookie",
+      "versions": [
+        "0.6.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@types+cookie@0.6.0/node_modules/@types/cookie"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/cookie",
+      "description": "TypeScript definitions for cookie"
+    },
+    {
+      "name": "@types/estree",
+      "versions": [
+        "1.0.8"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@types+estree@1.0.8/node_modules/@types/estree"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree",
+      "description": "TypeScript definitions for estree"
+    },
+    {
+      "name": "@types/json-schema",
+      "versions": [
+        "7.0.15"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@types+json-schema@7.0.15/node_modules/@types/json-schema"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/json-schema",
+      "description": "TypeScript definitions for json-schema"
+    },
+    {
+      "name": "@types/mdast",
+      "versions": [
+        "4.0.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@types+mdast@4.0.4/node_modules/@types/mdast"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mdast",
+      "description": "TypeScript definitions for mdast"
+    },
+    {
+      "name": "@types/node",
+      "versions": [
+        "24.10.9"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@types+node@24.10.9/node_modules/@types/node"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+      "description": "TypeScript definitions for node"
+    },
+    {
+      "name": "@types/unist",
+      "versions": [
+        "2.0.11"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@types+unist@2.0.11/node_modules/@types/unist"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/unist",
+      "description": "TypeScript definitions for unist"
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.53.0_@typescript-eslint+parser@8.53.0_eslint@9.39.2__38c2b7dec4ddbcc926b825441bb32ab1/node_modules/@typescript-eslint/eslint-plugin"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/eslint-plugin",
+      "description": "TypeScript plugin for ESLint"
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+parser@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/@typescript-eslint/parser"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/parser",
+      "description": "An ESLint custom parser which leverages TypeScript ESTree"
+    },
+    {
+      "name": "@typescript-eslint/project-service",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+project-service@8.53.0_typescript@5.9.3/node_modules/@typescript-eslint/project-service"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Standalone TypeScript project service wrapper for linting."
+    },
+    {
+      "name": "@typescript-eslint/scope-manager",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+scope-manager@8.53.0/node_modules/@typescript-eslint/scope-manager"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/scope-manager",
+      "description": "TypeScript scope analyser for ESLint"
+    },
+    {
+      "name": "@typescript-eslint/tsconfig-utils",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+tsconfig-utils@8.53.0_typescript@5.9.3/node_modules/@typescript-eslint/tsconfig-utils"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Utilities for collecting TSConfigs for linting scenarios."
+    },
+    {
+      "name": "@typescript-eslint/type-utils",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+type-utils@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/@typescript-eslint/type-utils"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Type utilities for working with TypeScript + ESLint together"
+    },
+    {
+      "name": "@typescript-eslint/types",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+types@8.53.0/node_modules/@typescript-eslint/types"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Types for the TypeScript-ESTree AST spec"
+    },
+    {
+      "name": "@typescript-eslint/typescript-estree",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+typescript-estree@8.53.0_typescript@5.9.3/node_modules/@typescript-eslint/typescript-estree"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/typescript-estree",
+      "description": "A parser that converts TypeScript source code into an ESTree compatible form"
+    },
+    {
+      "name": "@typescript-eslint/utils",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+utils@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/@typescript-eslint/utils"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/utils",
+      "description": "Utilities for working with TypeScript + ESLint together"
+    },
+    {
+      "name": "@typescript-eslint/visitor-keys",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@typescript-eslint+visitor-keys@8.53.0/node_modules/@typescript-eslint/visitor-keys"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Visitor keys used to help traverse the TypeScript-ESTree AST"
+    },
+    {
+      "name": "acorn",
+      "versions": [
+        "8.15.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/acornjs/acorn",
+      "description": "ECMAScript parser"
+    },
+    {
+      "name": "acorn-jsx",
+      "versions": [
+        "5.3.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/acorn-jsx@5.3.2_acorn@8.15.0/node_modules/acorn-jsx"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/acornjs/acorn-jsx",
+      "description": "Modern, fast React.js JSX parser"
+    },
+    {
+      "name": "ajv",
+      "versions": [
+        "6.12.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/ajv@6.12.6/node_modules/ajv"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/ajv-validator/ajv",
+      "description": "Another JSON Schema Validator"
+    },
+    {
+      "name": "ansi-styles",
+      "versions": [
+        "4.3.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/ansi-styles@4.3.0/node_modules/ansi-styles"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/ansi-styles#readme",
+      "description": "ANSI escape codes for styling strings in the terminal"
+    },
+    {
+      "name": "array-find-index",
+      "versions": [
+        "1.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/array-find-index@1.0.2/node_modules/array-find-index"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/array-find-index#readme",
+      "description": "ES2015 `Array#findIndex()` ponyfill"
+    },
+    {
+      "name": "balanced-match",
+      "versions": [
+        "1.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/balanced-match@1.0.2/node_modules/balanced-match"
+      ],
+      "license": "MIT",
+      "author": "Julian Gruber",
+      "homepage": "https://github.com/juliangruber/balanced-match",
+      "description": "Match balanced character pairs, like \"{\" and \"}\""
+    },
+    {
+      "name": "brace-expansion",
+      "versions": [
+        "1.1.12",
+        "2.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/brace-expansion@1.1.12/node_modules/brace-expansion",
+        "/workspaces/memon_app/node_modules/.pnpm/brace-expansion@2.0.2/node_modules/brace-expansion"
+      ],
+      "license": "MIT",
+      "author": "Julian Gruber",
+      "homepage": "https://github.com/juliangruber/brace-expansion",
+      "description": "Brace expansion as known from sh/bash"
+    },
+    {
+      "name": "callsites",
+      "versions": [
+        "3.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/callsites@3.1.0/node_modules/callsites"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/callsites#readme",
+      "description": "Get callsites from the V8 stack trace API"
+    },
+    {
+      "name": "chalk",
+      "versions": [
+        "4.1.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/chalk@4.1.2/node_modules/chalk"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/chalk/chalk#readme",
+      "description": "Terminal string styling done right"
+    },
+    {
+      "name": "chokidar",
+      "versions": [
+        "4.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/chokidar@4.0.3/node_modules/chokidar"
+      ],
+      "license": "MIT",
+      "author": "Paul Miller",
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "description": "Minimal and efficient cross-platform file watching library"
+    },
+    {
+      "name": "clsx",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/clsx#readme",
+      "description": "A tiny (239B) utility for constructing className strings conditionally."
+    },
+    {
+      "name": "color-convert",
+      "versions": [
+        "2.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/color-convert@2.0.1/node_modules/color-convert"
+      ],
+      "license": "MIT",
+      "author": "Heather Arthur",
+      "homepage": "https://github.com/Qix-/color-convert#readme",
+      "description": "Plain color conversion functions"
+    },
+    {
+      "name": "color-name",
+      "versions": [
+        "1.1.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/color-name@1.1.4/node_modules/color-name"
+      ],
+      "license": "MIT",
+      "author": "DY",
+      "homepage": "https://github.com/colorjs/color-name",
+      "description": "A list of color names and its values"
+    },
+    {
+      "name": "commenting",
+      "versions": [
+        "1.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/commenting@1.1.0/node_modules/commenting"
+      ],
+      "license": "MIT",
+      "author": "Arnout Kazemier",
+      "homepage": "https://github.com/3rd-Eden/commenting#readme",
+      "description": "Wrap content in a comment that is valid for a given file type."
+    },
+    {
+      "name": "concat-map",
+      "versions": [
+        "0.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/concat-map@0.0.1/node_modules/concat-map"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/substack/node-concat-map#readme",
+      "description": "concatenative mapdashery"
+    },
+    {
+      "name": "cookie",
+      "versions": [
+        "0.6.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/cookie@0.6.0/node_modules/cookie"
+      ],
+      "license": "MIT",
+      "author": "Roman Shtylman",
+      "homepage": "https://github.com/jshttp/cookie#readme",
+      "description": "HTTP server cookie parsing and serialization"
+    },
+    {
+      "name": "cross-spawn",
+      "versions": [
+        "7.0.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/cross-spawn@7.0.6/node_modules/cross-spawn"
+      ],
+      "license": "MIT",
+      "author": "André Cruz",
+      "homepage": "https://github.com/moxystudio/node-cross-spawn",
+      "description": "Cross platform child_process#spawn and child_process#spawnSync"
+    },
+    {
+      "name": "cssesc",
+      "versions": [
+        "3.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/cssesc@3.0.0/node_modules/cssesc"
+      ],
+      "license": "MIT",
+      "author": "Mathias Bynens",
+      "homepage": "https://mths.be/cssesc",
+      "description": "A JavaScript library for escaping CSS strings and identifiers while generating the shortest possible ASCII-only output."
+    },
+    {
+      "name": "debug",
+      "versions": [
+        "4.4.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/debug@4.4.3/node_modules/debug"
+      ],
+      "license": "MIT",
+      "author": "Josh Junon",
+      "homepage": "https://github.com/debug-js/debug#readme",
+      "description": "Lightweight debugging utility for Node.js and the browser"
+    },
+    {
+      "name": "deep-is",
+      "versions": [
+        "0.1.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/deep-is@0.1.4/node_modules/deep-is"
+      ],
+      "license": "MIT",
+      "author": "Thorsten Lorenz",
+      "homepage": "https://github.com/thlorenz/deep-is#readme",
+      "description": "node's assert.deepEqual algorithm except for NaN being equal to NaN"
+    },
+    {
+      "name": "deepmerge",
+      "versions": [
+        "4.3.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/deepmerge@4.3.1/node_modules/deepmerge"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/TehShrike/deepmerge",
+      "description": "A library for deep (recursive) merging of Javascript objects"
+    },
+    {
+      "name": "devalue",
+      "versions": [
+        "5.6.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/devalue@5.6.2/node_modules/devalue"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/sveltejs/devalue#readme",
+      "description": "Gets the job done when JSON.stringify can't"
+    },
+    {
+      "name": "esbuild",
+      "versions": [
+        "0.27.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/evanw/esbuild#readme",
+      "description": "An extremely fast JavaScript and CSS bundler and minifier."
+    },
+    {
+      "name": "escape-string-regexp",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/escape-string-regexp@4.0.0/node_modules/escape-string-regexp"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/escape-string-regexp#readme",
+      "description": "Escape RegExp special characters"
+    },
+    {
+      "name": "eslint",
+      "versions": [
+        "9.39.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/eslint@9.39.2/node_modules/eslint"
+      ],
+      "license": "MIT",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://eslint.org",
+      "description": "An AST-based pattern checker for JavaScript."
+    },
+    {
+      "name": "eslint-config-prettier",
+      "versions": [
+        "10.1.8"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/eslint-config-prettier@10.1.8_eslint@9.39.2/node_modules/eslint-config-prettier"
+      ],
+      "license": "MIT",
+      "author": "Simon Lydell",
+      "homepage": "https://github.com/prettier/eslint-config-prettier#readme",
+      "description": "Turns off all rules that are unnecessary or might conflict with Prettier."
+    },
+    {
+      "name": "eslint-plugin-svelte",
+      "versions": [
+        "3.14.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/eslint-plugin-svelte@3.14.0_eslint@9.39.2_svelte@5.46.4/node_modules/eslint-plugin-svelte"
+      ],
+      "license": "MIT",
+      "author": "Yosuke Ota",
+      "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
+      "description": "ESLint plugin for Svelte using AST"
+    },
+    {
+      "name": "esm-env",
+      "versions": [
+        "1.2.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/esm-env@1.2.2/node_modules/esm-env"
+      ],
+      "license": "MIT",
+      "author": "Ben McCann",
+      "homepage": "https://github.com/benmccann/esm-env"
+    },
+    {
+      "name": "esrap",
+      "versions": [
+        "2.2.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/esrap@2.2.1/node_modules/esrap"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/sveltejs/esrap#readme",
+      "description": "Parse in reverse"
+    },
+    {
+      "name": "fast-deep-equal",
+      "versions": [
+        "3.1.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/fast-deep-equal@3.1.3/node_modules/fast-deep-equal"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/epoberezkin/fast-deep-equal#readme",
+      "description": "Fast deep equal"
+    },
+    {
+      "name": "fast-json-stable-stringify",
+      "versions": [
+        "2.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/fast-json-stable-stringify@2.1.0/node_modules/fast-json-stable-stringify"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/epoberezkin/fast-json-stable-stringify",
+      "description": "deterministic `JSON.stringify()` - a faster version of substack's json-stable-strigify without jsonify"
+    },
+    {
+      "name": "fast-levenshtein",
+      "versions": [
+        "2.0.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/fast-levenshtein@2.0.6/node_modules/fast-levenshtein"
+      ],
+      "license": "MIT",
+      "author": "Ramesh Nair",
+      "homepage": "https://github.com/hiddentao/fast-levenshtein#readme",
+      "description": "Efficient implementation of Levenshtein algorithm  with locale-specific collator support."
+    },
+    {
+      "name": "fdir",
+      "versions": [
+        "6.5.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/fdir@6.5.0_picomatch@4.0.3/node_modules/fdir"
+      ],
+      "license": "MIT",
+      "author": "thecodrr",
+      "homepage": "https://github.com/thecodrr/fdir#readme",
+      "description": "The fastest directory crawler & globbing alternative to glob, fast-glob, & tiny-glob. Crawls 1m files in < 1s"
+    },
+    {
+      "name": "file-entry-cache",
+      "versions": [
+        "8.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/file-entry-cache@8.0.0/node_modules/file-entry-cache"
+      ],
+      "license": "MIT",
+      "author": "Jared Wray",
+      "homepage": "https://github.com/jaredwray/file-entry-cache#readme",
+      "description": "Super simple cache for file metadata, useful for process that work o a given series of files and that only need to repeat the job on the changed ones since the previous run of the process"
+    },
+    {
+      "name": "find-up",
+      "versions": [
+        "5.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/find-up@5.0.0/node_modules/find-up"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/find-up#readme",
+      "description": "Find a file or directory by walking up parent directories"
+    },
+    {
+      "name": "flat-cache",
+      "versions": [
+        "4.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/flat-cache@4.0.1/node_modules/flat-cache"
+      ],
+      "license": "MIT",
+      "author": "Jared Wray",
+      "homepage": "https://github.com/jaredwray/flat-cache#readme",
+      "description": "A stupidly simple key/value storage using files to persist some data"
+    },
+    {
+      "name": "globals",
+      "versions": [
+        "14.0.0",
+        "16.5.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/globals@14.0.0/node_modules/globals",
+        "/workspaces/memon_app/node_modules/.pnpm/globals@16.5.0/node_modules/globals"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/globals#readme",
+      "description": "Global identifiers from different JavaScript environments"
+    },
+    {
+      "name": "has-flag",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/has-flag@4.0.0/node_modules/has-flag"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/has-flag#readme",
+      "description": "Check if argv has a specific flag"
+    },
+    {
+      "name": "ignore",
+      "versions": [
+        "5.3.2",
+        "7.0.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/ignore@5.3.2/node_modules/ignore",
+        "/workspaces/memon_app/node_modules/.pnpm/ignore@7.0.5/node_modules/ignore"
+      ],
+      "license": "MIT",
+      "author": "kael",
+      "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+      "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others."
+    },
+    {
+      "name": "immediate",
+      "versions": [
+        "3.0.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/immediate@3.0.6/node_modules/immediate"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/calvinmetcalf/immediate#readme",
+      "description": "A cross browser microtask library"
+    },
+    {
+      "name": "immutable",
+      "versions": [
+        "5.1.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/immutable@5.1.4/node_modules/immutable"
+      ],
+      "license": "MIT",
+      "author": "Lee Byron",
+      "homepage": "https://immutable-js.com",
+      "description": "Immutable Data Collections"
+    },
+    {
+      "name": "import-fresh",
+      "versions": [
+        "3.3.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/import-fresh@3.3.1/node_modules/import-fresh"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/import-fresh#readme",
+      "description": "Import a module while bypassing the cache"
+    },
+    {
+      "name": "imurmurhash",
+      "versions": [
+        "0.1.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/imurmurhash@0.1.4/node_modules/imurmurhash"
+      ],
+      "license": "MIT",
+      "author": "Jens Taylor",
+      "homepage": "https://github.com/jensyt/imurmurhash-js",
+      "description": "An incremental implementation of MurmurHash3"
+    },
+    {
+      "name": "is-extglob",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/is-extglob@2.1.1/node_modules/is-extglob"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/is-extglob",
+      "description": "Returns true if a string has an extglob."
+    },
+    {
+      "name": "is-glob",
+      "versions": [
+        "4.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/is-glob@4.0.3/node_modules/is-glob"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/micromatch/is-glob",
+      "description": "Returns `true` if the given string looks like a glob pattern or an extglob pattern. This makes it easy to create code that only uses external modules like node-glob when necessary, resulting in much faster code execution and initialization time, and a better user experience."
+    },
+    {
+      "name": "is-reference",
+      "versions": [
+        "3.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/is-reference@3.0.3/node_modules/is-reference"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://github.com/Rich-Harris/is-reference#readme",
+      "description": "Determine whether an AST node is a reference"
+    },
+    {
+      "name": "js-yaml",
+      "versions": [
+        "4.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/js-yaml@4.1.1/node_modules/js-yaml"
+      ],
+      "license": "MIT",
+      "author": "Vladimir Zapparov",
+      "homepage": "https://github.com/nodeca/js-yaml#readme",
+      "description": "YAML 1.2 parser and serializer"
+    },
+    {
+      "name": "json-buffer",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/json-buffer@3.0.1/node_modules/json-buffer"
+      ],
+      "license": "MIT",
+      "author": "Dominic Tarr",
+      "homepage": "https://github.com/dominictarr/json-buffer",
+      "description": "JSON parse & stringify that supports binary via bops & base64"
+    },
+    {
+      "name": "json-schema-traverse",
+      "versions": [
+        "0.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/json-schema-traverse@0.4.1/node_modules/json-schema-traverse"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/epoberezkin/json-schema-traverse#readme",
+      "description": "Traverse JSON Schema passing each schema object to callback"
+    },
+    {
+      "name": "json-stable-stringify-without-jsonify",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/json-stable-stringify-without-jsonify@1.0.1/node_modules/json-stable-stringify-without-jsonify"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/samn/json-stable-stringify",
+      "description": "deterministic JSON.stringify() with custom sorting to get deterministic hashes from stringified results, with no public domain dependencies"
+    },
+    {
+      "name": "keyv",
+      "versions": [
+        "4.5.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/keyv@4.5.4/node_modules/keyv"
+      ],
+      "license": "MIT",
+      "author": "Jared Wray",
+      "homepage": "https://github.com/jaredwray/keyv",
+      "description": "Simple key-value storage with support for multiple backends"
+    },
+    {
+      "name": "kleur",
+      "versions": [
+        "4.1.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/kleur@4.1.5/node_modules/kleur"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/kleur#readme",
+      "description": "The fastest Node.js library for formatting terminal text with ANSI colors~!"
+    },
+    {
+      "name": "known-css-properties",
+      "versions": [
+        "0.37.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/known-css-properties@0.37.0/node_modules/known-css-properties"
+      ],
+      "license": "MIT",
+      "author": "Viorel Cojocaru",
+      "homepage": "https://github.com/known-css/known-css-properties#readme",
+      "description": "List of known CSS properties"
+    },
+    {
+      "name": "levn",
+      "versions": [
+        "0.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/levn@0.4.1/node_modules/levn"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "https://github.com/gkz/levn",
+      "description": "Light ECMAScript (JavaScript) Value Notation - human written, concise, typed, flexible"
+    },
+    {
+      "name": "lie",
+      "versions": [
+        "3.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/lie@3.1.1/node_modules/lie"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/calvinmetcalf/lie#readme",
+      "description": "A basic but performant promise implementation"
+    },
+    {
+      "name": "lilconfig",
+      "versions": [
+        "2.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/lilconfig@2.1.0/node_modules/lilconfig"
+      ],
+      "license": "MIT",
+      "author": "antonk52",
+      "homepage": "https://github.com/antonk52/lilconfig#readme",
+      "description": "A zero-dependency alternative to cosmiconfig"
+    },
+    {
+      "name": "locate-character",
+      "versions": [
+        "3.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/locate-character@3.0.0/node_modules/locate-character"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://gitlab.com/Rich-Harris/locate-character#README",
+      "description": "Get the line and column number of a specific character in a string"
+    },
+    {
+      "name": "locate-path",
+      "versions": [
+        "6.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/locate-path@6.0.0/node_modules/locate-path"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/locate-path#readme",
+      "description": "Get the first path that exists on disk of multiple paths"
+    },
+    {
+      "name": "lodash",
+      "versions": [
+        "4.17.21"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/lodash@4.17.21/node_modules/lodash"
+      ],
+      "license": "MIT",
+      "author": "John-David Dalton",
+      "homepage": "https://lodash.com/",
+      "description": "Lodash modular utilities."
+    },
+    {
+      "name": "lodash.merge",
+      "versions": [
+        "4.6.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/lodash.merge@4.6.2/node_modules/lodash.merge"
+      ],
+      "license": "MIT",
+      "author": "John-David Dalton",
+      "homepage": "https://lodash.com/",
+      "description": "The Lodash method `_.merge` exported as a module."
+    },
+    {
+      "name": "magic-string",
+      "versions": [
+        "0.30.21"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/magic-string@0.30.21/node_modules/magic-string"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://github.com/Rich-Harris/magic-string#readme",
+      "description": "Modify strings, generate sourcemaps"
+    },
+    {
+      "name": "mdsvex",
+      "versions": [
+        "0.12.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/mdsvex@0.12.6_svelte@5.46.4/node_modules/mdsvex"
+      ],
+      "license": "MIT",
+      "author": "pngwn",
+      "homepage": "https://github.com/pngwn/MDsveX#readme",
+      "description": "Markdown preprocessor for Svelte"
+    },
+    {
+      "name": "moment",
+      "versions": [
+        "2.30.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/moment@2.30.1/node_modules/moment"
+      ],
+      "license": "MIT",
+      "author": "Iskren Ivov Chernev",
+      "homepage": "https://momentjs.com",
+      "description": "Parse, validate, manipulate, and display dates"
+    },
+    {
+      "name": "mri",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/mri@1.2.0/node_modules/mri"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/mri#readme",
+      "description": "Quickly scan for CLI flags and arguments"
+    },
+    {
+      "name": "mrmime",
+      "versions": [
+        "2.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/mrmime@2.0.1/node_modules/mrmime"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/mrmime#readme",
+      "description": "A tiny (2.8kB) and fast utility for getting a MIME type from an extension or filename"
+    },
+    {
+      "name": "ms",
+      "versions": [
+        "2.1.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/ms@2.1.3/node_modules/ms"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/vercel/ms#readme",
+      "description": "Tiny millisecond conversion utility"
+    },
+    {
+      "name": "nanoid",
+      "versions": [
+        "3.3.11"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/nanoid@3.3.11/node_modules/nanoid"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://github.com/ai/nanoid#readme",
+      "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator"
+    },
+    {
+      "name": "natural-compare",
+      "versions": [
+        "1.4.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/natural-compare@1.4.0/node_modules/natural-compare"
+      ],
+      "license": "MIT",
+      "author": "Lauri Rooden",
+      "homepage": "https://github.com/litejs/natural-compare-lite#readme",
+      "description": "Compare strings containing a mix of letters and numbers in the way a human being would in sort order."
+    },
+    {
+      "name": "node-addon-api",
+      "versions": [
+        "7.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/node-addon-api@7.1.1/node_modules/node-addon-api"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/nodejs/node-addon-api",
+      "description": "Node.js API (Node-API)"
+    },
+    {
+      "name": "obug",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/obug@2.1.1/node_modules/obug"
+      ],
+      "license": "MIT",
+      "author": "Kevin Deng",
+      "homepage": "https://github.com/sxzz/obug#readme",
+      "description": "A lightweight JavaScript debugging utility, forked from debug, featuring TypeScript and ESM support."
+    },
+    {
+      "name": "optionator",
+      "versions": [
+        "0.9.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/optionator@0.9.4/node_modules/optionator"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "https://github.com/gkz/optionator",
+      "description": "option parsing and help generation"
+    },
+    {
+      "name": "p-limit",
+      "versions": [
+        "3.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/p-limit@3.1.0/node_modules/p-limit"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/p-limit#readme",
+      "description": "Run multiple promise-returning & async functions with limited concurrency"
+    },
+    {
+      "name": "p-locate",
+      "versions": [
+        "5.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/p-locate@5.0.0/node_modules/p-locate"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/p-locate#readme",
+      "description": "Get the first fulfilled promise that satisfies the provided testing function"
+    },
+    {
+      "name": "package-name-regex",
+      "versions": [
+        "2.0.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/package-name-regex@2.0.6/node_modules/package-name-regex"
+      ],
+      "license": "MIT",
+      "author": "Sebastian Landwehr",
+      "homepage": "https://github.com/dword-design/package-name-regex#readme",
+      "description": "Provides a regex that can be used to test if a string is a valid NPM package name."
+    },
+    {
+      "name": "parent-module",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/parent-module@1.0.1/node_modules/parent-module"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/parent-module#readme",
+      "description": "Get the path of the parent module"
+    },
+    {
+      "name": "path-exists",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/path-exists@4.0.0/node_modules/path-exists"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/path-exists#readme",
+      "description": "Check if a path exists"
+    },
+    {
+      "name": "path-key",
+      "versions": [
+        "3.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/path-key@3.1.1/node_modules/path-key"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/path-key#readme",
+      "description": "Get the PATH environment variable key cross-platform"
+    },
+    {
+      "name": "picomatch",
+      "versions": [
+        "4.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/picomatch@4.0.3/node_modules/picomatch"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/micromatch/picomatch",
+      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions."
+    },
+    {
+      "name": "postcss",
+      "versions": [
+        "8.5.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/postcss@8.5.6/node_modules/postcss"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://postcss.org/",
+      "description": "Tool for transforming styles with JS plugins"
+    },
+    {
+      "name": "postcss-load-config",
+      "versions": [
+        "3.1.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/postcss-load-config@3.1.4_postcss@8.5.6/node_modules/postcss-load-config"
+      ],
+      "license": "MIT",
+      "author": "Michael Ciniawky",
+      "homepage": "https://github.com/postcss/postcss-load-config#readme",
+      "description": "Autoload Config for PostCSS"
+    },
+    {
+      "name": "postcss-safe-parser",
+      "versions": [
+        "7.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/postcss-safe-parser@7.0.1_postcss@8.5.6/node_modules/postcss-safe-parser"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://github.com/postcss/postcss-safe-parser#readme",
+      "description": "Fault-tolerant CSS parser for PostCSS"
+    },
+    {
+      "name": "postcss-scss",
+      "versions": [
+        "4.0.9"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/postcss-scss@4.0.9_postcss@8.5.6/node_modules/postcss-scss"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://github.com/postcss/postcss-scss#readme",
+      "description": "SCSS parser for PostCSS"
+    },
+    {
+      "name": "postcss-selector-parser",
+      "versions": [
+        "7.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/postcss-selector-parser@7.1.1/node_modules/postcss-selector-parser"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/postcss/postcss-selector-parser"
+    },
+    {
+      "name": "prelude-ls",
+      "versions": [
+        "1.2.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/prelude-ls@1.2.1/node_modules/prelude-ls"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "http://preludels.com",
+      "description": "prelude.ls is a functionally oriented utility library. It is powerful and flexible. Almost all of its functions are curried. It is written in, and is the recommended base library for, LiveScript."
+    },
+    {
+      "name": "prettier",
+      "versions": [
+        "3.8.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/prettier@3.8.0/node_modules/prettier"
+      ],
+      "license": "MIT",
+      "author": "James Long",
+      "homepage": "https://prettier.io",
+      "description": "Prettier is an opinionated code formatter"
+    },
+    {
+      "name": "prettier-plugin-svelte",
+      "versions": [
+        "3.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/prettier-plugin-svelte@3.4.1_prettier@3.8.0_svelte@5.46.4/node_modules/prettier-plugin-svelte"
+      ],
+      "license": "MIT",
+      "author": "James Birtles",
+      "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
+      "description": "Svelte plugin for prettier"
+    },
+    {
+      "name": "prism-svelte",
+      "versions": [
+        "0.4.7"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/prism-svelte@0.4.7/node_modules/prism-svelte"
+      ],
+      "license": "MIT",
+      "author": "pngwn",
+      "homepage": "https://github.com/pngwn/prism-svelte#readme",
+      "description": "Svelte language extension for prismjs"
+    },
+    {
+      "name": "prismjs",
+      "versions": [
+        "1.30.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/prismjs@1.30.0/node_modules/prismjs"
+      ],
+      "license": "MIT",
+      "author": "Lea Verou",
+      "homepage": "https://github.com/PrismJS/prism#readme",
+      "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet."
+    },
+    {
+      "name": "punycode",
+      "versions": [
+        "2.3.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/punycode@2.3.1/node_modules/punycode"
+      ],
+      "license": "MIT",
+      "author": "Mathias Bynens",
+      "homepage": "https://mths.be/punycode",
+      "description": "A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms."
+    },
+    {
+      "name": "readdirp",
+      "versions": [
+        "4.1.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/readdirp@4.1.2/node_modules/readdirp"
+      ],
+      "license": "MIT",
+      "author": "Thorsten Lorenz",
+      "homepage": "https://github.com/paulmillr/readdirp",
+      "description": "Recursive version of fs.readdir with small RAM & CPU footprint."
+    },
+    {
+      "name": "resolve-from",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/resolve-from@4.0.0/node_modules/resolve-from"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/resolve-from#readme",
+      "description": "Resolve the path of a module like `require.resolve()` but from a given path"
+    },
+    {
+      "name": "rollup",
+      "versions": [
+        "4.55.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/rollup@4.55.1/node_modules/rollup"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://rollupjs.org/",
+      "description": "Next-generation ES module bundler"
+    },
+    {
+      "name": "rollup-plugin-license",
+      "versions": [
+        "3.6.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/rollup-plugin-license@3.6.0_picomatch@4.0.3_rollup@4.55.1/node_modules/rollup-plugin-license"
+      ],
+      "license": "MIT",
+      "author": "Mickael Jeanroy",
+      "homepage": "https://github.com/mjeanroy/rollup-plugin-license",
+      "description": "Rollup plugin to add license banner to the final bundle and output third party licenses"
+    },
+    {
+      "name": "sade",
+      "versions": [
+        "1.8.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/sade@1.8.1/node_modules/sade"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/sade#readme",
+      "description": "Smooth (CLI) operator 🎶"
+    },
+    {
+      "name": "sass",
+      "versions": [
+        "1.97.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/sass@1.97.2/node_modules/sass"
+      ],
+      "license": "MIT",
+      "author": "Natalie Weizenbaum",
+      "homepage": "https://github.com/sass/dart-sass",
+      "description": "A pure JavaScript implementation of Sass."
+    },
+    {
+      "name": "set-cookie-parser",
+      "versions": [
+        "2.7.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/set-cookie-parser@2.7.2/node_modules/set-cookie-parser"
+      ],
+      "license": "MIT",
+      "author": "Nathan Friedly",
+      "homepage": "https://github.com/nfriedly/set-cookie-parser",
+      "description": "Parses set-cookie headers into objects"
+    },
+    {
+      "name": "shebang-command",
+      "versions": [
+        "2.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/shebang-command@2.0.0/node_modules/shebang-command"
+      ],
+      "license": "MIT",
+      "author": "Kevin Mårtensson",
+      "homepage": "https://github.com/kevva/shebang-command#readme",
+      "description": "Get the command from a shebang"
+    },
+    {
+      "name": "shebang-regex",
+      "versions": [
+        "3.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/shebang-regex@3.0.0/node_modules/shebang-regex"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/shebang-regex#readme",
+      "description": "Regular expression for matching a shebang line"
+    },
+    {
+      "name": "sirv",
+      "versions": [
+        "3.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/sirv@3.0.2/node_modules/sirv"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/sirv#readme",
+      "description": "The optimized & lightweight middleware for serving requests to static assets"
+    },
+    {
+      "name": "spdx-compare",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-compare@1.0.0/node_modules/spdx-compare"
+      ],
+      "license": "MIT",
+      "author": "Kyle E. Mitchell",
+      "homepage": "https://github.com/kemitchell/spdx-compare.js#readme",
+      "description": "compare SPDX license expressions"
+    },
+    {
+      "name": "spdx-expression-parse",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-expression-parse@3.0.1/node_modules/spdx-expression-parse"
+      ],
+      "license": "MIT",
+      "author": "Kyle E. Mitchell",
+      "homepage": "https://github.com/jslicense/spdx-expression-parse.js#readme",
+      "description": "parse SPDX license expressions"
+    },
+    {
+      "name": "spdx-satisfies",
+      "versions": [
+        "5.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-satisfies@5.0.1/node_modules/spdx-satisfies"
+      ],
+      "license": "MIT",
+      "author": "Kyle E. Mitchell",
+      "homepage": "https://github.com/kemitchell/spdx-satisfies.js#readme",
+      "description": "test whether SPDX expressions satisfy licensing criteria"
+    },
+    {
+      "name": "strip-json-comments",
+      "versions": [
+        "3.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/strip-json-comments@3.1.1/node_modules/strip-json-comments"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/strip-json-comments#readme",
+      "description": "Strip comments from JSON. Lets you use comments in your JSON files!"
+    },
+    {
+      "name": "supports-color",
+      "versions": [
+        "7.2.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/supports-color@7.2.0/node_modules/supports-color"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/supports-color#readme",
+      "description": "Detect whether a terminal supports color"
+    },
+    {
+      "name": "svelte",
+      "versions": [
+        "5.46.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/svelte@5.46.4/node_modules/svelte"
+      ],
+      "license": "MIT",
+      "homepage": "https://svelte.dev",
+      "description": "Cybernetically enhanced web apps"
+    },
+    {
+      "name": "svelte-check",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/svelte-check@4.3.5_picomatch@4.0.3_svelte@5.46.4_typescript@5.9.3/node_modules/svelte-check"
+      ],
+      "license": "MIT",
+      "author": "The Svelte Community",
+      "homepage": "https://github.com/sveltejs/language-tools#readme",
+      "description": "Svelte Code Checker Terminal Interface"
+    },
+    {
+      "name": "svelte-eslint-parser",
+      "versions": [
+        "1.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/svelte-eslint-parser@1.4.1_svelte@5.46.4/node_modules/svelte-eslint-parser"
+      ],
+      "license": "MIT",
+      "author": "Yosuke Ota",
+      "homepage": "https://github.com/sveltejs/svelte-eslint-parser#readme",
+      "description": "Svelte parser for ESLint"
+    },
+    {
+      "name": "tinyglobby",
+      "versions": [
+        "0.2.15"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/tinyglobby@0.2.15/node_modules/tinyglobby"
+      ],
+      "license": "MIT",
+      "author": "Superchupu",
+      "homepage": "https://superchupu.dev/tinyglobby",
+      "description": "A fast and minimal alternative to globby and fast-glob"
+    },
+    {
+      "name": "totalist",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/totalist@3.0.1/node_modules/totalist"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/totalist#readme",
+      "description": "A tiny (195B to 220B) utility to recursively list all (total) files in a directory"
+    },
+    {
+      "name": "ts-api-utils",
+      "versions": [
+        "2.4.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/ts-api-utils@2.4.0_typescript@5.9.3/node_modules/ts-api-utils"
+      ],
+      "license": "MIT",
+      "author": "JoshuaKGoldberg",
+      "homepage": "https://github.com/JoshuaKGoldberg/ts-api-utils#readme",
+      "description": "Utility functions for working with TypeScript's API. Successor to the wonderful tsutils. 🛠️️"
+    },
+    {
+      "name": "type-check",
+      "versions": [
+        "0.4.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/type-check@0.4.0/node_modules/type-check"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "https://github.com/gkz/type-check",
+      "description": "type-check allows you to check the types of JavaScript values at runtime with a Haskell like type syntax."
+    },
+    {
+      "name": "typescript-eslint",
+      "versions": [
+        "8.53.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/typescript-eslint@8.53.0_eslint@9.39.2_typescript@5.9.3/node_modules/typescript-eslint"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/typescript-eslint",
+      "description": "Tooling which enables you to use TypeScript with ESLint"
+    },
+    {
+      "name": "undici-types",
+      "versions": [
+        "7.16.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/undici-types@7.16.0/node_modules/undici-types"
+      ],
+      "license": "MIT",
+      "homepage": "https://undici.nodejs.org",
+      "description": "A stand-alone types package for Undici"
+    },
+    {
+      "name": "unist-util-is",
+      "versions": [
+        "4.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/unist-util-is@4.1.0/node_modules/unist-util-is"
+      ],
+      "license": "MIT",
+      "author": "Titus Wormer",
+      "homepage": "https://github.com/syntax-tree/unist-util-is#readme",
+      "description": "unist utility to check if a node passes a test"
+    },
+    {
+      "name": "unist-util-stringify-position",
+      "versions": [
+        "2.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/unist-util-stringify-position@2.0.3/node_modules/unist-util-stringify-position"
+      ],
+      "license": "MIT",
+      "author": "Titus Wormer",
+      "homepage": "https://github.com/syntax-tree/unist-util-stringify-position#readme",
+      "description": "unist utility to serialize a node, position, or point as a human readable location"
+    },
+    {
+      "name": "unist-util-visit",
+      "versions": [
+        "2.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/unist-util-visit@2.0.3/node_modules/unist-util-visit"
+      ],
+      "license": "MIT",
+      "author": "Titus Wormer",
+      "homepage": "https://github.com/syntax-tree/unist-util-visit#readme",
+      "description": "unist utility to visit nodes"
+    },
+    {
+      "name": "unist-util-visit-parents",
+      "versions": [
+        "3.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/unist-util-visit-parents@3.1.1/node_modules/unist-util-visit-parents"
+      ],
+      "license": "MIT",
+      "author": "Titus Wormer",
+      "homepage": "https://github.com/syntax-tree/unist-util-visit-parents#readme",
+      "description": "unist utility to recursively walk over nodes, with ancestral information"
+    },
+    {
+      "name": "util-deprecate",
+      "versions": [
+        "1.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/util-deprecate@1.0.2/node_modules/util-deprecate"
+      ],
+      "license": "MIT",
+      "author": "Nathan Rajlich",
+      "homepage": "https://github.com/TooTallNate/util-deprecate",
+      "description": "The Node.js `util.deprecate()` function with browser support"
+    },
+    {
+      "name": "vfile-message",
+      "versions": [
+        "2.0.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/vfile-message@2.0.4/node_modules/vfile-message"
+      ],
+      "license": "MIT",
+      "author": "Titus Wormer",
+      "homepage": "https://github.com/vfile/vfile-message#readme",
+      "description": "vfile utility to create a virtual message"
+    },
+    {
+      "name": "vite",
+      "versions": [
+        "7.3.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/vite@7.3.1_@types+node@24.10.9_sass@1.97.2/node_modules/vite"
+      ],
+      "license": "MIT",
+      "author": "Evan You",
+      "homepage": "https://vite.dev",
+      "description": "Native-ESM powered web dev build tool"
+    },
+    {
+      "name": "vitefu",
+      "versions": [
+        "1.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/vitefu@1.1.1_vite@7.3.1_@types+node@24.10.9_sass@1.97.2_/node_modules/vitefu"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/svitejs/vitefu#readme",
+      "description": "Utilities for building frameworks with Vite"
+    },
+    {
+      "name": "word-wrap",
+      "versions": [
+        "1.2.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/word-wrap@1.2.5/node_modules/word-wrap"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/word-wrap",
+      "description": "Wrap words to a specified length."
+    },
+    {
+      "name": "yocto-queue",
+      "versions": [
+        "0.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/yocto-queue@0.1.0/node_modules/yocto-queue"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/yocto-queue#readme",
+      "description": "Tiny queue data structure"
+    },
+    {
+      "name": "zimmerframe",
+      "versions": [
+        "1.1.4"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/zimmerframe@1.1.4/node_modules/zimmerframe"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/sveltejs/zimmerframe#readme",
+      "description": "A tool for walking ASTs"
+    }
+  ],
+  "Apache-2.0": [
+    {
+      "name": "@eslint/compat",
+      "versions": [
+        "1.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+compat@1.4.1_eslint@9.39.2/node_modules/@eslint/compat"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/compat#readme",
+      "description": "Compatibility utilities for ESLint"
+    },
+    {
+      "name": "@eslint/config-array",
+      "versions": [
+        "0.21.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+config-array@0.21.1/node_modules/@eslint/config-array"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/config-array#readme",
+      "description": "General purpose glob-based configuration matching."
+    },
+    {
+      "name": "@eslint/config-helpers",
+      "versions": [
+        "0.4.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+config-helpers@0.4.2/node_modules/@eslint/config-helpers"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/config-helpers#readme",
+      "description": "Helper utilities for creating ESLint configuration"
+    },
+    {
+      "name": "@eslint/core",
+      "versions": [
+        "0.17.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+core@0.17.0/node_modules/@eslint/core"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/core#readme",
+      "description": "Runtime-agnostic core of ESLint"
+    },
+    {
+      "name": "@eslint/object-schema",
+      "versions": [
+        "2.1.7"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+object-schema@2.1.7/node_modules/@eslint/object-schema"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/object-schema#readme",
+      "description": "An object schema merger/validator"
+    },
+    {
+      "name": "@eslint/plugin-kit",
+      "versions": [
+        "0.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@eslint+plugin-kit@0.4.1/node_modules/@eslint/plugin-kit"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/plugin-kit#readme",
+      "description": "Utilities for building ESLint plugins."
+    },
+    {
+      "name": "@humanfs/core",
+      "versions": [
+        "0.19.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@humanfs+core@0.19.1/node_modules/@humanfs/core"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/humanwhocodes/humanfs#readme",
+      "description": "The core of the humanfs library."
+    },
+    {
+      "name": "@humanfs/node",
+      "versions": [
+        "0.16.7"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@humanfs+node@0.16.7/node_modules/@humanfs/node"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/humanwhocodes/humanfs#readme",
+      "description": "The Node.js bindings of the humanfs library."
+    },
+    {
+      "name": "@humanwhocodes/module-importer",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@humanwhocodes+module-importer@1.0.1/node_modules/@humanwhocodes/module-importer"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zaks",
+      "homepage": "https://github.com/humanwhocodes/module-importer#readme",
+      "description": "Universal module importer for Node.js"
+    },
+    {
+      "name": "@humanwhocodes/retry",
+      "versions": [
+        "0.4.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@humanwhocodes+retry@0.4.3/node_modules/@humanwhocodes/retry"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zaks",
+      "homepage": "https://github.com/humanwhocodes/retry#readme",
+      "description": "A utility to retry failed async methods."
+    },
+    {
+      "name": "aria-query",
+      "versions": [
+        "5.3.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/aria-query@5.3.2/node_modules/aria-query"
+      ],
+      "license": "Apache-2.0",
+      "author": "Jesse Beach",
+      "homepage": "https://github.com/A11yance/aria-query#readme",
+      "description": "Programmatic access to the ARIA specification"
+    },
+    {
+      "name": "axobject-query",
+      "versions": [
+        "4.1.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/axobject-query@4.1.0/node_modules/axobject-query"
+      ],
+      "license": "Apache-2.0",
+      "author": "Jesse Beach",
+      "homepage": "https://github.com/A11yance/axobject-query#readme",
+      "description": "Programmatic access to information about the AXObject Model"
+    },
+    {
+      "name": "detect-libc",
+      "versions": [
+        "2.1.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/detect-libc@2.1.2/node_modules/detect-libc"
+      ],
+      "license": "Apache-2.0",
+      "author": "Lovell Fuller",
+      "homepage": "https://github.com/lovell/detect-libc#readme",
+      "description": "Node.js module to detect the C standard library (libc) implementation family and version"
+    },
+    {
+      "name": "eslint-visitor-keys",
+      "versions": [
+        "3.4.3",
+        "4.2.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/eslint-visitor-keys@3.4.3/node_modules/eslint-visitor-keys",
+        "/workspaces/memon_app/node_modules/.pnpm/eslint-visitor-keys@4.2.1/node_modules/eslint-visitor-keys"
+      ],
+      "license": "Apache-2.0",
+      "author": "Toru Nagashima",
+      "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-visitor-keys/README.md",
+      "description": "Constants and utilities about visitor keys to traverse AST."
+    },
+    {
+      "name": "localforage",
+      "versions": [
+        "1.10.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/localforage@1.10.0/node_modules/localforage"
+      ],
+      "license": "Apache-2.0",
+      "author": "Mozilla",
+      "homepage": "https://github.com/localForage/localForage",
+      "description": "Offline storage, improved."
+    },
+    {
+      "name": "typescript",
+      "versions": [
+        "5.9.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/typescript@5.9.3/node_modules/typescript"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corp.",
+      "homepage": "https://www.typescriptlang.org/",
+      "description": "TypeScript is a language for application scale JavaScript development"
+    }
+  ],
+  "OFL-1.1": [
+    {
+      "name": "@fontsource/material-icons-round",
+      "versions": [
+        "5.2.6"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@fontsource+material-icons-round@5.2.6/node_modules/@fontsource/material-icons-round"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/material-icons-round",
+      "description": "Self-host the Material Icons Round font in a neatly bundled NPM package."
+    },
+    {
+      "name": "@fontsource/zen-kaku-gothic-new",
+      "versions": [
+        "5.2.7"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@fontsource+zen-kaku-gothic-new@5.2.7/node_modules/@fontsource/zen-kaku-gothic-new"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/zen-kaku-gothic-new",
+      "description": "Self-host the Zen Kaku Gothic New font in a neatly bundled NPM package."
+    },
+    {
+      "name": "@fontsource/zen-maru-gothic",
+      "versions": [
+        "5.2.8"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/@fontsource+zen-maru-gothic@5.2.8/node_modules/@fontsource/zen-maru-gothic"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/zen-maru-gothic",
+      "description": "Self-host the Zen Maru Gothic font in a neatly bundled NPM package."
+    }
+  ],
+  "Python-2.0": [
+    {
+      "name": "argparse",
+      "versions": [
+        "2.0.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/argparse@2.0.1/node_modules/argparse"
+      ],
+      "license": "Python-2.0",
+      "homepage": "https://github.com/nodeca/argparse#readme",
+      "description": "CLI arguments parser. Native port of python's argparse."
+    }
+  ],
+  "BSD-2-Clause": [
+    {
+      "name": "eslint-scope",
+      "versions": [
+        "8.4.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/eslint-scope@8.4.0/node_modules/eslint-scope"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-scope/README.md",
+      "description": "ECMAScript scope analyzer for ESLint"
+    },
+    {
+      "name": "espree",
+      "versions": [
+        "10.4.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/espree@10.4.0/node_modules/espree"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/js/blob/main/packages/espree/README.md",
+      "description": "An Esprima-compatible JavaScript parser built on Acorn"
+    },
+    {
+      "name": "esrecurse",
+      "versions": [
+        "4.3.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/esrecurse@4.3.0/node_modules/esrecurse"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/estools/esrecurse",
+      "description": "ECMAScript AST recursive visitor"
+    },
+    {
+      "name": "estraverse",
+      "versions": [
+        "5.3.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/estraverse@5.3.0/node_modules/estraverse"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/estools/estraverse",
+      "description": "ECMAScript JS AST traversal functions"
+    },
+    {
+      "name": "esutils",
+      "versions": [
+        "2.0.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/esutils@2.0.3/node_modules/esutils"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/estools/esutils",
+      "description": "utility box for ECMAScript language tools"
+    },
+    {
+      "name": "uri-js",
+      "versions": [
+        "4.4.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/uri-js@4.4.1/node_modules/uri-js"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Gary Court",
+      "homepage": "https://github.com/garycourt/uri-js",
+      "description": "An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript."
+    }
+  ],
+  "BSD-3-Clause": [
+    {
+      "name": "esquery",
+      "versions": [
+        "1.7.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/esquery@1.7.0/node_modules/esquery"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Joel Feenstra",
+      "homepage": "https://github.com/estools/esquery/",
+      "description": "A query library for ECMAScript AST using a CSS selector like query language."
+    },
+    {
+      "name": "source-map-js",
+      "versions": [
+        "1.2.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/source-map-js@1.2.1/node_modules/source-map-js"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Valentin 7rulnik Semirulnik",
+      "homepage": "https://github.com/7rulnik/source-map-js",
+      "description": "Generates and consumes source maps"
+    }
+  ],
+  "ISC": [
+    {
+      "name": "flatted",
+      "versions": [
+        "3.3.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted"
+      ],
+      "license": "ISC",
+      "author": "Andrea Giammarchi",
+      "homepage": "https://github.com/WebReflection/flatted#readme",
+      "description": "A super light and fast circular JSON parser."
+    },
+    {
+      "name": "glob-parent",
+      "versions": [
+        "6.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/glob-parent@6.0.2/node_modules/glob-parent"
+      ],
+      "license": "ISC",
+      "author": "Gulp Team",
+      "homepage": "https://github.com/gulpjs/glob-parent#readme",
+      "description": "Extract the non-magic parent path from a glob string."
+    },
+    {
+      "name": "isexe",
+      "versions": [
+        "2.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/isexe@2.0.0/node_modules/isexe"
+      ],
+      "license": "ISC",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/isexe#readme",
+      "description": "Minimal module to check if a file is executable."
+    },
+    {
+      "name": "minimatch",
+      "versions": [
+        "3.1.2",
+        "9.0.5"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/minimatch@3.1.2/node_modules/minimatch",
+        "/workspaces/memon_app/node_modules/.pnpm/minimatch@9.0.5/node_modules/minimatch"
+      ],
+      "license": "ISC",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/minimatch#readme",
+      "description": "a glob matcher in javascript"
+    },
+    {
+      "name": "picocolors",
+      "versions": [
+        "1.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors"
+      ],
+      "license": "ISC",
+      "author": "Alexey Raspopov",
+      "homepage": "https://github.com/alexeyraspopov/picocolors#readme",
+      "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors"
+    },
+    {
+      "name": "semver",
+      "versions": [
+        "7.7.3"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/semver@7.7.3/node_modules/semver"
+      ],
+      "license": "ISC",
+      "author": "GitHub Inc.",
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "description": "The semantic version parser used by npm."
+    },
+    {
+      "name": "which",
+      "versions": [
+        "2.0.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/which@2.0.2/node_modules/which"
+      ],
+      "license": "ISC",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/node-which#readme",
+      "description": "Like which(1) unix command. Find the first instance of an executable in the PATH."
+    },
+    {
+      "name": "yaml",
+      "versions": [
+        "1.10.2"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/yaml@1.10.2/node_modules/yaml"
+      ],
+      "license": "ISC",
+      "author": "Eemeli Aro",
+      "homepage": "https://eemeli.org/yaml/v1/",
+      "description": "JavaScript parser and stringifier for YAML"
+    }
+  ],
+  "CC-BY-3.0": [
+    {
+      "name": "spdx-exceptions",
+      "versions": [
+        "2.5.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-exceptions@2.5.0/node_modules/spdx-exceptions"
+      ],
+      "license": "CC-BY-3.0",
+      "author": "The Linux Foundation",
+      "homepage": "https://github.com/kemitchell/spdx-exceptions.json#readme",
+      "description": "list of SPDX standard license exceptions"
+    }
+  ],
+  "(MIT AND CC-BY-3.0)": [
+    {
+      "name": "spdx-expression-validate",
+      "versions": [
+        "2.0.0"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-expression-validate@2.0.0/node_modules/spdx-expression-validate"
+      ],
+      "license": "(MIT AND CC-BY-3.0)",
+      "author": "Kyle E. Mitchell",
+      "homepage": "https://github.com/kemitchell/spdx.js",
+      "description": "validate SPDX license expressions"
+    },
+    {
+      "name": "spdx-ranges",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-ranges@2.1.1/node_modules/spdx-ranges"
+      ],
+      "license": "(MIT AND CC-BY-3.0)",
+      "author": "The Linux Foundation",
+      "homepage": "https://github.com/kemitchell/spdx-ranges.js#readme",
+      "description": "list of SPDX standard license ranges"
+    }
+  ],
+  "CC0-1.0": [
+    {
+      "name": "spdx-license-ids",
+      "versions": [
+        "3.0.22"
+      ],
+      "paths": [
+        "/workspaces/memon_app/node_modules/.pnpm/spdx-license-ids@3.0.22/node_modules/spdx-license-ids"
+      ],
+      "license": "CC0-1.0",
+      "author": "Shinnosuke Watanabe",
+      "homepage": "https://github.com/jslicense/spdx-license-ids#readme",
+      "description": "A list of SPDX license identifiers"
+    }
+  ]
+}
