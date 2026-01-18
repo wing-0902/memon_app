@@ -13,6 +13,32 @@
   }
 
   import { wordStore } from '$lib/data/words.svelte';
+
+  let omoteWord = $state('');
+  let uraWord = $state('');
+  let isAdding = $state(false);
+  let frontInputEl = $state<HTMLInputElement | null>(null);
+
+  async function handleAddWord() {
+    if (!omoteWord || !uraWord) {
+      return;
+    } else {
+      isAdding = true;
+      try {
+        // Storeの関数を呼ぶ
+        await wordStore.addWord(omoteWord, uraWord);
+
+        // 入力をリセット
+        omoteWord = '';
+        uraWord = '';
+
+        // 次の入力のために「表」の入力欄にフォーカスを戻す
+        frontInputEl?.focus();
+      } finally {
+        isAdding = false;
+      }
+    }
+  }
 </script>
 
 <div class="root">
@@ -36,10 +62,22 @@
     </ul>
     <h3>単語帳</h3>
     <ul>
-      <li class='addNew'>
-        <input type='text' placeholder='おもて（問）' />
-        <input type='text' placeholder='うら（答）' />
-        <button>add</button>
+      <li class="addNew">
+        <input
+          type="text"
+          placeholder="おもて（問）"
+          bind:value={omoteWord}
+          bind:this={omoteInput}
+        />
+        <input
+          type="text"
+          placeholder="うら（答）"
+          bind:value={uraWord}
+        />
+        <button
+          disabled={!omoteWord || !uraWord}
+          onclick={handleAddWord}>add</button
+        >
       </li>
       {#each wordStore.words as word}
         <li>
