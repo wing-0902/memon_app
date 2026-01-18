@@ -8,4 +8,6 @@
   <meta name='generator' content='SvelteKit {SVELTEKIT_VERSION}' />
 </svelte:head>
 
-{@render children()}
+<div class='root'>
+  {@render children()}
+</div>
