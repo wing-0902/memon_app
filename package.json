@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wing-0902/memon_app.git"
+  },
+  "author": {
+    "name": "Tsubasa Terasawa",
+    "email": "wing@me.wing.osaka",
+    "url": "https://wing.osaka/"
+  },
+
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
