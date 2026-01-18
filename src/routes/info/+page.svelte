@@ -7,6 +7,7 @@
 </svelte:head>
 
 <div class="root">
+  <p>利用規約・ライセンスについては<a href='/policy/'>こちら</a>をご覧ください．</p>
   <h2>Memonについて</h2>
   <ul>
     <li>Version：{__APP_VERSION__}</li>
