@@ -85,13 +85,14 @@
           onclick={handleAddWord}>add</button
         >
       </li>
-      {#each wordStore.words as word}
-        <li>
-          <strong>{word.front}</strong>
-          <span>{word.back}</span>
-        </li>
-      {/each}
     </ul>
+    {#each wordStore.words as word, i}
+      <li class="list">
+        <span class="number">#{i + 1}</span>
+        <strong class="front">{word.front}</strong>
+        <span class="back">{word.back}</span>
+      </li>
+    {/each}
   {/if}
 </div>
 
@@ -103,22 +104,20 @@
       padding: 0;
       width: 100%;
     }
-    li {
-      &.addNew {
+    li.addNew {
+      display: flex;
+      justify-content: center;
+      input {
+        max-width: calc(50% - 60px);
+      }
+      button {
+        font-family: 'Material Icons Round', sans-serif;
+        font-size: 24px;
+        height: 40px;
+        width: 40px;
         display: flex;
         justify-content: center;
-        input {
-          max-width: calc(50% - 60px);
-        }
-        button {
-          font-family: 'Material Icons Round', sans-serif;
-          font-size: 24px;
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+        align-items: center;
       }
     }
   }
