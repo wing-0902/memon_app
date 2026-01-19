@@ -13,17 +13,18 @@
 
   // itemStoreの存在？
   const targetItem = $derived(itemStore.items.find((i) => i.id === targetId));
-  
+
   if (!targetItem) {
     goto('/');
   }
 
   // onMount
   onMount(() => {
-    if (quizNum = 1) { // １問目の画面を開いたときに１回だけ実行
+    if ((quizNum = 1)) {
+      // １問目の画面を開いたときに１回だけ実行
       nowCorrectAnswers.list = [];
     }
-  })
+  });
 
   // wordStore初期化
   $effect(() => {
@@ -34,9 +35,9 @@
 
   $effect(() => {
     if (quizNum > Number(localforage.getItem('テストの出題数'))) {
-      goto(`/${targetId}/play/complete/`)
+      goto(`/${targetId}/play/complete/`);
     }
-  })
+  });
 </script>
 
 <div class="root">
