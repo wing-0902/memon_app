@@ -24,7 +24,7 @@
   });
 
   $effect(() => {
-    if (quizNum > wordStore.words.length) {
+    if (quizNum > Number(localforage.getItem('テストの出題数'))) {
       goto(`/${targetId}/play/complete/`)
     }
   })
