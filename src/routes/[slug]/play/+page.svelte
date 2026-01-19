@@ -18,5 +18,7 @@
 
 <div class='root'>
   <h2>{targetItem?.displayName}</h2>
-  <h3>再生を開始</h3>
+  <h3>モードを設定</h3>
+  
+  <button class='icon' onclick={() => goto('')}>play_circle開始！</button>
 </div>
