@@ -7,6 +7,7 @@
 
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
+  import localforage from 'localforage';
 
   // itemStoreの存在？
   const targetItem = $derived(itemStore.items.find((i) => i.id === targetId));
