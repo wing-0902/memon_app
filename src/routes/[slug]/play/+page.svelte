@@ -17,13 +17,13 @@
   let qMode = $state('自己採点'); // 自己採点 or 選択肢 or 自動採点
 
   export function handleClick() {
-    if (qCount = 0) return;
+    if (qCount <= 0) return;
 
     localforage.setItem('テストの出題数', qCount);
     localforage.setItem('どっちからか', qFrom);
     localforage.setItem('採点モード', qMode);
 
-    
+
   }
 </script>
 
