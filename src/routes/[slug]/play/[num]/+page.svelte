@@ -8,6 +8,8 @@
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
   import localforage from 'localforage';
+  import { onMount } from 'svelte';
+  import { nowCorrectAnswers } from '$lib/data/answering.svelte';
 
   // itemStoreの存在？
   const targetItem = $derived(itemStore.items.find((i) => i.id === targetId));
@@ -15,6 +17,13 @@
   if (!targetItem) {
     goto('/');
   }
+
+  // onMount
+  onMount(() => {
+    if (quizNum = 1) { // １問目の画面を開いたときに１回だけ実行
+      nowCorrectAnswers.list = [];
+    }
+  })
 
   // wordStore初期化
   $effect(() => {
