@@ -73,6 +73,9 @@
         >
       </li>
     </ul>
+    <button class='icon' onclick={() => goto(`/${targetId}/play/`)}>
+      play_arrowテストを開始
+    </button>
     <h3>単語帳</h3>
     <ul>
       <li class="addNew">
