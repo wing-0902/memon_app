@@ -10,6 +10,9 @@
   if (!targetItem) {
     goto("/");
   }
+
+  let qCount = $state(20);
+  let qFrom = $state('omote');
 </script>
 
 <svelte:head>
@@ -17,8 +20,15 @@
 </svelte:head>
 
 <div class='root'>
-  <h2>{targetItem?.displayName}</h2>
-  <h3>モードを設定</h3>
-  
-  <button class='icon' onclick={() => goto('')}>play_circle開始！</button>
+  {#if targetItem}
+    <h2>{targetItem.displayName}</h2>
+    <h3>モードを設定</h3>
+    <label for='qCount'>問題数</label>
+    <input id='qCount' bind:value={qCount} type="number" /><br/>
+    {#if targetItem.is双方向}
+      <button>おもて<small>から</small>うら</button>
+      <button>うら<small>から</small>おもて</button><br/>
+    {/if}
+    <button class='icon' onclick={() => goto('')}>play_circle開始！</button>
+  {/if}
 </div>
