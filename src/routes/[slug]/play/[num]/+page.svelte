@@ -42,4 +42,5 @@
 
 <div class="root">
   <h2>Q.{quizNum}</h2>
+  
 </div>
