@@ -103,6 +103,7 @@
         >
       </li>
     </ul>
+    <p>{wordStore.words.length}個の単語を表示中</p>
     <table class="listT">
       <tbody>
         <tr>
