@@ -1,4 +1,4 @@
 export const nowCorrectAnswers = $state({
-  list: [],
-  todo: []
+  list: [] as number[],
+  todo: [] as number[]
 });

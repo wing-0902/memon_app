@@ -7,6 +7,8 @@
 
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
+  import { nowCorrectAnswers } from '$lib/data/answering.svelte';
+  import { getRandomElements } from '$lib/func/rand';
   const targetItem = $derived(itemStore.items.find((i) => i.id === targetId));
 
   // wordStore初期化
@@ -33,6 +35,8 @@
     localforage.setItem('どっちからか', qFrom);
     localforage.setItem('採点モード', qMode);
     localforage.setItem('順番', qTurn);
+
+    nowCorrectAnswers.todo = getRandomElements(wordStore.words.length, qCount);
 
     goto(`/${targetId}/play/1/`);
   }
