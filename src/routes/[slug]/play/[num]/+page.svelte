@@ -30,5 +30,5 @@
 </script>
 
 <div class="root">
-  <p>{quizNum}問目</p>
+  <h2>Q.{quizNum}</h2>
 </div>
