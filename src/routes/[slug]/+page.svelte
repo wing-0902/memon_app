@@ -54,6 +54,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>{targetItem?.displayName} | Memon</title>
+</svelte:head>
+
 <div class="root">
   {#if targetItem}
     <h2>{targetItem.displayName}</h2>
@@ -73,7 +77,10 @@
         >
       </li>
     </ul>
-    <button class='icon' onclick={() => goto(`/${targetId}/play/`)}>
+    <button
+      class="icon"
+      onclick={() => goto(`/${targetId}/play/`)}
+    >
       play_arrowテストを開始
     </button>
     <h3>単語帳</h3>
@@ -115,14 +122,13 @@
                 colspan="2"><button onclick={() => (wordEditing = i + 1)}>edit</button></td
               >
             {:else}
-              <td
-              class='l6'
+              <td class="l6"
                 ><input
                   bind:value={word.front}
                   type="text"
                 /></td
               >
-              <td class='l6'
+              <td class="l6"
                 ><input
                   bind:value={word.back}
                   type="text"
