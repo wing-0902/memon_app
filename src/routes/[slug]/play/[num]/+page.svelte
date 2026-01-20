@@ -79,6 +79,10 @@
     正誤判定 = '不正解';
     手動判定 = false;
   }
+
+  function handleNext() {
+
+  }
 </script>
 
 <div class="root">
@@ -101,17 +105,20 @@
   <br/>
   <button onclick={checkAns}>
     答え合わせ
-  </button>
+  </button><br/>
 
-  {正誤判定}
+  <br/>
+  {正誤判定}<br/>
+
 
   {#if 手動判定}
     <button onclick={handleCorrect}>正解</button>
-    <button onclick={handleWrong}>間違い</button>
+    <button onclick={handleWrong}>間違い</button><br/>
   {/if}
 
   {#if 正誤判定 === '正解'}
-    <button>
+    <br/>
+    <button onclick={handleNext}>
       次の問題に進む
     </button>
   {/if}
