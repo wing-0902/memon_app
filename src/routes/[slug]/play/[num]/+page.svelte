@@ -96,7 +96,7 @@
   }
 
   function handleNext() {
-    if (正誤判定 = '正解') {
+    if (正誤判定 === '正解') {
       nowCorrectAnswers.list.push(quizListNum - 1);
     } else {
       nowCorrectAnswers.wrongList.push(quizListNum - 1);

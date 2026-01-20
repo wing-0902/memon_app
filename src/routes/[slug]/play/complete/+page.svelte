@@ -19,7 +19,7 @@
 
   onMount(async () => {
     qFrom = await localforage.getItem<string>('どっちからか');
-    totalQuizCount = await localforage.getItem<number>('テストの出題数') || 0;
+    totalQuizCount = (await localforage.getItem<number>('テストの出題数')) || 0;
     if (!targetItem) {
       goto('/');
       return;
@@ -37,7 +37,7 @@
 <div>
   <h2>結果</h2>
   <p>{targetItem?.displayName || ''}</p>
-  <small>計{totalQuizCount}問</small><br/>
+  <small>計{totalQuizCount}問</small><br />
   {#if qFrom === 'omote'}
     <small>おもて から</small>
   {:else if qFrom === 'ura'}
@@ -45,6 +45,5 @@
   {/if}
   <br />
 
-  「正解{nowCorrectAnswers.list}」
-  「不正解{nowCorrectAnswers.wrongList}」
+  「正解{nowCorrectAnswers.list}」 「不正解{nowCorrectAnswers.wrongList}」
 </div>
