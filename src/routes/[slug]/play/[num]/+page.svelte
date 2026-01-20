@@ -24,7 +24,8 @@
       return;
     }
 
-    if (quizNum === 1) { // 比較は === を使用
+    if (quizNum === 1) {
+      // 比較は === を使用
       nowCorrectAnswers.list = [];
     }
 
@@ -54,7 +55,7 @@
   // 遷移後に初期化が必要なやつ
   let answeringText: string = $state('');
   let 正誤判定: string = $state('');
-  let 手動判定: boolean = $state(false)
+  let 手動判定: boolean = $state(false);
   // 遷移後に初期化が必要なやつ　おわり
 
   // 遷移後の初期化
@@ -62,7 +63,7 @@
     answeringText = '';
     正誤判定 = '';
     手動判定 = false;
-  })
+  });
 
   function checkAns() {
     const answeringWord = answeringText;
@@ -91,8 +92,10 @@
   }
 
   function handleNext() {
-    if (正誤判定 = '正解') {
-      nowCorrectAnswers.list.push(quizListNum -1);
+    if ((正誤判定 = '正解')) {
+      nowCorrectAnswers.list.push(quizListNum - 1);
+    } else {
+      nowCorrectAnswers.wrongList.push(quizListNum - 1);
     }
     goto(`/${targetId}/play/${quizNum + 1}`);
   }
@@ -106,8 +109,8 @@
   {:else if qFrom === 'ura'}
     <small>うら から</small>
   {/if}
-  <br/>
-  
+  <br />
+
   {#if wordStore.words[quizListNum - 1]}
     {#if qFrom === 'omote'}
       <small>{wordStore.words[quizListNum - 1].id}</small>
@@ -115,26 +118,24 @@
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
     {/if}
-    <input type='text' bind:value={answeringText} />
+    <input
+      type="text"
+      bind:value={answeringText}
+    />
   {/if}
-  <br/>
-  <button onclick={checkAns}>
-    答え合わせ
-  </button><br/>
+  <br />
+  <button onclick={checkAns}> 答え合わせ </button><br />
 
-  <br/>
-  {正誤判定}<br/>
-
+  <br />
+  {正誤判定}<br />
 
   {#if 手動判定}
     <button onclick={handleCorrect}>正解</button>
-    <button onclick={handleWrong}>間違い</button><br/>
+    <button onclick={handleWrong}>間違い</button><br />
   {/if}
 
   {#if 正誤判定 === '正解'}
-    <br/>
-    <button onclick={handleNext}>
-      次の問題に進む
-    </button>
+    <br />
+    <button onclick={handleNext}> 次の問題に進む </button>
   {/if}
 </div>
