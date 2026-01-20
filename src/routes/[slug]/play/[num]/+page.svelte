@@ -56,6 +56,7 @@
   let answeringText: string = $state('');
   let 正誤判定: string = $state('');
   let 手動判定: boolean = $state(false);
+  let 解き終わりました: boolean = $state(false);
   // 遷移後に初期化が必要なやつ　おわり
 
   // 遷移後の初期化
@@ -63,6 +64,7 @@
     answeringText = '';
     正誤判定 = '';
     手動判定 = false;
+    解き終わりました = false;
   });
 
   function checkAns() {
@@ -85,14 +87,16 @@
   function handleCorrect() {
     正誤判定 = '正解';
     手動判定 = false;
+    解き終わりました = true;
   }
   function handleWrong() {
     正誤判定 = '不正解';
     手動判定 = false;
+    解き終わりました = true;
   }
 
   function handleNext() {
-    if ((正誤判定 = '正解')) {
+    if (正誤判定 = '正解') {
       nowCorrectAnswers.list.push(quizListNum - 1);
     } else {
       nowCorrectAnswers.wrongList.push(quizListNum - 1);
@@ -134,7 +138,7 @@
     <button onclick={handleWrong}>間違い</button><br />
   {/if}
 
-  {#if 正誤判定 === '正解'}
+  {#if 正誤判定 === '正解' || 解き終わりました}
     <br />
     <button onclick={handleNext}> 次の問題に進む </button>
   {/if}
