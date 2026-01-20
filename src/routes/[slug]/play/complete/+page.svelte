@@ -50,11 +50,12 @@
       wordStore.words[index].lastResult = true;
       wordStore.words[index].lastSeen = 現在時刻;
     }
-    for ( const index of 誤答一覧の添字) {
+    for (const index of 誤答一覧の添字) {
       wordStore.words[index].tryTimes += 1;
       wordStore.words[index].lastResult = false;
       wordStore.words[index].lastSeen = 現在時刻;
     }
+    goto(`/${targetId}/`)
   }
 </script>
 
@@ -76,44 +77,44 @@
   {/if}
 
   <section bind:clientHeight={elementHeight}>
-  <h3>間違えた単語</h3>
-  <table>
-    <thead>
-      <tr>
-        <td>番号</td>
-        <td>おもて</td>
-        <td>うら</td>
-      </tr>
-    </thead>
-    <tbody>
-      {#each nowCorrectAnswers.wrongList as listN}
+    <h3>間違えた単語</h3>
+    <table>
+      <thead>
         <tr>
-          <td>{listN}</td>
-          <td>{wordStore.words[listN].front}</td>
-          <td>{wordStore.words[listN].back}</td>
+          <td>番号</td>
+          <td>おもて</td>
+          <td>うら</td>
         </tr>
-      {/each}
-    </tbody>
-  </table>
-  <h3>正解した単語</h3>
-  <table>
-    <thead>
-      <tr>
-        <td>番号</td>
-        <td>おもて</td>
-        <td>うら</td>
-      </tr>
-    </thead>
-    <tbody>
-      {#each nowCorrectAnswers.list as listN}
+      </thead>
+      <tbody>
+        {#each nowCorrectAnswers.wrongList as listN}
+          <tr>
+            <td>{listN}</td>
+            <td>{wordStore.words[listN].front}</td>
+            <td>{wordStore.words[listN].back}</td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
+    <h3>正解した単語</h3>
+    <table>
+      <thead>
         <tr>
-          <td>{listN}</td>
-          <td>{wordStore.words[listN].front}</td>
-          <td>{wordStore.words[listN].back}</td>
+          <td>番号</td>
+          <td>おもて</td>
+          <td>うら</td>
         </tr>
-      {/each}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {#each nowCorrectAnswers.list as listN}
+          <tr>
+            <td>{listN}</td>
+            <td>{wordStore.words[listN].front}</td>
+            <td>{wordStore.words[listN].back}</td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
   </section>
 
   <button onclick={saveAndFin}>保存して終了</button>

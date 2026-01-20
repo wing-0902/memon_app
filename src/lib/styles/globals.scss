@@ -37,7 +37,7 @@ $themes: (
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   input,
   textarea {
@@ -46,7 +46,7 @@ body {
     color: var(--foreground);
     background: transparent;
     border: 3px solid transparent;
-    border-bottom-color: var(--foregroumd);
+    border-bottom-color: var(--foreground);
     outline: none;
     &:focus {
       color: var(--theme);

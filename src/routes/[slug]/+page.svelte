@@ -113,7 +113,11 @@
           <th colspan="2"></th>
         </tr>
         {#each wordStore.words as word, i}
-          <tr class="list">
+          <tr
+            class="list"
+            class:正解={word.lastResult === true}
+            class:間違い={word.lastResult === false}
+          >
             <td class="l1"><span class="number">#{i + 1}</span></td>
             {#if wordEditing !== i + 1}
               <td class="l2"><strong class="front">{word.front}</strong></td>
@@ -185,6 +189,12 @@
         }
         &.list {
           width: 100%;
+          &.正解 {
+            background-color: rgba(135, 207, 235, 0.53);
+          }
+          &.間違い {
+            background-color: rgba(255, 0, 0, 0.53);
+          }
           .l1 {
             width: 60px;
           }
