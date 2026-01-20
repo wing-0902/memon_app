@@ -45,5 +45,42 @@
   {/if}
   <br />
 
-  「正解{nowCorrectAnswers.list}」 「不正解{nowCorrectAnswers.wrongList}」
+  <h3>間違えた単語</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>番号</td>
+        <td>おもて</td>
+        <td>うら</td>
+      </tr>
+    </thead>
+    <tbody>
+      {#each nowCorrectAnswers.wrongList as listN}
+        <tr>
+          <td>{listN}</td>
+          <td>{wordStore.words[listN].front}</td>
+          <td>{wordStore.words[listN].back}</td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+  <h3>正解した単語</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>番号</td>
+        <td>おもて</td>
+        <td>うら</td>
+      </tr>
+    </thead>
+    <tbody>
+      {#each nowCorrectAnswers.list as listN}
+        <tr>
+          <td>{listN}</td>
+          <td>{wordStore.words[listN].front}</td>
+          <td>{wordStore.words[listN].back}</td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
 </div>
