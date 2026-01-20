@@ -46,6 +46,12 @@
     }
   }
 
+  async function handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      handleAddWord();
+    } else return;
+  }
+
   let wordEditing = $state(0);
 
   async function handleRemoveItem(id: string) {
@@ -96,6 +102,7 @@
           type="text"
           placeholder="うら（答）"
           bind:value={uraWord}
+          onkeydown={handleKeyDown}
         />
         <button
           disabled={!omoteWord || !uraWord}
