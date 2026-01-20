@@ -23,7 +23,7 @@
   }
 
   let qCount = $state(Math.min(20, wordStore.words.length));
-  let qFrom = $state('omote'); // omote or ura
+  let qFrom: string = $state('omote'); // omote or ura
   let qMode = $state('自己採点'); // 自己採点 or 選択肢 or 自動採点
 
   export function handleClick() {
