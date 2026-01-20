@@ -32,7 +32,18 @@
       wordStore.load(targetId);
     }
   });
+
+  // 高さ
+  let elementHeight = $state(0);
+  let windowHeight = $state(0);
+
+  // 保存アンド終了
+  function saveAndFin() {
+
+  }
 </script>
+
+<svelte:window bind:innerHeight={windowHeight} />
 
 <div>
   <h2>結果</h2>
@@ -45,6 +56,11 @@
   {/if}
   <br />
 
+  {#if elementHeight >= windowHeight}
+    <button onclick={saveAndFin}>保存して終了</button>
+  {/if}
+
+  <section bind:clientHeight={elementHeight}>
   <h3>間違えた単語</h3>
   <table>
     <thead>
@@ -83,4 +99,7 @@
       {/each}
     </tbody>
   </table>
+  </section>
+
+  <button onclick={saveAndFin}>保存して終了</button>
 </div>
