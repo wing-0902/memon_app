@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
+  import { afterNavigate, goto } from '$app/navigation';
   import { page } from '$app/state';
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
@@ -9,6 +9,7 @@
 
   let targetId = $derived(page.params.slug);
   let quizNum = $derived(Number(page.params.num));
+  let quizListNum = $derived(nowCorrectAnswers.todo[quizNum - 1]);
 
   // qFromをリアクティブな変数として宣言
   let qFrom = $state<string | null>(null);
@@ -47,12 +48,21 @@
     }
   });
 
-  let omoteAnswer: string = $derived(wordStore.words[quizNum - 1].front);
-  let uraAnswer: string = $derived(wordStore.words[quizNum - 1].back);
-  let answeringText: string = $state('');
+  let omoteAnswer: string = $derived(wordStore.words[quizListNum - 1].front);
+  let uraAnswer: string = $derived(wordStore.words[quizListNum - 1].back);
 
+  // 遷移後に初期化が必要なやつ
+  let answeringText: string = $state('');
   let 正誤判定: string = $state('');
   let 手動判定: boolean = $state(false)
+  // 遷移後に初期化が必要なやつ　おわり
+
+  // 遷移後の初期化
+  afterNavigate(() => {
+    answeringText = '';
+    正誤判定 = '';
+    手動判定 = false;
+  })
 
   function checkAns() {
     const answeringWord = answeringText;
@@ -81,7 +91,10 @@
   }
 
   function handleNext() {
-
+    if (正誤判定 = '正解') {
+      nowCorrectAnswers.list.push(quizListNum -1);
+    }
+    goto(`/${targetId}/play/${quizNum + 1}`);
   }
 </script>
 
@@ -93,9 +106,11 @@
   {:else if qFrom === 'ura'}
     <small>うら から</small>
   {/if}
+  <br/>
   
-  {#if wordStore.words[quizNum - 1]}
+  {#if wordStore.words[quizListNum - 1]}
     {#if qFrom === 'omote'}
+      <small>{wordStore.words[quizListNum - 1].id}</small>
       <p>{omoteAnswer}</p>
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
