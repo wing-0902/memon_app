@@ -39,7 +39,22 @@
 
   // 保存アンド終了
   function saveAndFin() {
+    const 正解一覧の添字 = nowCorrectAnswers.list;
+    const 誤答一覧の添字 = nowCorrectAnswers.wrongList;
 
+    const 現在時刻: number = Date.now();
+
+    for (const index of 正解一覧の添字) {
+      wordStore.words[index].tryTimes += 1;
+      wordStore.words[index].successTimes += 1;
+      wordStore.words[index].lastResult = true;
+      wordStore.words[index].lastSeen = 現在時刻;
+    }
+    for ( const index of 誤答一覧の添字) {
+      wordStore.words[index].tryTimes += 1;
+      wordStore.words[index].lastResult = false;
+      wordStore.words[index].lastSeen = 現在時刻;
+    }
   }
 </script>
 
