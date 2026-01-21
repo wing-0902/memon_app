@@ -120,7 +120,7 @@
 
   {#if wordStore.words[quizListNum - 1]}
     {#if qFrom === 'omote'}
-      <small>{wordStore.words[quizListNum - 1].id}</small>
+      <small>#{quizListNum}</small>
       <p>{omoteAnswer}</p>
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
