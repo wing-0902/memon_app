@@ -3,10 +3,41 @@ import { defineConfig } from 'vite';
 import license from 'rollup-plugin-license';
 import path from 'path';
 import pkg from './package.json' with { type: 'json' };
+import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
 export default defineConfig({
   plugins: [
-    sveltekit()
+    sveltekit(),
+    SvelteKitPWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico'],
+      manifest: {
+        name: 'Memon - 単語帳',
+        short_name: 'Memon',
+        description: 'Memon is the best way to memorize something such as English words. Memory On your Memo.',
+        theme_color: 'rgb(6,23,47)',
+        background_color: 'rgb(6,23,47)',
+        display: 'standalone',
+        icons: [
+          {
+            src: '/web-app-manifest-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/web-app-manifest-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: '/web-app-manifest-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
+          }
+        ]
+      }
+    })
     /*// 1回目：テキストファイルの出力用
     license({
       thirdParty: {
