@@ -137,7 +137,7 @@
     <p>
       正答：
       <strong>
-        {#if (qFrom === 'omote')}
+        {#if qFrom === 'omote'}
           {uraAnswer}
         {:else}
           {omoteAnswer}
