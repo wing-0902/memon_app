@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-import license from 'rollup-plugin-license';
-import path from 'path';
+/* import license from 'rollup-plugin-license';
+import path from 'path'; */
 import pkg from './package.json' with { type: 'json' };
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
@@ -10,7 +10,10 @@ export default defineConfig({
     sveltekit(),
     SvelteKitPWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'web-app-manifest-192x192.png', 'web-app-manifest-512x512.png'],
+      workbox: {
+        navigateFallback: '/',
+      },
       manifest: {
         name: 'Memon - 単語帳',
         short_name: 'Memon',
