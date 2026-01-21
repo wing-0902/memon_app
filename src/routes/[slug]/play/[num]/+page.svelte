@@ -57,6 +57,7 @@
   let 正誤判定: string = $state('');
   let 手動判定: boolean = $state(false);
   let 解き終わりました: boolean = $state(false);
+  let 答え合わせを開始: boolean = $state(false);
   // 遷移後に初期化が必要なやつ　おわり
 
   // 遷移後の初期化
@@ -65,11 +66,13 @@
     正誤判定 = '';
     手動判定 = false;
     解き終わりました = false;
+    答え合わせを開始 = false;
   });
 
   function checkAns() {
     const answeringWord = answeringText;
     let correctAns = '';
+    答え合わせを開始 = true;
 
     if (qFrom === 'omote') {
       correctAns = uraAnswer;
@@ -128,7 +131,20 @@
     />
   {/if}
   <br />
-  <button onclick={checkAns}> 答え合わせ </button><br />
+  {#if !答え合わせを開始}
+    <button onclick={checkAns}> 答え合わせ </button><br />
+  {:else}
+    <p>
+      正答：
+      <strong>
+        {#if (qFrom === 'omote')}
+          {uraAnswer}
+        {:else}
+          {omoteAnswer}
+        {/if}
+      </strong>
+    </p>
+  {/if}
 
   <br />
   {正誤判定}<br />

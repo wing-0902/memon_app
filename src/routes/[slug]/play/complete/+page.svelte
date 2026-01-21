@@ -55,7 +55,7 @@
       wordStore.words[index].lastResult = false;
       wordStore.words[index].lastSeen = 現在時刻;
     }
-    goto(`/${targetId}/`)
+    goto(`/${targetId}/`);
   }
 </script>
 
