@@ -10,9 +10,22 @@ export default defineConfig({
     sveltekit(),
     SvelteKitPWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'web-app-manifest-192x192.png', 'web-app-manifest-512x512.png'],
+      strategies: 'generateSW',
+      includeAssets: [
+        'favicon.ico',
+        'apple-touch-icon.png',
+        'web-app-manifest-192x192.png',
+        'web-app-manifest-512x512.png'
+      ],
       workbox: {
         navigateFallback: '/',
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.destination === 'document',
+            handler: 'CacheFirst'
+          }
+        ]
       },
       manifest: {
         name: 'Memon - 単語帳',
