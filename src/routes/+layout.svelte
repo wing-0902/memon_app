@@ -14,6 +14,13 @@
   // レイアウト
   import Header from '$lib/components/layouts/Header.svelte';
   import Footer from '$lib/components/layouts/Footer.svelte';
+
+  // onMount
+  import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
+  onMount(() => {
+    goto('/');
+  })
 </script>
 
 <svelte:head>
