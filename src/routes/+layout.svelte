@@ -21,10 +21,15 @@
   onMount(() => {
     goto('/');
   });
+
+  // PWA
+  import { pwaInfo } from 'virtual:pwa-info';
+  let webManifestLink = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
 </script>
 
 <svelte:head>
   <meta name="generator" content="SvelteKit {SVELTEKIT_VERSION}" />
+  {@html webManifestLink}
 </svelte:head>
 
 <div class="root">

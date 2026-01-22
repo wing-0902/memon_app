@@ -1,7 +1,3 @@
-/// <reference types="@vite-pwa/sveltekit/info" />
-/// <reference types="@vite-pwa/sveltekit/client" />
-/// <reference types="@vite-pwa/sveltekit/self-supporting" />
-
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 declare global {
