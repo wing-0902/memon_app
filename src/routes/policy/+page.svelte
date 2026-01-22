@@ -18,9 +18,7 @@
     <li>
       <h3><a href="/policy/license">ライセンス</a></h3>
       <p>
-        <a
-          href="https://github.com/wing-0902/memon_app"
-          target="_blank">ソースコード</a
+        <a href="https://github.com/wing-0902/memon_app" target="_blank">ソースコード</a
         >をご利用になる際にご確認ください．
       </p>
     </li>

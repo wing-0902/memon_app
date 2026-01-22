@@ -22,10 +22,7 @@
   {#each itemStore.items as item (item.id)}
     <li class="list">
       {#if isEditing === item.id}
-        <input
-          class="title"
-          bind:value={item.displayName}
-        />
+        <input class="title" bind:value={item.displayName} />
         <div class="buttonSlot">
           <button onclick={() => (isEditing = '')}>edit_off</button>
           <button onclick={() => itemStore.removeItem(item.id)}>delete</button>

@@ -125,10 +125,7 @@
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
     {/if}
-    <input
-      type="text"
-      bind:value={answeringText}
-    />
+    <input type="text" bind:value={answeringText} />
   {/if}
   <br />
   {#if !答え合わせを開始}

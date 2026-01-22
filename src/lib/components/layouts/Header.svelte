@@ -9,10 +9,7 @@
       <li><a href="/create/">単語帳を作成</a></li>
       <li><a href="/config/">設定</a></li>
       <li>
-        <a
-          href="https://memon.cards/docs/"
-          target="_blank">ヘルプ</a
-        >
+        <a href="https://memon.cards/docs/" target="_blank">ヘルプ</a>
       </li>
     </ul>
   </nav>

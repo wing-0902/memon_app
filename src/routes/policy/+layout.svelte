@@ -5,10 +5,7 @@
 
 <div>
   {#if page.url.pathname !== '/policy/'}
-    <a
-      href="/policy/"
-      class="return"
-    >
+    <a href="/policy/" class="return">
       <span class="icon">arrow_back_ios_new</span>
       <span class="text">戻る</span>
     </a>

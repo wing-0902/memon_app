@@ -23,24 +23,12 @@
 <div class="root">
   <h2>単語帳を作る</h2>
   <label for="newName">覚えやすい名前を入力してください．</label><br />
-  <input
-    id="newName"
-    name="newName"
-    type="text"
-    bind:value={newName}
-  /><br />
+  <input id="newName" name="newName" type="text" bind:value={newName} /><br />
   <label>
-    <input
-      bind:checked={dual}
-      type="checkbox"
-    />
+    <input bind:checked={dual} type="checkbox" />
     双方向に出題
   </label><br />
-  <button
-    disabled={!newName}
-    onclick={() => handleClick()}
-    class="create">作成</button
-  >
+  <button disabled={!newName} onclick={() => handleClick()} class="create">作成</button>
 </div>
 
 <style lang="scss">

@@ -75,18 +75,10 @@
         <li>最終利用：未使用</li>
       {/if}
       <li>
-        <label
-          ><input
-            type="checkbox"
-            bind:checked={targetItem.is双方向}
-          />双方向に出題</label
-        >
+        <label><input type="checkbox" bind:checked={targetItem.is双方向} />双方向に出題</label>
       </li>
     </ul>
-    <button
-      class="icon"
-      onclick={() => goto(`/${targetId}/play/`)}
-    >
+    <button class="icon" onclick={() => goto(`/${targetId}/play/`)}>
       play_arrowテストを開始
     </button>
     <h3>単語帳</h3>
@@ -104,10 +96,7 @@
           bind:value={uraWord}
           onkeydown={handleKeyDown}
         />
-        <button
-          disabled={!omoteWord || !uraWord}
-          onclick={handleAddWord}>add</button
-        >
+        <button disabled={!omoteWord || !uraWord} onclick={handleAddWord}>add</button>
       </li>
     </ul>
     <p>{wordStore.words.length}個の単語を表示中</p>
@@ -129,23 +118,12 @@
             {#if wordEditing !== i + 1}
               <td class="l2"><strong class="front">{word.front}</strong></td>
               <td class="l2"><span class="back">{word.back}</span></td>
-              <td
-                class="l3"
-                colspan="2"><button onclick={() => (wordEditing = i + 1)}>edit</button></td
+              <td class="l3" colspan="2"
+                ><button onclick={() => (wordEditing = i + 1)}>edit</button></td
               >
             {:else}
-              <td class="l6"
-                ><input
-                  bind:value={word.front}
-                  type="text"
-                /></td
-              >
-              <td class="l6"
-                ><input
-                  bind:value={word.back}
-                  type="text"
-                /></td
-              >
+              <td class="l6"><input bind:value={word.front} type="text" /></td>
+              <td class="l6"><input bind:value={word.back} type="text" /></td>
               <td class="l4"><button onclick={() => (wordEditing = 0)}>edit_off</button></td>
               <td class="l5"><button onclick={() => handleRemoveItem(word.id)}>delete</button></td>
             {/if}

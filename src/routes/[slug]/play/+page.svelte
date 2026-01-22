@@ -45,20 +45,13 @@
 </svelte:head>
 
 <div class="root">
-  <a
-    class="returnLink"
-    href="/{targetId}/">＜戻る</a
-  >
+  <a class="returnLink" href="/{targetId}/">＜戻る</a>
   {#if targetItem}
     <h2>{targetItem.displayName}</h2>
     <small>{wordStore.words.length}個の単語</small>
     <h3>モードを設定</h3>
     <label for="qCount">問題数</label>
-    <input
-      id="qCount"
-      bind:value={qCount}
-      type="number"
-    /><br />
+    <input id="qCount" bind:value={qCount} type="number" /><br />
     <br />
     {#if targetItem.is双方向}
       <button onclick={() => (qFrom = 'omote')}>おもて<small>から</small>うら</button>
@@ -68,10 +61,7 @@
     <button onclick={() => (qMode = '選択肢')}>選択肢</button>
     <button onclick={() => (qMode = '自動採点')}>自動採点（Beta）</button><br />
     <br />
-    <button
-      class="icon"
-      onclick={handleClick}>play_circle開始！</button
-    >
+    <button class="icon" onclick={handleClick}>play_circle開始！</button>
   {/if}
 </div>
 

@@ -17,10 +17,7 @@
 </script>
 
 <svelte:head>
-  <meta
-    name="generator"
-    content="SvelteKit {SVELTEKIT_VERSION}"
-  />
+  <meta name="generator" content="SvelteKit {SVELTEKIT_VERSION}" />
 </svelte:head>
 
 <div class="root">
