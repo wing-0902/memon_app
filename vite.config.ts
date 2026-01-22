@@ -11,7 +11,7 @@ export default defineConfig({
     SvelteKitPWA({
       registerType: 'autoUpdate',
       strategies: 'generateSW',
-      injectRegister: 'script',
+      injectRegister: false,
       srcDir: 'src',
       includeAssets: [
         'favicon.ico',
@@ -23,13 +23,7 @@ export default defineConfig({
       scope: '/',
       workbox: {
         navigateFallback: '/',
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
-        runtimeCaching: [
-          {
-            urlPattern: ({ request }) => request.destination === 'document',
-            handler: 'CacheFirst'
-          }
-        ],
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,webmanifest}'],
         skipWaiting: true,
         clientsClaim: true,
       },
