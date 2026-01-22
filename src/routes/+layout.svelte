@@ -23,6 +23,23 @@
   });
 
   // PWA
+  onMount(async () => {
+    if (pwaInfo) {
+      // 登録用のモジュールを動的にインポート 
+      // @ts-ignore
+      const { registerSW } = await import('virtual:pwa-register');
+      registerSW({
+        immediate: true,
+        onRegistered(r: ServiceWorkerRegistration | undefined) {
+          console.log('SW Registered:', r);
+        },
+        onRegisterError(error: Error) {
+          console.error('SW Registration error:', error);
+        }
+      });
+    }
+  });
+
   //@ts-ignore
   import { pwaInfo } from 'virtual:pwa-info';
   let webManifestLink = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
