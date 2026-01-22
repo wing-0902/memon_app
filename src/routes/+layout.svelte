@@ -21,31 +21,10 @@
   onMount(() => {
     goto('/');
   });
-
-  // PWA
-  import { pwaInfo } from 'virtual:pwa-info';
-
-	let webManifestLink = $state( pwaInfo ? pwaInfo.webManifest.linkTag : '');
-
-  onMount(async () => {
-		if (pwaInfo) {
-			const { registerSW } = await import('virtual:pwa-register');
-			registerSW({
-				immediate: true,
-				onRegistered(r) {
-					console.log('SW Registered: ', r);
-				},
-				onRegisterError(error) {
-					console.log('SW registration error', error);
-				}
-			});
-		}
-	});
 </script>
 
 <svelte:head>
   <meta name="generator" content="SvelteKit {SVELTEKIT_VERSION}" />
-  {@html webManifestLink}
 </svelte:head>
 
 <div class="root">
