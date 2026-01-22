@@ -87,9 +87,6 @@ importers:
       vite:
         specifier: ^7.2.6
         version: 7.3.1(@types/node@24.10.9)(sass@1.97.2)(terser@5.46.0)
-      workbox-window:
-        specifier: ^7.4.0
-        version: 7.4.0
 
 packages:
 

@@ -11,12 +11,16 @@ export default defineConfig({
     SvelteKitPWA({
       registerType: 'autoUpdate',
       strategies: 'generateSW',
+      injectRegister: 'script',
+      srcDir: 'src',
       includeAssets: [
         'favicon.ico',
         'apple-touch-icon.png',
         'web-app-manifest-192x192.png',
         'web-app-manifest-512x512.png'
       ],
+      buildBase: '/',
+      scope: '/',
       workbox: {
         navigateFallback: '/',
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
@@ -25,7 +29,9 @@ export default defineConfig({
             urlPattern: ({ request }) => request.destination === 'document',
             handler: 'CacheFirst'
           }
-        ]
+        ],
+        skipWaiting: true,
+        clientsClaim: true,
       },
       manifest: {
         name: 'Memon - 単語帳',

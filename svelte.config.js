@@ -19,6 +19,9 @@ const config = {
       precompress: false,
       strict: true
     }),
+    paths: {
+      relative: false,
+    },
     prerender: {
       handleHttpError: ({ path, referrer, message }) => {
         console.warn(`Prerender Warning: ${message} at ${path} (linked from ${referrer})`);
