@@ -20,7 +20,7 @@
   import { goto } from '$app/navigation';
   onMount(() => {
     goto('/');
-  })
+  });
 </script>
 
 <svelte:head>

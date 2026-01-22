@@ -8,7 +8,7 @@
   import { nowCorrectAnswers } from '$lib/data/answering.svelte';
 
   let targetId = $derived(page.params.slug);
-  let quizNum = $derived(Number(page.params.num));
+  let quizNum = $derived(Number(page.params.num) || 1);
   let quizListNum = $derived(nowCorrectAnswers.todo[quizNum - 1]);
 
   // qFromをリアクティブな変数として宣言
@@ -104,7 +104,11 @@
     } else {
       nowCorrectAnswers.wrongList.push(quizListNum - 1);
     }
-    goto(`/${targetId}/play/${quizNum + 1}`);
+    if (quizNum >= totalQuizCount) {
+      goto(`/${targetId}/play/complete/`);
+    } else {
+      goto(`/${targetId}/play/${quizNum + 1}`);
+    }
   }
 </script>
 
