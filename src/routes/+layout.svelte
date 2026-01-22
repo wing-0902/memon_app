@@ -23,6 +23,7 @@
   });
 
   // PWA
+  //@ts-ignore
   import { pwaInfo } from 'virtual:pwa-info';
   let webManifestLink = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
 </script>

@@ -32,8 +32,8 @@ export default defineConfig({
         short_name: 'Memon',
         description:
           'Memon is the best way to memorize something such as English words. Memory On your Memo.',
-        theme_color: 'rgb(6,23,47)',
-        background_color: 'rgb(6,23,47)',
+        theme_color: '#06172f',
+        background_color: '#06172f',
         display: 'standalone',
         icons: [
           {
