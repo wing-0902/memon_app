@@ -3,7 +3,7 @@
   "description": "Memon is the best way to memorize something such as English words. Memory On your Memo.",
   "homepage": "https://memon.cards",
   "private": true,
-  "version": "0.1.1 Beta",
+  "version": "0.1.2 Beta",
   "type": "module",
   "license": "BSD-3-Clause",
   "repository": {
@@ -30,6 +30,7 @@
     "@eslint/compat": "^1.4.0",
     "@eslint/js": "^9.39.1",
     "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/enhanced-img": "^0.9.3",
     "@sveltejs/kit": "^2.49.1",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "@types/node": "^24",

@@ -1,5 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 /* import license from 'rollup-plugin-license';
 import path from 'path'; */
 import pkg from './package.json' with { type: 'json' };
@@ -7,6 +8,7 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
 export default defineConfig({
   plugins: [
+    enhancedImages(),
     sveltekit(),
     SvelteKitPWA({
       registerType: 'autoUpdate',
@@ -26,7 +28,7 @@ export default defineConfig({
         navigateFallbackAllowlist: [/^\/.*$/],
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,webmanifest}'],
         skipWaiting: true,
-        clientsClaim: true,
+        clientsClaim: true
       },
       manifest: {
         name: 'Memon - 単語帳',

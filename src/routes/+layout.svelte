@@ -18,8 +18,11 @@
   // onMount
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
+  import { dev } from '$app/environment';
   onMount(() => {
-    goto('/');
+    if (!dev) {
+      goto('/');
+    }
   });
 
   // PWA
