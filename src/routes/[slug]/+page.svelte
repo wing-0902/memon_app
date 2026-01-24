@@ -69,7 +69,9 @@
 
 <div class="root">
   {#if targetItem}
-    <h2>{targetItem.displayName}</h2>
+    <button class='h2T'>
+      <h2>{targetItem.displayName}</h2>
+    </button>
     <ul>
       <li>作成日時：{new Date(targetItem.createdAt).toLocaleString()}</li>
       {#if targetItem.lastUsed}
@@ -147,6 +149,11 @@
 <style lang="scss">
   .root {
     width: 100%;
+    .h2T {
+      background: transparent;
+      border: none;
+      color: var(--foreground);
+    }
     ul {
       list-style: none;
       padding: 0;
