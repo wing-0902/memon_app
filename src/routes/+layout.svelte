@@ -55,8 +55,10 @@
 
 <style lang="scss">
   .root {
+    margin: 0;
     .slot {
       margin: auto 0;
+      min-height: 50dvh;
     }
   }
 </style>

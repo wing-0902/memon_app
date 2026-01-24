@@ -39,18 +39,18 @@
 </ul>
 
 <style lang="scss">
-  .allLists {
-    width: 100%;
+  ul.allLists {
+    margin: auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .list {
+    li.list {
       height: 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 500px;
-      max-width: calc(100vw - 28px);
+      max-width: calc(100vw - 50px);
       .title {
         font-size: 20px;
         &input {
