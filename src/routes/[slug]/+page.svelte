@@ -23,7 +23,7 @@
   let omoteWord = $state('');
   let uraWord = $state('');
   let isAdding = $state(false);
-  let frontInputEl = $state<HTMLInputElement | null>(null);
+  let frontInputEl = $state<HTMLTextAreaElement | null>(null);
 
   async function handleAddWord() {
     if (!omoteWord || !uraWord) {
@@ -84,18 +84,10 @@
     <h3>単語帳</h3>
     <ul>
       <li class="addNew">
-        <input
-          type="text"
-          placeholder="おもて（問）"
-          bind:value={omoteWord}
-          bind:this={frontInputEl}
-        />
-        <input
-          type="text"
-          placeholder="うら（答）"
-          bind:value={uraWord}
-          onkeydown={handleKeyDown}
-        />
+        <textarea placeholder="おもて（問）" bind:value={omoteWord} bind:this={frontInputEl}
+        ></textarea>
+        <textarea placeholder="うら（答）" bind:value={uraWord} onkeydown={handleKeyDown}
+        ></textarea>
         <button disabled={!omoteWord || !uraWord} onclick={handleAddWord}>add</button>
       </li>
     </ul>
@@ -145,8 +137,19 @@
       li.addNew {
         display: flex;
         justify-content: center;
-        input {
-          max-width: calc(50% - 60px);
+        align-items: center;
+        textarea {
+          width: calc(50% - 60px);
+          resize: none;
+          height: 80px;
+          text-align: center;
+        }
+
+        @media (max-width: 700px) {
+          flex-direction: column;
+          textarea {
+            width: calc(100% - 60px);
+          }
         }
         button {
           font-family: 'Material Icons Round', sans-serif;
@@ -167,6 +170,7 @@
           border-bottom: 2px solid var(--foreground);
         }
         td {
+          white-space: pre-wrap;
           border-bottom: 0.1px solid var(--foreground);
           button {
             font-family: 'Material Icons Round', sans-serif;

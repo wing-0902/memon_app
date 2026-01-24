@@ -40,6 +40,7 @@
 
 <svelte:head>
   <meta name="generator" content="SvelteKit {SVELTEKIT_VERSION}" />
+  <title>Memon</title>
   {@html webManifestLink}
 </svelte:head>
 
@@ -55,7 +56,7 @@
 <style lang="scss">
   .root {
     .slot {
-      margin: auto 13px;
+      margin: auto 0;
     }
   }
 </style>
