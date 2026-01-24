@@ -6,7 +6,7 @@ const CACHE = `cache-${version}`;
 // プリキャッシュするファイル
 const ASSETS = [
   ...build, // アプリケーションファイル
-  ...files, // 静的ファイル
+  ...files // 静的ファイル
 ];
 
 // Service Worker のインストール
@@ -18,15 +18,12 @@ self.addEventListener('fetch', (event) => {
       (async () => {
         try {
           // ネットワークから取得を試行
-          const preloadResponse =
-            await event.preloadResponse;
+          const preloadResponse = await event.preloadResponse;
           if (preloadResponse) {
             return preloadResponse;
           }
 
-          const networkResponse = await fetch(
-            event.request
-          );
+          const networkResponse = await fetch(event.request);
           return networkResponse;
         } catch (error) {
           // オフライン時はキャッシュから取得

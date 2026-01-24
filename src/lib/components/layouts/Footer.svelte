@@ -1,10 +1,11 @@
-<script lang='ts'>
+<script lang="ts">
   let isPWA = $state(false);
 
   $effect(() => {
     const checkPWA = () => {
-      isPWA = window.matchMedia('(display-mode: standalone)').matches || 
-              window.matchMedia('(display-mode: minimal-ui)').matches;
+      isPWA =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.matchMedia('(display-mode: minimal-ui)').matches;
     };
 
     checkPWA();
@@ -12,7 +13,7 @@
     // モード変更を監視（オプション）
     const mediaQuery = window.matchMedia('(display-mode: standalone)');
     mediaQuery.addEventListener('change', checkPWA);
-    
+
     return () => mediaQuery.removeEventListener('change', checkPWA);
   });
 </script>
