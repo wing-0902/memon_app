@@ -43,6 +43,7 @@
   });
 
   // 全部終わった場合の判定（値が取得できた後に実行）
+  // これ動いてないのなんで？
   $effect(() => {
     if (totalQuizCount > 0 && quizNum > totalQuizCount) {
       goto(`/${targetId}/play/complete/`);
