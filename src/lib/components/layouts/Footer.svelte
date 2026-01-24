@@ -21,7 +21,7 @@
 <footer class="footer">
   <p>Memon App v{__APP_VERSION__}</p>
   {#if isPWA}
-    <p>Working on PWA (standalone) mode</p>
+    <p>Working on standalone mode</p>
   {/if}
   <p>
     Released under <a href="https://opensource.org/license/bsd-3-clause" target="_blank"
