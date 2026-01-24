@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
   import { goto } from '$app/navigation';
+  import { fade, fly } from 'svelte/transition';
 
   let targetId = $derived(page.params.slug);
 
@@ -55,8 +56,10 @@
   let wordEditing = $state(0);
 
   async function handleRemoveItem(id: string) {
-    wordEditing = 0;
-    wordStore.removeWord(id);
+    const checkResult = confirm('本当にこの単語を削除しますか？');
+    if (checkResult) {
+      wordStore.removeWord(id);
+    } else return;
   }
 </script>
 
@@ -105,6 +108,7 @@
             class="list"
             class:正解={word.lastResult === true}
             class:間違い={word.lastResult === false}
+            onclick={() => (wordEditing = i + 1)}
           >
             <td class="l1"><span class="number">#{i + 1}</span></td>
             <td class="l2"><strong class="front">{word.front}</strong></td>
@@ -117,7 +121,28 @@
       </tbody>
     </table>
   {/if}
+  {wordEditing}
 </div>
+
+{#if wordEditing}
+  <div class="pWind" transition:fly={{ y: 200, duration: 500 }}>
+    <h3>詳細</h3>
+    <label for="変更ウィンドウのおもて">おもて</label>
+    <textarea id="変更ウィンドウのおもて" bind:value={wordStore.words[wordEditing - 1].front}
+    ></textarea>
+    <br />
+    <label for="変更ウィンドウのうら">うら</label>
+    <textarea id="変更ウィンドウのうら" bind:value={wordStore.words[wordEditing - 1].back}
+    ></textarea>
+    <br />
+    <button onclick={() => handleRemoveItem(wordStore.words[wordEditing - 1].id)}>単語を削除</button><br/>
+    <button onclick={() => (wordEditing = 0)}>閉じる</button>
+  </div>
+{/if}
+
+{#if wordEditing}
+  <div class="pOverlay" transition:fade onclick={() => (wordEditing = 0)}> </div>
+{/if}
 
 <style lang="scss">
   .root {
@@ -198,5 +223,34 @@
         }
       }
     }
+  }
+
+  .pWind {
+    position: fixed;
+    top: 50dvh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(15px) brightness(250%);
+    border: 1.5px solid var(--background);
+    border-radius: 10px;
+    z-index: 600;
+    overflow-y: scroll;
+    textarea {
+      resize: none;
+      overflow-y: scroll;
+      width: 700px;
+      text-align: center;
+      height: 120px;
+    }
+  }
+
+  .pOverlay {
+    backdrop-filter: brightness(40%);
+    z-index: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100vw;
   }
 </style>
