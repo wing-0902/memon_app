@@ -24,7 +24,7 @@ export default defineConfig({
       buildBase: '/',
       scope: '/',
       workbox: {
-        navigateFallback: '/fallback.html',
+        navigateFallback: '/',
         navigateFallbackAllowlist: [/^\/.*$/],
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,webmanifest}'],
         skipWaiting: true,
