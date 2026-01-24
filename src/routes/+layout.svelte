@@ -30,6 +30,12 @@
   import { pwaInfo } from 'virtual:pwa-info';
   let webManifestLink = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
   import '$lib/pwa';
+
+  // オフライン状態の判定
+  /*
+  import { createOnlineStatus } from '$lib/func/online.svelte';
+  const network = createOnlineStatus();
+  */
 </script>
 
 <svelte:head>
