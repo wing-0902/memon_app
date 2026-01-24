@@ -10,6 +10,15 @@ const ASSETS = [
 ];
 
 // Service Worker のインストール
+self.addEventListener('install', (event) => {
+  async function addFilesToCache() {
+    const cache = await caches.open(CACHE);
+    await cache.addAll(ASSETS);
+  }
+
+  event.waitUntil(addFilesToCache());
+});
+
 // フェッチイベントの処理
 self.addEventListener('fetch', (event) => {
   // ナビゲーションリクエストの処理
