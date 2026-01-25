@@ -20,6 +20,9 @@
     <li>
       Homepage：<a href="https://memon.cards/" target="_blank">memon.cards</a>
     </li>
+    <li>
+      Repository：<a href='https://github.com/wing-0902/memon_app.git' target='_blank'>GitHub</a>
+    </li>
   </ul>
   <h2>作者について</h2>
   <p>Tsubasa Terasawa</p>
