@@ -200,10 +200,10 @@
         &.list {
           width: 100%;
           &.正解 {
-            background: linear-gradient(180deg, transparent, rgba(135, 207, 235, 0.73) 64%, transparent);
+            background: linear-gradient(180deg, transparent, rgba(135, 207, 235, 0.73) 74%, rgba(135, 207, 235, 0.2));
           }
           &.間違い {
-            background: linear-gradient(180deg, transparent, rgba(255, 142, 142, 0.73) 64%, transparent);
+            background: linear-gradient(180deg, transparent, rgba(255, 142, 142, 0.73) 74%, rgba(255, 142, 142, 0.2));
           }
           .l1 {
             width: 60px;
