@@ -18,7 +18,7 @@
     if (event.key === 'Enter' && newName) {
       handleClick();
     }
-  };
+  }
 </script>
 
 <svelte:head>
@@ -28,7 +28,13 @@
 <div class="root">
   <h2>単語帳を作る</h2>
   <label for="newName">覚えやすい名前を入力してください．</label><br />
-  <input id="newName" name="newName" type="text" bind:value={newName} onkeydown={handleKeyDown} /><br />
+  <input
+    id="newName"
+    name="newName"
+    type="text"
+    bind:value={newName}
+    onkeydown={handleKeyDown}
+  /><br />
   <label>
     <input bind:checked={dual} type="checkbox" />
     双方向に出題

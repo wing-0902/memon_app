@@ -84,6 +84,18 @@ class WordManager {
       await this.save();
     }
   }
+  constructor() {
+    // クラスがインスタンス化された時に一度だけ実行される
+    $effect.root(() => {
+      $effect(() => {
+        // this.words (およびその中身) へのアクセスを検知して
+        // 変更があるたびに自動で save() を走らせる
+        // JSON.stringify や snapshot を通すと、深い階層まで依存関係として登録されます
+        const _dump = $state.snapshot(this.words);
+        this.save();
+      });
+    });
+  }
 }
 
 export const wordStore = new WordManager();

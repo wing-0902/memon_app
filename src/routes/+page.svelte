@@ -3,6 +3,14 @@
   import { itemStore } from '$lib/data/list.svelte';
 
   let isEditing: string = $state('');
+
+  async function handleRemove(itemId: string) {
+    if (confirm('復元できませんが，本当に削除しますか？')) {
+      itemStore.removeItem(itemId);
+    } else {
+      isEditing = '';
+    }
+  }
 </script>
 
 <svelte:head>
@@ -25,10 +33,10 @@
         <input class="title" bind:value={item.displayName} />
         <div class="buttonSlot">
           <button onclick={() => (isEditing = '')}>edit_off</button>
-          <button onclick={() => itemStore.removeItem(item.id)}>delete</button>
+          <button onclick={() => handleRemove(item.id)}>delete</button>
         </div>
       {:else}
-        <span class="title">{item.displayName}</span>
+        <span onclick={() => goto(`/${item.id}/`)} class="title">{item.displayName}</span>
         <div class="buttonSlot">
           <button onclick={() => (isEditing = item.id)}>edit</button>
           <button onclick={() => goto(`/${item.id}/`)}>play_arrow</button>

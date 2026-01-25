@@ -58,8 +58,9 @@
   async function handleRemoveItem(id: string) {
     const checkResult = confirm('本当にこの単語を削除しますか？');
     if (checkResult) {
-      wordStore.removeWord(id);
-    } else return;
+      await wordStore.removeWord(id);
+      wordEditing = 0;
+    }
   }
 </script>
 
@@ -126,7 +127,7 @@
   {wordEditing}
 </div>
 
-{#if wordEditing}
+{#if wordEditing !== 0 && wordEditing - 1 < wordStore.words.length}
   <div class="pWind" transition:fly={{ y: 200, duration: 500 }}>
     <h3>詳細</h3>
     <label for="変更ウィンドウのおもて">おもて</label>
@@ -143,7 +144,7 @@
   </div>
 {/if}
 
-{#if wordEditing}
+{#if wordEditing !== 0}
   <div class="pOverlay" transition:fade onclick={() => (wordEditing = 0)}></div>
 {/if}
 
