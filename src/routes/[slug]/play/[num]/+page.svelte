@@ -152,6 +152,10 @@
       bind:value={answeringText}
       onkeydown={handleKeyDownToNext}
       bind:this={formInputEl}
+      autocomplete="one-time-code"
+      autocorrect="off"
+      autocapitalize="none" 
+      spellcheck="false"
     />
   {/if}
   <br />
