@@ -1,38 +1,16 @@
-# sv
+# Memon
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## About This App
+Memon is the best way to memorize something such as English words. Memory On your Memo.
 
-## Creating a project
+## How to Open
+Visit the [Web App](https://memon.cards/).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Third Party Licenses
 
-```sh
-# create a new project in the current directory
-npx sv create
+This project includes third-party software.
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [All License List](./THIRD_PARTY_ALL.txt)  
+  Licenses of all dependencies, including development dependencies, provided for completeness.
+- [License List without DevDependencies](./THIRD_PARTY_PROD.txt)  
+  Licenses of dependencies expected to be included in the production/runtime environment.
