@@ -7,7 +7,8 @@
   let isEditing: string = $state('');
 
   async function handleRemove(itemId: string) {
-    if (confirm('復元できませんが，本当に削除しますか？')) {
+    const checkResult = confirm('復元できませんが，本当に削除しますか？');
+    if (checkResult) {
       try {
         itemStore.removeItem(itemId);
         if (wordStore.currentDeckId === itemId) {
