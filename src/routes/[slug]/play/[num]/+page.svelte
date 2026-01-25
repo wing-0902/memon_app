@@ -26,7 +26,6 @@
     }
 
     if (quizNum === 1) {
-      // 比較は === を使用
       nowCorrectAnswers.list = [];
     }
 
@@ -62,6 +61,9 @@
   let 答え合わせを開始: boolean = $state(false);
   // 遷移後に初期化が必要なやつ　おわり
 
+  // focus用
+  let formInputEl = $state<HTMLInputElement | null>(null);
+
   // 遷移後の初期化
   afterNavigate(() => {
     answeringText = '';
@@ -69,6 +71,7 @@
     手動判定 = false;
     解き終わりました = false;
     答え合わせを開始 = false;
+    formInputEl?.focus();
   });
 
   function checkAns() {
@@ -119,7 +122,7 @@
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
       if (checkAns() === '正解') {
-        await sleep(3000);
+        await sleep(700);
         handleNext();
       }
     }
@@ -143,7 +146,7 @@
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
     {/if}
-    <input type="text" bind:value={answeringText} onkeydown={handleKeyDownToNext} />
+    <input type="text" bind:value={answeringText} onkeydown={handleKeyDownToNext} bind:this={formInputEl} />
   {/if}
   <br />
   {#if !答え合わせを開始}
