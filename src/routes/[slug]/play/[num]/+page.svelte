@@ -6,6 +6,7 @@
   import localforage from 'localforage';
   import { onMount } from 'svelte';
   import { nowCorrectAnswers } from '$lib/data/answering.svelte';
+  import { sleep } from '$lib/func/sleep';
 
   let targetId = $derived(page.params.slug);
   let quizNum = $derived(Number(page.params.num) || 1);
@@ -83,8 +84,10 @@
 
     if (answeringWord === correctAns) {
       正誤判定 = '正解';
+      return '正解';
     } else {
       手動判定 = true;
+      return '正解ではありません';
     }
   }
 
@@ -111,6 +114,16 @@
       goto(`/${targetId}/play/${quizNum + 1}`);
     }
   }
+
+  async function handleKeyDownToNext(event: KeyboardEvent) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      if (checkAns() === '正解') {
+        await sleep(3000);
+        handleNext();
+      }
+    }
+  }
 </script>
 
 <div class="root">
@@ -130,7 +143,7 @@
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
     {/if}
-    <input type="text" bind:value={answeringText} />
+    <input type="text" bind:value={answeringText} onkeydown={handleKeyDownToNext} />
   {/if}
   <br />
   {#if !答え合わせを開始}

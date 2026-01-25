@@ -45,7 +45,6 @@
 </svelte:head>
 
 <div class="root">
-  <a class="returnLink" href="/{targetId}/">＜戻る</a>
   {#if targetItem}
     <h2>{targetItem.displayName}</h2>
     <small>{wordStore.words.length}個の単語</small>
