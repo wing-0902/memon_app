@@ -27,6 +27,7 @@
 
     if (quizNum === 1) {
       nowCorrectAnswers.list = [];
+      nowCorrectAnswers.wrongList = [];
     }
 
     // localforageから値を取得（awaitが必要）
