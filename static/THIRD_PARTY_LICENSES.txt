@@ -1,1 +1,0 @@
- ERR_PNPM_LICENSES_UNKNOWN_SUBCOMMAND  This subcommand is not known
