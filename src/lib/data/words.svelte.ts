@@ -34,6 +34,30 @@ class WordManager {
     }
   }
 
+  // 単語帳を削除
+  async deleteCurrentDeck() {
+    if (!this.currentDeckId) {
+      console.warn('削除する単語帳が選択されていません。');
+      return;
+    }
+
+    const deckIdToDelete = this.currentDeckId;
+
+    try {
+      // 1. ストレージからデータを削除
+      await localforage.removeItem(`words_${deckIdToDelete}`);
+      
+      // 2. メモリ上のステートをクリア
+      this.words = [];
+      this.currentDeckId = null;
+
+      console.log(`単語帳 ${deckIdToDelete} を削除しました。`);
+    } catch (e) {
+      console.error('単語帳の削除に失敗:', e);
+      throw e; // 必要に応じてエラーを再送出
+    }
+  }
+
   // 単語の追加
   async addWord(front: string, back: string) {
     if (!this.currentDeckId) return;

@@ -1,12 +1,24 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import { itemStore } from '$lib/data/list.svelte';
+  import { wordStore } from '$lib/data/words.svelte';
+  import localforage from 'localforage';
 
   let isEditing: string = $state('');
 
   async function handleRemove(itemId: string) {
     if (confirm('復元できませんが，本当に削除しますか？')) {
-      itemStore.removeItem(itemId);
+      try {
+        itemStore.removeItem(itemId);
+        if (wordStore.currentDeckId === itemId) {
+          await wordStore.deleteCurrentDeck(); 
+        } else {
+          await localforage.removeItem(`words_${itemId}`);
+        }
+        isEditing = '';
+      } catch (err) {
+        console.error('error:', err)
+      }
     } else {
       isEditing = '';
     }
