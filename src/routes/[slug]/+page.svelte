@@ -117,9 +117,6 @@
             <td class="l1"><span class="number">#{i + 1}</span></td>
             <td class="l2"><strong class="front">{word.front}</strong></td>
             <td class="l2"><span class="back">{word.back}</span></td>
-            <!--  
-              <td class="l3" colspan="2"><button onclick={() => (wordEditing = i + 1)}>edit</button></td>
-            -->
           </tr>
         {/each}
       </tbody>
