@@ -146,7 +146,12 @@
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
     {/if}
-    <input type="text" bind:value={answeringText} onkeydown={handleKeyDownToNext} bind:this={formInputEl} />
+    <input
+      type="text"
+      bind:value={answeringText}
+      onkeydown={handleKeyDownToNext}
+      bind:this={formInputEl}
+    />
   {/if}
   <br />
   {#if !答え合わせを開始}

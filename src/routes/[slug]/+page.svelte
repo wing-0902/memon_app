@@ -125,17 +125,33 @@
 </div>
 
 {#if wordEditing !== 0 && wordEditing - 1 < wordStore.words.length}
+  {@const currentWord = wordStore.words[wordEditing - 1]}
   <div class="pWind" transition:fly={{ y: 200, duration: 500 }}>
     <h3>詳細</h3>
+    <ul>
+      <li>作成日時：{new Date(currentWord.createdAt).toLocaleString()}</li>
+      {#if currentWord.lastSeen !== undefined}
+        {@const val = currentWord.lastSeen}
+        {#if val !== undefined}
+          <li>最終利用：{new Date(val).toLocaleString()}</li>
+        {/if}
+      {/if}
+      {#if currentWord.tryTimes > 0}
+        <li>正答率：{Math.round(currentWord.successTimes / currentWord.tryTimes * 100)}%</li>
+        <li>演習回数：{currentWord.tryTimes}回</li>
+        <li>正解回数：{currentWord.successTimes}回</li>
+        <li>最終成績：{currentWord.lastResult === true ? '正解' : '間違い'}</li>
+      {/if}
+    </ul>
     <label for="変更ウィンドウのおもて">おもて</label>
-    <textarea id="変更ウィンドウのおもて" bind:value={wordStore.words[wordEditing - 1].front}
+    <textarea id="変更ウィンドウのおもて" bind:value={currentWord.front}
     ></textarea>
     <br />
     <label for="変更ウィンドウのうら">うら</label>
-    <textarea id="変更ウィンドウのうら" bind:value={wordStore.words[wordEditing - 1].back}
+    <textarea id="変更ウィンドウのうら" bind:value={currentWord.back}
     ></textarea>
     <br />
-    <button onclick={() => handleRemoveItem(wordStore.words[wordEditing - 1].id)}>単語を削除</button
+    <button onclick={() => handleRemoveItem(currentWord.id)}>単語を削除</button
     ><br />
     <button onclick={() => (wordEditing = 0)}>保存・閉じる</button>
   </div>
@@ -200,10 +216,20 @@
         &.list {
           width: 100%;
           &.正解 {
-            background: linear-gradient(180deg, transparent, rgba(135, 207, 235, 0.73) 74%, rgba(135, 207, 235, 0.2));
+            background: linear-gradient(
+              180deg,
+              transparent,
+              rgba(135, 207, 235, 0.73) 74%,
+              rgba(135, 207, 235, 0.2)
+            );
           }
           &.間違い {
-            background: linear-gradient(180deg, transparent, rgba(255, 142, 142, 0.73) 74%, rgba(255, 142, 142, 0.2));
+            background: linear-gradient(
+              180deg,
+              transparent,
+              rgba(255, 142, 142, 0.73) 74%,
+              rgba(255, 142, 142, 0.2)
+            );
           }
           .l1 {
             width: 60px;
@@ -229,6 +255,10 @@
     overflow-y: scroll;
     width: 700px;
     max-width: 100vw;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
     textarea {
       resize: none;
       overflow-y: scroll;
