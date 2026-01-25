@@ -25,9 +25,9 @@
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
     "listLicense:All:Repo": "pnpm exec pnpm-licenses generate-disclaimer -o THIRD_PARTY_ALL.txt",
-    "listLicense:All:Site": "pnpm exec pnpm-licenses generate-disclaimer -o static/THIRD_PARTY_ALL.txt",
+    "listLicense:All:Site": "pnpm exec pnpm-licenses generate-disclaimer -o static/THIRD_PARTY/ALL.txt",
     "listLicense:Prod:Repo": "pnpm exec pnpm-licenses generate-disclaimer --prod -o THIRD_PARTY_PROD.txt",
-    "listLicense:Prod:Site": "pnpm exec pnpm-licenses generate-disclaimer --prod -o static/THIRD_PARTY_PROD.txt",
+    "listLicense:Prod:Site": "pnpm exec pnpm-licenses generate-disclaimer --prod -o static/THIRD_PARTY/PROD.txt",
     "listLicense": "pnpm listLicense:All:Repo && pnpm listLicense:All:Site && pnpm listLicense:Prod:Repo && pnpm listLicense:Prod:Site"
   },
   "devDependencies": {
