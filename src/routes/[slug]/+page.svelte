@@ -137,22 +137,19 @@
         {/if}
       {/if}
       {#if currentWord.tryTimes > 0}
-        <li>正答率：{Math.round(currentWord.successTimes / currentWord.tryTimes * 100)}%</li>
+        <li>正答率：{Math.round((currentWord.successTimes / currentWord.tryTimes) * 100)}%</li>
         <li>演習回数：{currentWord.tryTimes}回</li>
         <li>正解回数：{currentWord.successTimes}回</li>
         <li>最終成績：{currentWord.lastResult === true ? '正解' : '間違い'}</li>
       {/if}
     </ul>
     <label for="変更ウィンドウのおもて">おもて</label>
-    <textarea id="変更ウィンドウのおもて" bind:value={currentWord.front}
-    ></textarea>
+    <textarea id="変更ウィンドウのおもて" bind:value={currentWord.front}></textarea>
     <br />
     <label for="変更ウィンドウのうら">うら</label>
-    <textarea id="変更ウィンドウのうら" bind:value={currentWord.back}
-    ></textarea>
+    <textarea id="変更ウィンドウのうら" bind:value={currentWord.back}></textarea>
     <br />
-    <button onclick={() => handleRemoveItem(currentWord.id)}>単語を削除</button
-    ><br />
+    <button onclick={() => handleRemoveItem(currentWord.id)}>単語を削除</button><br />
     <button onclick={() => (wordEditing = 0)}>保存・閉じる</button>
   </div>
 {/if}

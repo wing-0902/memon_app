@@ -61,7 +61,7 @@
 
 <svelte:window bind:innerHeight={windowHeight} />
 
-<div>
+<div class="root">
   <h2>結果</h2>
   <p>{targetItem?.displayName || ''}</p>
   <small>計{totalQuizCount}問</small><br />
@@ -76,46 +76,75 @@
     <button onclick={saveAndFin}>保存して終了</button>
   {/if}
 
-  <section bind:clientHeight={elementHeight}>
-    <h3>間違えた単語</h3>
-    <table>
-      <thead>
-        <tr>
-          <td>番号</td>
-          <td>おもて</td>
-          <td>うら</td>
-        </tr>
-      </thead>
-      <tbody>
-        {#each nowCorrectAnswers.wrongList as listN}
+  <section bind:clientHeight={elementHeight} class="resultT">
+    {#if nowCorrectAnswers.wrongList.length > 0}
+      <h3>間違えた単語</h3>
+      <table>
+        <thead>
           <tr>
-            <td>{listN}</td>
-            <td>{wordStore.words[listN].front}</td>
-            <td>{wordStore.words[listN].back}</td>
+            <th>番号</th>
+            <th>おもて</th>
+            <th>うら</th>
           </tr>
-        {/each}
-      </tbody>
-    </table>
-    <h3>正解した単語</h3>
-    <table>
-      <thead>
-        <tr>
-          <td>番号</td>
-          <td>おもて</td>
-          <td>うら</td>
-        </tr>
-      </thead>
-      <tbody>
-        {#each nowCorrectAnswers.list as listN}
+        </thead>
+        <tbody>
+          {#each nowCorrectAnswers.wrongList as listN}
+            <tr>
+              <td class="l1">{listN}</td>
+              <td>{wordStore.words[listN].front}</td>
+              <td>{wordStore.words[listN].back}</td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    {/if}
+    {#if nowCorrectAnswers.list.length > 0}
+      <h3>正解した単語</h3>
+      <table>
+        <thead>
           <tr>
-            <td>{listN}</td>
-            <td>{wordStore.words[listN].front}</td>
-            <td>{wordStore.words[listN].back}</td>
+            <th>番号</th>
+            <th>おもて</th>
+            <th>うら</th>
           </tr>
-        {/each}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {#each nowCorrectAnswers.list as listN}
+            <tr>
+              <td class="l1">{listN}</td>
+              <td>{wordStore.words[listN].front}</td>
+              <td>{wordStore.words[listN].back}</td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    {/if}
   </section>
 
   <button onclick={saveAndFin}>保存して終了</button>
 </div>
+
+<style lang="scss">
+  div.root {
+    width: 100%;
+    section.resultT {
+      width: 100%;
+      table {
+        width: 100%;
+        tr {
+          height: 40px;
+          th {
+            border-bottom: 2px solid var(--foreground);
+          }
+          td {
+            white-space: pre-wrap;
+            border-bottom: 0.1px solid var(--foreground);
+            &.l1 {
+              width: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
