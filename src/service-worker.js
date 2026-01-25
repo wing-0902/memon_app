@@ -31,13 +31,13 @@ self.addEventListener('fetch', (event) => {
         try {
           // まずはネットワーク経由
           const networkResponse = await fetch(event.request);
-          
+
           // 308リダイレクト等の「汚染されたレスポンス」をキャッシュさせないための防御策
           if (networkResponse.ok) {
             // 必要ならここでキャッシュを更新するロジックを入れますが、
             // 今はループ脱出を優先してそのまま返します
           }
-          
+
           return networkResponse;
         } catch (error) {
           // オフライン、またはネットワークエラー（ループ含む）時にここへ

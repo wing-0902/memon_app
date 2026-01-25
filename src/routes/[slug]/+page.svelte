@@ -69,7 +69,7 @@
 
 <div class="root">
   {#if targetItem}
-    <button class='h2T'>
+    <button class="h2T">
       <h2>{targetItem.displayName}</h2>
     </button>
     <ul>
@@ -137,13 +137,14 @@
     <textarea id="変更ウィンドウのうら" bind:value={wordStore.words[wordEditing - 1].back}
     ></textarea>
     <br />
-    <button onclick={() => handleRemoveItem(wordStore.words[wordEditing - 1].id)}>単語を削除</button><br/>
+    <button onclick={() => handleRemoveItem(wordStore.words[wordEditing - 1].id)}>単語を削除</button
+    ><br />
     <button onclick={() => (wordEditing = 0)}>閉じる</button>
   </div>
 {/if}
 
 {#if wordEditing}
-  <div class="pOverlay" transition:fade onclick={() => (wordEditing = 0)}> </div>
+  <div class="pOverlay" transition:fade onclick={() => (wordEditing = 0)}></div>
 {/if}
 
 <style lang="scss">
