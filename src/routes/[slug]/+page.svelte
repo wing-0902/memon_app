@@ -49,6 +49,7 @@
 
   async function handleKeyDown(event: KeyboardEvent) {
     if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
       handleAddWord();
     } else return;
   }
@@ -140,7 +141,7 @@
     <br />
     <button onclick={() => handleRemoveItem(wordStore.words[wordEditing - 1].id)}>単語を削除</button
     ><br />
-    <button onclick={() => (wordEditing = 0)}>閉じる</button>
+    <button onclick={() => (wordEditing = 0)}>保存・閉じる</button>
   </div>
 {/if}
 
@@ -243,11 +244,15 @@
     border: 1.5px solid var(--background);
     border-radius: 10px;
     z-index: 600;
+    overflow-x: hidden;
     overflow-y: scroll;
+    width: 700px;
+    max-width: 100vw;
     textarea {
       resize: none;
       overflow-y: scroll;
-      width: 700px;
+      width: 500px;
+      max-width: 100%;
       text-align: center;
       height: 120px;
     }
