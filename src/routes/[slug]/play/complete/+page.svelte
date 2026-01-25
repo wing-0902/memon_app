@@ -82,7 +82,7 @@
       <table>
         <thead>
           <tr>
-            <th>番号</th>
+            <th class='tableNo'>番号</th>
             <th>おもて</th>
             <th>うら</th>
           </tr>
@@ -90,7 +90,7 @@
         <tbody>
           {#each nowCorrectAnswers.wrongList as listN}
             <tr>
-              <td class="l1">{listN}</td>
+              <td>{listN}</td>
               <td>{wordStore.words[listN].front}</td>
               <td>{wordStore.words[listN].back}</td>
             </tr>
@@ -103,7 +103,7 @@
       <table>
         <thead>
           <tr>
-            <th>番号</th>
+            <th class='tableNo'>番号</th>
             <th>おもて</th>
             <th>うら</th>
           </tr>
@@ -111,7 +111,7 @@
         <tbody>
           {#each nowCorrectAnswers.list as listN}
             <tr>
-              <td class="l1">{listN}</td>
+              <td>{listN}</td>
               <td>{wordStore.words[listN].front}</td>
               <td>{wordStore.words[listN].back}</td>
             </tr>
@@ -135,13 +135,13 @@
           height: 40px;
           th {
             border-bottom: 2px solid var(--foreground);
+            &.tableNo {
+              width: 60px;
+            }
           }
           td {
             white-space: pre-wrap;
             border-bottom: 0.1px solid var(--foreground);
-            &.l1 {
-              width: 60px;
-            }
           }
         }
       }

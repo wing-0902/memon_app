@@ -102,7 +102,7 @@
     <table class="listT">
       <tbody>
         <tr>
-          <th>No.</th>
+          <th class='tableNo'>No.</th>
           <th>おもて</th>
           <th>うら</th>
           <!-- <th colspan="2"></th> -->
@@ -114,7 +114,7 @@
             class:間違い={word.lastResult === false}
             onclick={() => (wordEditing = i + 1)}
           >
-            <td class="l1"><span class="number">#{i + 1}</span></td>
+            <td><span class="number">#{i + 1}</span></td>
             <td class="l2"><strong class="front">{word.front}</strong></td>
             <td class="l2"><span class="back">{word.back}</span></td>
           </tr>
@@ -203,6 +203,9 @@
       width: 100%;
       tr {
         height: 40px;
+        .tableNo {
+          width: 60px;
+        }
         th {
           border-bottom: 2px solid var(--foreground);
         }
@@ -227,9 +230,6 @@
               rgba(255, 142, 142, 0.73) 74%,
               rgba(255, 142, 142, 0.2)
             );
-          }
-          .l1 {
-            width: 60px;
           }
           .l2 {
             width: calc(50vw - 140px);
