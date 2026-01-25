@@ -53,13 +53,16 @@
     <input id="qCount" bind:value={qCount} type="number" /><br />
     <br />
     {#if targetItem.is双方向}
-      <button onclick={() => (qFrom = 'omote')}>おもて<small>から</small>うら</button>
-      <button onclick={() => (qFrom = 'ura')}>うら<small>から</small>おもて</button><br />
+      <div class='configRow fromTo'>
+        <button onclick={() => (qFrom = 'omote')} class:this={qFrom === 'omote'}>おもて<small>から</small>うら</button>
+        <button onclick={() => (qFrom = 'ura')} class:this={qFrom === 'ura'}>うら<small>から</small>おもて</button>
+      </div><br />
     {/if}
-    <button onclick={() => (qMode = '自己採点')}>自己採点</button>
-    <button onclick={() => (qMode = '選択肢')}>選択肢</button>
-    <button onclick={() => (qMode = '自動採点')}>自動採点（Beta）</button><br />
-    <br />
+    <div class='configRow autoMode'>
+      <button onclick={() => (qMode = '自己採点')} class:this={qMode === '自己採点'}>自己採点</button>
+      <button onclick={() => (qMode = '選択肢')} class:this={qMode === '選択肢'}>選択肢</button>
+      <button onclick={() => (qMode = '自動採点')} class:this={qMode === '自動採点'}>自動採点（Beta）</button>
+    </div><br />
     <button class="icon" onclick={handleClick}>play_circle開始！</button>
   {/if}
 </div>
@@ -67,11 +70,41 @@
 <style lang="scss">
   .root {
     width: 100%;
-    .returnLink {
+    .configRow {
       width: 100%;
+      padding: 0;
       display: flex;
-      justify-content: left;
-      margin-left: 20px;
+      justify-content: center;
+      &.fromTo {
+        button {
+          width: 300px;
+          max-width: 50%;
+        }
+      }
+      &.autoMode {
+        button {
+          width: 200px;
+          max-width: 33%;
+        }
+      }
+      button {
+        padding: 0;
+        margin: 0;
+        border: 1px solid var(--theme);
+        border-radius: 0;
+        background: transparent;
+        color: var(--theme);
+        &:nth-child(1) {
+          border-radius: 10px 0 0 10px;
+        }
+        &:nth-last-child(1) {
+          border-radius: 0 10px 10px 0;
+        }
+        &.this {
+          color: var(--background);
+          background: var(--theme);
+        }
+      }
     }
   }
 </style>
