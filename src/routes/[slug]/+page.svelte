@@ -125,7 +125,6 @@
       </tbody>
     </table>
   {/if}
-  {wordEditing}
 </div>
 
 {#if wordEditing !== 0 && wordEditing - 1 < wordStore.words.length}
@@ -200,9 +199,6 @@
         td {
           white-space: pre-wrap;
           border-bottom: 0.1px solid var(--foreground);
-          button {
-            font-family: 'Material Icons Round', sans-serif;
-          }
         }
         &.list {
           width: 100%;
@@ -217,18 +213,6 @@
           }
           .l2 {
             width: calc(50vw - 140px);
-          }
-          .l3 {
-            width: 150px;
-          }
-          .l4,
-          .l5 {
-            width: 75px;
-          }
-          .l6 {
-            input {
-              max-width: calc(50vw - 40px);
-            }
           }
         }
       }
