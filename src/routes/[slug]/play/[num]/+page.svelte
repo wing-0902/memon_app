@@ -7,6 +7,7 @@
   import { onMount } from 'svelte';
   import { nowCorrectAnswers } from '$lib/data/answering.svelte';
   import { sleep } from '$lib/func/sleep';
+  import { getRandomElements } from '$lib/func/rand';
 
   let targetId = $derived(page.params.slug);
   let quizNum = $derived(Number(page.params.num) || 1);
@@ -166,6 +167,9 @@
     {:else if qFrom === 'ura'}
       <p>{uraAnswer}</p>
     {/if}
+    {#if localStorage.getItem('採点モード') === '選択肢'}
+
+    {:else}
     <input
       type="text"
       bind:value={answeringText}
@@ -177,6 +181,7 @@
       spellcheck="false"
       class="ans"
     />
+    {/if}
   {/if}
   <br />
   {#if !答え合わせを開始}

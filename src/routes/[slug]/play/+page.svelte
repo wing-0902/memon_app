@@ -102,20 +102,30 @@
         background: transparent;
         color: var(--theme);
         &:nth-child(1) {
-          border-radius: 10px 0 0 10px;
+          border-radius: 20px 0 0 20px;
         }
         &:nth-last-child(1) {
-          border-radius: 0 10px 10px 0;
+          border-radius: 0 20px 20px 0;
         }
         &.this {
           color: var(--background);
           background: var(--theme);
         }
+        height: 40px;
       }
     }
     .begin {
       width: 600px;
       max-width: 100%;
+      height: 40px;
+      border: 1px solid var(--theme);
+      border-radius: 20px;
+      color: var(--theme);
+      background-color: transparent;
+      &:hover {
+        color: var(--background);
+        background-color: var(--theme);
+      }
     }
   }
 </style>
