@@ -75,8 +75,12 @@
     formInputEl?.focus();
   });
 
+  // onClick
   function checkAns() {
     const answeringWord = answeringText;
+    if (!answeringWord.trim()) {
+      return;
+    }
     let correctAns = '';
     答え合わせを開始 = true;
 
