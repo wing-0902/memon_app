@@ -7,7 +7,7 @@
 
   let { onUpdate } = $props();
 
-  let qFrom = $state<string | null>(null);
+  let qFrom = $state<string | null>(null); // omote or ura
   let totalQuizCount = $state<number>(0);
 
   let targetId = $derived(page.params.slug);
@@ -26,7 +26,7 @@
     }
   });
 
-  const 選択肢用配列 = $derived.by(() => {
+  const 選択肢用配列: number[] = $derived.by(() => {
     if (totalQuizCount === 0) return [];
 
     // 1. ベースの配列を取得
@@ -50,6 +50,12 @@
   });
 </script>
 
-{#each 選択肢用配列 as index}
-  <button>{wordStore.words[index].front}</button>
-{/each}
+{#if qFrom === 'omote'}
+  {#each 選択肢用配列 as index}
+    <button>{wordStore.words[index - 1].back}</button>
+  {/each}
+{:else if qFrom === 'ura'}
+    {#each 選択肢用配列 as index}
+    <button>{wordStore.words[index - 1].front}</button>
+  {/each}
+{/if}
