@@ -173,7 +173,9 @@
       <p>{uraAnswer}</p>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
-      <Choose onUpdate={(v: string) => handleChoose(v)} />
+      <Choose quizListNum={quizListNum} 
+  totalQuizCount={totalQuizCount} 
+  onUpdate={(v: string) => handleChoose(v)} />
     {:else}
       <input
         type="text"
@@ -190,8 +192,8 @@
   {/if}
   <br />
   {#if !答え合わせを開始}
-    <button class="handleButton" onclick={skip}>スキップ</button><br />
-    <button class="handleButton" onclick={checkAns}> 答え合わせ </button><br />
+    <button class="handleButton skip" onclick={skip}>スキップ</button><br />
+    <button class="handleButton check" onclick={checkAns}> 答え合わせ </button><br />
   {:else}
     <p>
       正答：
@@ -231,15 +233,22 @@
       margin-bottom: 4px;
     }
     .handleButton {
-      margin: 4px 0;
+      margin: 0;
       height: 40px;
-      border-radius: 20px;
       color: var(--theme);
       border: 1px solid var(--theme);
       background-color: var(--background);
       &:hover {
         color: var(--background);
         background-color: var(--theme);
+      }
+      &.skip {
+        border-radius: 20px 20px 0 0;
+        border-bottom-width: 0.5px;
+      }
+      &.check {
+        border-radius: 0 0 20px 20px;
+        border-bottom-width: 0.5px;
       }
     }
   }

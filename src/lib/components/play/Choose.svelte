@@ -5,41 +5,35 @@
   import localforage from 'localforage';
   import { getRandomElements } from '$lib/func/rand';
 
-  let { onUpdate } = $props();
+// propsとして受け取る
+  let { onUpdate, quizListNum, totalQuizCount } = $props<{
+    onUpdate: (v: string) => void;
+    quizListNum: number;
+    totalQuizCount: number;
+  }>();
 
-  let qFrom = $state<string | null>(null); // omote or ura
-  let totalQuizCount = $state<number>(0);
-
+  let qFrom = $state<string | null>(null);
   let targetId = $derived(page.params.slug);
-  let quizNum = $derived(Number(page.params.num) || 1); // １から
 
   onMount(async () => {
     qFrom = await localforage.getItem<string>('どっちからか');
-    const storedCount = await localforage.getItem<number>('テストの出題数');
-    totalQuizCount = storedCount || 0; // １から
-  });
-
-  // wordStore初期化
-  $effect(() => {
-    if (targetId) {
-      wordStore.load(targetId);
-    }
+    // totalQuizCountはpropsで受け取るのでここで取得しなくてOK（または予備として残す）
   });
 
   const 選択肢用配列: number[] = $derived.by(() => {
-    if (totalQuizCount === 0) return [];
+    // totalQuizCountが親から渡ってくるまで待機
+    if (!totalQuizCount || !quizListNum) return [];
 
-    // 1. ベースの配列を取得
+    // 1. 全範囲からランダムに取得
     let elements = getRandomElements(totalQuizCount, Math.min(5, totalQuizCount));
 
-    // 2. quizNumが含まれていなければ、最後を差し替える
-    if (!elements.includes(quizNum)) {
+    // 2. 「現在の正解(quizListNum)」が含まれているかチェック
+    if (!elements.includes(quizListNum)) {
       elements = [...elements];
-      elements[elements.length - 1] = quizNum;
+      elements[elements.length - 1] = quizListNum;
     }
 
-    // 3. 配列をシャッフル（Fisher-Yates アルゴリズム）
-    // elementsをコピーしてから操作
+    // 3. シャッフル
     const shuffled = [...elements];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -50,12 +44,37 @@
   });
 </script>
 
-{#if qFrom === 'omote'}
-  {#each 選択肢用配列 as index}
-    <button>{wordStore.words[index - 1].back}</button>
-  {/each}
-{:else if qFrom === 'ura'}
+{#if qFrom && wordStore.words.length > 0}
+  <div class="choices">
     {#each 選択肢用配列 as index}
-    <button>{wordStore.words[index - 1].front}</button>
-  {/each}
+      {@const word = wordStore.words[index - 1]}
+      {#if word}
+        <button onclick={() => onUpdate(qFrom === 'omote' ? word.back : word.front)}>
+          {qFrom === 'omote' ? word.back : word.front}
+        </button>
+      {/if}
+    {/each}
+  </div>
 {/if}
+
+<style lang="scss">
+  .choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+      width: 420px;
+      max-width: 100%;
+      min-height: 40px;
+      margin: 2px 0;
+      border-radius: 10px;
+      color: var(--theme);
+      border: 1px solid var(--theme);
+      background-color: transparent;
+      &:hover {
+        color: var(--background);
+        background-color: var(--theme);
+      }
+    }
+  }
+</style>
