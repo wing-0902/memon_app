@@ -7,7 +7,7 @@
   import { onMount } from 'svelte';
   import { nowCorrectAnswers } from '$lib/data/answering.svelte';
   import { sleep } from '$lib/func/sleep';
-  import { getRandomElements } from '$lib/func/rand';
+  import Choose from '$lib/components/play/Choose.svelte';
 
   let targetId = $derived(page.params.slug);
   let quizNum = $derived(Number(page.params.num) || 1);
@@ -148,6 +148,11 @@
       }
     }
   }
+
+  function handleChoose(v: string) {
+    answeringText = v;
+    checkAns();
+  }
 </script>
 
 <div class="root">
@@ -168,19 +173,19 @@
       <p>{uraAnswer}</p>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
-
+      <Choose onUpdate={(v: string) => handleChoose(v)} />
     {:else}
-    <input
-      type="text"
-      bind:value={answeringText}
-      onkeydown={handleKeyDownToNext}
-      bind:this={formInputEl}
-      autocomplete="one-time-code"
-      autocorrect="off"
-      autocapitalize="none"
-      spellcheck="false"
-      class="ans"
-    />
+      <input
+        type="text"
+        bind:value={answeringText}
+        onkeydown={handleKeyDownToNext}
+        bind:this={formInputEl}
+        autocomplete="one-time-code"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        class="ans"
+      />
     {/if}
   {/if}
   <br />

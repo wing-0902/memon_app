@@ -1,7 +1,7 @@
 export const nowCorrectAnswers = $state({
   list: [] as number[], // 正解したやつ一覧（単語帳のIDで管理しよう，0からn-1まで）
   wrongList: [] as number[], // 間違ったやつ
-  todo: [] as number[], // 単語テストキュー（1からnまで）
+  todo: [] as number[] // 単語テストキュー（1からnまで）
 });
 
 // 採点モードは，localStorageに'採点モード'で記録（記述 or 選択肢）

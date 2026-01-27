@@ -64,9 +64,7 @@
       <br />
     {/if}
     <div class="configRow autoMode">
-      <button onclick={() => (qMode = '記述')} class:this={qMode === '記述'}
-        >記述</button
-      >
+      <button onclick={() => (qMode = '記述')} class:this={qMode === '記述'}>記述</button>
       <button onclick={() => (qMode = '選択肢')} class:this={qMode === '選択肢'}>選択肢</button>
     </div>
     <br />
