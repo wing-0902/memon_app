@@ -82,7 +82,7 @@
       <table>
         <thead>
           <tr>
-            <th class='tableNo'>番号</th>
+            <th class="tableNo">番号</th>
             <th>おもて</th>
             <th>うら</th>
           </tr>
@@ -103,7 +103,7 @@
       <table>
         <thead>
           <tr>
-            <th class='tableNo'>番号</th>
+            <th class="tableNo">番号</th>
             <th>おもて</th>
             <th>うら</th>
           </tr>

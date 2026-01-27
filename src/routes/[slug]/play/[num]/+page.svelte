@@ -158,7 +158,7 @@
       bind:this={formInputEl}
       autocomplete="one-time-code"
       autocorrect="off"
-      autocapitalize="none" 
+      autocapitalize="none"
       spellcheck="false"
     />
   {/if}

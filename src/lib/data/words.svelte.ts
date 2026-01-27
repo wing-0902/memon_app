@@ -46,7 +46,7 @@ class WordManager {
     try {
       // 1. ストレージからデータを削除
       await localforage.removeItem(`words_${deckIdToDelete}`);
-      
+
       // 2. メモリ上のステートをクリア
       this.words = [];
       this.currentDeckId = null;

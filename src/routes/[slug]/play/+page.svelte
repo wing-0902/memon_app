@@ -53,16 +53,26 @@
     <input id="qCount" bind:value={qCount} type="number" /><br />
     <br />
     {#if targetItem.is双方向}
-      <div class='configRow fromTo'>
-        <button onclick={() => (qFrom = 'omote')} class:this={qFrom === 'omote'}>おもて<small>から</small>うら</button>
-        <button onclick={() => (qFrom = 'ura')} class:this={qFrom === 'ura'}>うら<small>から</small>おもて</button>
-      </div><br />
+      <div class="configRow fromTo">
+        <button onclick={() => (qFrom = 'omote')} class:this={qFrom === 'omote'}
+          >おもて<small>から</small>うら</button
+        >
+        <button onclick={() => (qFrom = 'ura')} class:this={qFrom === 'ura'}
+          >うら<small>から</small>おもて</button
+        >
+      </div>
+      <br />
     {/if}
-    <div class='configRow autoMode'>
-      <button onclick={() => (qMode = '自己採点')} class:this={qMode === '自己採点'}>自己採点</button>
+    <div class="configRow autoMode">
+      <button onclick={() => (qMode = '自己採点')} class:this={qMode === '自己採点'}
+        >自己採点</button
+      >
       <button onclick={() => (qMode = '選択肢')} class:this={qMode === '選択肢'}>選択肢</button>
-      <button onclick={() => (qMode = '自動採点')} class:this={qMode === '自動採点'}>自動採点（Beta）</button>
-    </div><br />
+      <button onclick={() => (qMode = '自動採点')} class:this={qMode === '自動採点'}
+        >自動採点（Beta）</button
+      >
+    </div>
+    <br />
     <button class="icon" onclick={handleClick}>play_circle開始！</button>
   {/if}
 </div>

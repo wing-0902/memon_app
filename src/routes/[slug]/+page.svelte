@@ -102,7 +102,7 @@
     <table class="listT">
       <tbody>
         <tr>
-          <th class='tableNo'>No.</th>
+          <th class="tableNo">No.</th>
           <th>おもて</th>
           <th>うら</th>
           <!-- <th colspan="2"></th> -->

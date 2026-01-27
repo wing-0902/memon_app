@@ -1,9 +1,11 @@
 # Memon
 
 ## About This App
+
 Memon is the best way to memorize something such as English words. Memory On your Memo.
 
 ## How to Open
+
 Visit the [Web App](https://app.memon.cards/).
 
 ## Third Party Licenses

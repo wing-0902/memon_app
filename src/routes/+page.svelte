@@ -12,13 +12,13 @@
       try {
         itemStore.removeItem(itemId);
         if (wordStore.currentDeckId === itemId) {
-          await wordStore.deleteCurrentDeck(); 
+          await wordStore.deleteCurrentDeck();
         } else {
           await localforage.removeItem(`words_${itemId}`);
         }
         isEditing = '';
       } catch (err) {
-        console.error('error:', err)
+        console.error('error:', err);
       }
     } else {
       isEditing = '';
