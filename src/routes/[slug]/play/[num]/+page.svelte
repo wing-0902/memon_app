@@ -137,6 +137,7 @@
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
       if (checkAns() === '正解') {
+        遷移中 = true;
         await sleep(700);
         handleNext();
       }
