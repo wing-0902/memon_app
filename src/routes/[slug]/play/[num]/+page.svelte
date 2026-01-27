@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { afterNavigate, goto } from '$app/navigation';
+  import { beforeNavigate, goto } from '$app/navigation';
   import { page } from '$app/state';
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
@@ -65,8 +65,8 @@
   // focus用
   let formInputEl = $state<HTMLInputElement | null>(null);
 
-  // 遷移後の初期化
-  afterNavigate(() => {
+  // 遷移前の初期化
+  beforeNavigate(() => {
     answeringText = '';
     正誤判定 = '';
     手動判定 = false;
