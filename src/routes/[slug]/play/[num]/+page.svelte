@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { beforeNavigate, goto } from '$app/navigation';
+  import { afterNavigate, goto } from '$app/navigation';
   import { page } from '$app/state';
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
@@ -60,23 +60,28 @@
   let 手動判定: boolean = $state(false);
   let 解き終わりました: boolean = $state(false);
   let 答え合わせを開始: boolean = $state(false);
+  let 遷移中: boolean = $state(false);
   // 遷移後に初期化が必要なやつ　おわり
 
   // focus用
   let formInputEl = $state<HTMLInputElement | null>(null);
 
-  // 遷移前の初期化
-  beforeNavigate(() => {
+  // 遷移後の初期化
+  afterNavigate(() => {
     answeringText = '';
     正誤判定 = '';
     手動判定 = false;
     解き終わりました = false;
     答え合わせを開始 = false;
     formInputEl?.focus();
+    遷移中 = false;
   });
 
   // onClick
   function checkAns() {
+    if (遷移中 === true) {
+      return;
+    }
     const answeringWord = answeringText;
     if (!answeringWord.trim()) {
       return;
@@ -117,13 +122,18 @@
       nowCorrectAnswers.wrongList.push(quizListNum - 1);
     }
     if (quizNum >= totalQuizCount) {
+      遷移中 = true;
       goto(`/${targetId}/play/complete/`);
     } else {
+      遷移中 = true;
       goto(`/${targetId}/play/${quizNum + 1}`);
     }
   }
 
   async function handleKeyDownToNext(event: KeyboardEvent) {
+    if (遷移中 === true) {
+      return;
+    }
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
       if (checkAns() === '正解') {
