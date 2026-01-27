@@ -24,7 +24,7 @@
 
   let qCount = $state(Math.min(20, wordStore.words.length));
   let qFrom: string = $state('omote'); // omote or ura
-  let qMode = $state('自己採点'); // 自己採点 or 選択肢 or 自動採点
+  let qMode = $state('記述'); // 記述 or 選択肢
 
   export function handleClick() {
     if (qCount <= 0) return;
@@ -32,7 +32,7 @@
 
     localforage.setItem('テストの出題数', qCount);
     localforage.setItem('どっちからか', qFrom);
-    localforage.setItem('採点モード', qMode);
+    localStorage.setItem('採点モード', qMode);
 
     nowCorrectAnswers.todo = getRandomElements(wordStore.words.length, qCount);
 
@@ -64,16 +64,13 @@
       <br />
     {/if}
     <div class="configRow autoMode">
-      <button onclick={() => (qMode = '自己採点')} class:this={qMode === '自己採点'}
-        >自己採点</button
+      <button onclick={() => (qMode = '記述')} class:this={qMode === '記述'}
+        >記述</button
       >
       <button onclick={() => (qMode = '選択肢')} class:this={qMode === '選択肢'}>選択肢</button>
-      <button onclick={() => (qMode = '自動採点')} class:this={qMode === '自動採点'}
-        >自動採点（Beta）</button
-      >
     </div>
     <br />
-    <button class="icon" onclick={handleClick}>play_circle開始！</button>
+    <button class="icon begin" onclick={handleClick}>play_circle開始！</button>
   {/if}
 </div>
 
@@ -93,8 +90,8 @@
       }
       &.autoMode {
         button {
-          width: 200px;
-          max-width: 33%;
+          width: 300px;
+          max-width: 50%;
         }
       }
       button {
@@ -115,6 +112,10 @@
           background: var(--theme);
         }
       }
+    }
+    .begin {
+      width: 600px;
+      max-width: 100%;
     }
   }
 </style>

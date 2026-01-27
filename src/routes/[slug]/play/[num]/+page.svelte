@@ -121,6 +121,10 @@
     } else {
       nowCorrectAnswers.wrongList.push(quizListNum - 1);
     }
+    skip();
+  }
+
+  function skip() {
     if (quizNum >= totalQuizCount) {
       遷移中 = true;
       goto(`/${targetId}/play/complete/`);
@@ -171,11 +175,13 @@
       autocorrect="off"
       autocapitalize="none"
       spellcheck="false"
+      class="ans"
     />
   {/if}
   <br />
   {#if !答え合わせを開始}
-    <button onclick={checkAns}> 答え合わせ </button><br />
+    <button class="handleButton" onclick={skip}>スキップ</button><br />
+    <button class="handleButton" onclick={checkAns}> 答え合わせ </button><br />
   {:else}
     <p>
       正答：
@@ -202,3 +208,29 @@
     <button onclick={handleNext}> 次の問題に進む </button>
   {/if}
 </div>
+
+<style lang="scss">
+  .root {
+    width: 100%;
+    .ans,
+    .handleButton {
+      width: 420px;
+      max-width: 100%;
+    }
+    .ans {
+      margin-bottom: 4px;
+    }
+    .handleButton {
+      margin: 4px 0;
+      height: 40px;
+      border-radius: 20px;
+      color: var(--theme);
+      border: 1px solid var(--theme);
+      background-color: var(--background);
+      &:hover {
+        color: var(--background);
+        background-color: var(--theme);
+      }
+    }
+  }
+</style>
