@@ -6,14 +6,14 @@
   import { getRandomElements } from '$lib/func/rand';
 
   // propsとして受け取る
-  let { onUpdate, quizListNum, totalQuizCount } = $props<{
+  let { onUpdate, quizListNum, totalQuizCount, disabled } = $props<{
     onUpdate: (v: string) => void;
     quizListNum: number;
     totalQuizCount: number;
+    disabled: boolean;
   }>();
 
   let qFrom = $state<string | null>(null);
-  let targetId = $derived(page.params.slug);
 
   onMount(async () => {
     qFrom = await localforage.getItem<string>('どっちからか');
@@ -49,7 +49,7 @@
     {#each 選択肢用配列 as index}
       {@const word = wordStore.words[index - 1]}
       {#if word}
-        <button onclick={() => onUpdate(qFrom === 'omote' ? word.back : word.front)}>
+        <button onclick={() => onUpdate(qFrom === 'omote' ? word.back : word.front)} disabled={disabled}>
           {qFrom === 'omote' ? word.back : word.front}
         </button>
       {/if}
@@ -74,6 +74,11 @@
       &:hover {
         color: var(--background);
         background-color: var(--theme);
+      }
+      &:disabled {
+        background-color: var(--background);
+        color: gray;
+        border-color: gray;
       }
     }
   }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { afterNavigate, goto } from '$app/navigation';
+  import { afterNavigate, beforeNavigate, goto } from '$app/navigation';
   import { page } from '$app/state';
   import { itemStore } from '$lib/data/list.svelte';
   import { wordStore } from '$lib/data/words.svelte';
@@ -62,13 +62,18 @@
   let 解き終わりました: boolean = $state(false);
   let 答え合わせを開始: boolean = $state(false);
   let 遷移中: boolean = $state(false);
+  let answerDisabled: boolean = $state(false);
   // 遷移後に初期化が必要なやつ　おわり
 
   // focus用
   let formInputEl = $state<HTMLInputElement | null>(null);
 
   // 遷移後の初期化
-  afterNavigate(() => {
+  beforeNavigate(() => {
+    answerDisabled = false;
+  })
+  afterNavigate(async () => {
+    answerDisabled = false;
     answeringText = '';
     正誤判定 = '';
     手動判定 = false;
@@ -89,6 +94,7 @@
     }
     let correctAns = '';
     答え合わせを開始 = true;
+    answerDisabled = true;
 
     if (qFrom === 'omote') {
       correctAns = uraAnswer;
@@ -179,7 +185,7 @@
       <p>{uraAnswer}</p>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
-      <Choose {quizListNum} {totalQuizCount} onUpdate={(v: string) => handleChoose(v)} />
+      <Choose {quizListNum} {totalQuizCount} disabled={answerDisabled} onUpdate={(v: string) => handleChoose(v)} />
     {:else}
       <input
         type="text"
@@ -191,6 +197,7 @@
         autocapitalize="none"
         spellcheck="false"
         class="ans"
+        disabled={answerDisabled}
       />
     {/if}
   {/if}
