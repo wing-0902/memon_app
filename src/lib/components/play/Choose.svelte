@@ -5,7 +5,7 @@
   import localforage from 'localforage';
   import { getRandomElements } from '$lib/func/rand';
 
-// propsとして受け取る
+  // propsとして受け取る
   let { onUpdate, quizListNum, totalQuizCount } = $props<{
     onUpdate: (v: string) => void;
     quizListNum: number;

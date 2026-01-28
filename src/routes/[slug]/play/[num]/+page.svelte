@@ -149,9 +149,15 @@
     }
   }
 
-  function handleChoose(v: string) {
+  async function handleChoose(v: string) {
     answeringText = v;
-    checkAns();
+    if (checkAns() === '正解') {
+      遷移中 = true;
+      await sleep(700);
+      handleNext()
+    } else {
+      handleWrong();
+    };
   }
 </script>
 
@@ -173,9 +179,7 @@
       <p>{uraAnswer}</p>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
-      <Choose quizListNum={quizListNum} 
-  totalQuizCount={totalQuizCount} 
-  onUpdate={(v: string) => handleChoose(v)} />
+      <Choose {quizListNum} {totalQuizCount} onUpdate={(v: string) => handleChoose(v)} />
     {:else}
       <input
         type="text"
