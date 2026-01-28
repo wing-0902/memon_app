@@ -85,7 +85,7 @@
         <label><input type="checkbox" bind:checked={targetItem.is双方向} />双方向に出題</label>
       </li>
     </ul>
-    <button class="icon" onclick={() => goto(`/${targetId}/play/`)}>
+    <button class="icon beginExam" onclick={() => goto(`/${targetId}/play/`)}>
       play_arrowテストを開始
     </button>
     <h3>単語帳</h3>
@@ -149,8 +149,10 @@
     <label for="変更ウィンドウのうら">うら</label>
     <textarea id="変更ウィンドウのうら" bind:value={currentWord.back}></textarea>
     <br />
-    <button onclick={() => handleRemoveItem(currentWord.id)}>単語を削除</button><br />
-    <button onclick={() => (wordEditing = 0)}>保存・閉じる</button>
+    <div>
+      <button class='windowClose' onclick={() => handleRemoveItem(currentWord.id)}>単語を削除</button><br />
+      <button class='windowClose' onclick={() => (wordEditing = 0)}>保存・閉じる</button>
+    </div>
   </div>
 {/if}
 
@@ -165,6 +167,19 @@
       background: transparent;
       border: none;
       color: var(--foreground);
+    }
+    .beginExam {
+      border: 1px solid var(--theme);
+      color: var(--theme);
+      background-color: transparent;
+      height: 40px;
+      border-radius: 20px;
+      width: 210px;
+      max-width: 100%;
+      &:hover {
+        background-color: var(--theme);
+        color: var(--background);
+      }
     }
     ul {
       list-style: none;
@@ -263,6 +278,26 @@
       max-width: 100%;
       text-align: center;
       height: 120px;
+    }
+    .windowClose {
+      border: 1px solid var(--theme);
+      color: var(--theme);
+      background-color: transparent;
+      height: 40px;
+      width: 210px;
+      max-width: 100%;
+      &:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+        border-bottom-width: 0.5px;
+      }
+      &:nth-last-child(1) {
+        border-radius: 0 0 10px 10px;
+        border-bottom-width: 0.5px;
+      }
+      &:hover {
+        background-color: var(--theme);
+        color: var(--background);
+      }
     }
   }
 

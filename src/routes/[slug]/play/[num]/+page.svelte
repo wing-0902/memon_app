@@ -228,7 +228,7 @@
 
   {#if 正誤判定 === '正解' || 解き終わりました}
     <br />
-    <button onclick={handleNext}> 次の問題に進む </button>
+    <button onclick={handleNext} class='goToNext'> 次の問題に進む </button>
   {/if}
 </div>
 
@@ -260,6 +260,19 @@
       &.check {
         border-radius: 0 0 20px 20px;
         border-bottom-width: 0.5px;
+      }
+    }
+    .goToNext {
+      height: 40px;
+      width: 420px;
+      max-width: 100%;
+      color: var(--theme);
+      background-color: transparent;
+      border: 1px solid var(--theme);
+      border-radius: 20px;
+      &:hover {
+        color: var(--background);
+        background-color: var(--theme);
       }
     }
   }
