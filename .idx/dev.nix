@@ -13,6 +13,9 @@
       onCreate = {
         pnpm-install = "pnpm install";
       };
+      onStart = {
+        pnpm-install = "pnpm install";
+      };
     };
     previews = {
       previews = {
