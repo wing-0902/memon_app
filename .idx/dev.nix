@@ -27,6 +27,7 @@
             "--"
             "--host"
             "0.0.0.0"
+            "$PORT"
           ];
           manager = "web";
           env = {

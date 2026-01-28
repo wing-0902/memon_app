@@ -16,7 +16,7 @@
     "url": "https://wing.osaka/"
   },
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --port $PORT",
     "build": "pnpm listLicense && vite build",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
