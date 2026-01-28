@@ -1,8 +1,8 @@
 {pkgs}: {
   channel = "stable-24.05";
   packages = [
-    pkgs.nodejs_20
-    pkgs.nodePackages.pnpm
+    pkgs.nodejs_22
+    pkgs.pnpm
   ];
   idx = {
     extensions = [
