@@ -2,12 +2,12 @@
 # see: https://firebase.google.com/docs/studio/customize-workspace
 { pkgs, ... }: {
   # Which nixpkgs channel to use.
-  channel = "stable-25.11"; # or "unstable"
+  channel = "stable-24.11"; # or "unstable"
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.nodejs_24
-    pkgs.nodePackages.pnpm
+    pkgs.nodejs_22
+    pkgs.pnpm
   ];
 
   # Sets environment variables in the workspace
@@ -15,10 +15,8 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      "ms-vscode.vscode-typescript-next"
       "sdras.night-owl"
       "svelte.svelte-vscode"
-      "Vue.volar"
     ];
 
     # Enable previews
@@ -26,7 +24,7 @@
       enable = true;
       previews = {
         web = {
-          command = ["pnpm" "run" "dev" "--host" "0.0.0.0" "--port" "$PORT"];
+          command = ["pnpm" "run" "dev" "--" "--host" "--port" "$PORT"];
           manager = "web";
         };
       };
@@ -38,7 +36,7 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
-        pnpm-install = "pnpm install";
+        pnpm-install = "corepack enable && pnpm install";
       };
       # Runs when the workspace is (re)started
       onStart = {
