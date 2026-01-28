@@ -185,7 +185,7 @@
       <p>{uraAnswer}</p>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
-      <Choose {quizListNum} {totalQuizCount} disabled={answerDisabled} onUpdate={(v: string) => handleChoose(v)} />
+      <Choose {quizListNum} totalQuizCount={wordStore.words.length} disabled={answerDisabled} onUpdate={(v: string) => handleChoose(v)} />
     {:else}
       <input
         type="text"
