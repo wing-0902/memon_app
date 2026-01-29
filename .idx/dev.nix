@@ -7,7 +7,7 @@
   idx = {
     extensions = [
       "svelte.svelte-vscode"
-      "vue.volar"
+      "sdras.night-owl"
     ];
     workspace = {
       onCreate = {
