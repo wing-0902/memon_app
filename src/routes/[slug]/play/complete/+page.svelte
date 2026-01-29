@@ -24,6 +24,7 @@
       goto('/');
       return;
     }
+    targetItem.lastUsed = Date.now();
   });
 
   // wordStore初期化
