@@ -49,7 +49,7 @@
     {#each 選択肢用配列 as index}
       {@const word = wordStore.words[index - 1]}
       {#if word}
-        <button onclick={() => onUpdate(qFrom === 'omote' ? word.back : word.front)} disabled={disabled}>
+        <button onclick={() => onUpdate(qFrom === 'omote' ? word.back : word.front)} {disabled}>
           {qFrom === 'omote' ? word.back : word.front}
         </button>
       {/if}

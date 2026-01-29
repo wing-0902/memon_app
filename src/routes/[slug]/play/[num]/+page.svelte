@@ -71,7 +71,7 @@
   // 遷移後の初期化
   beforeNavigate(() => {
     answerDisabled = false;
-  })
+  });
   afterNavigate(async () => {
     answerDisabled = false;
     answeringText = '';
@@ -160,10 +160,10 @@
     if (checkAns() === '正解') {
       遷移中 = true;
       await sleep(700);
-      handleNext()
+      handleNext();
     } else {
       handleWrong();
-    };
+    }
   }
 </script>
 
@@ -185,7 +185,12 @@
       <p>{uraAnswer}</p>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
-      <Choose {quizListNum} totalQuizCount={wordStore.words.length} disabled={answerDisabled} onUpdate={(v: string) => handleChoose(v)} />
+      <Choose
+        {quizListNum}
+        totalQuizCount={wordStore.words.length}
+        disabled={answerDisabled}
+        onUpdate={(v: string) => handleChoose(v)}
+      />
     {:else}
       <input
         type="text"
@@ -228,7 +233,7 @@
 
   {#if 正誤判定 === '正解' || 解き終わりました}
     <br />
-    <button onclick={handleNext} class='goToNext'> 次の問題に進む </button>
+    <button onclick={handleNext} class="goToNext"> 次の問題に進む </button>
   {/if}
 </div>
 

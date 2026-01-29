@@ -63,6 +63,9 @@
       wordEditing = 0;
     }
   }
+
+  let showingShareComponent = $state(false);
+  import ShareMenu from '$lib/components/app/Share.svelte';
 </script>
 
 <svelte:head>
@@ -87,6 +90,9 @@
     </ul>
     <button class="icon beginExam" onclick={() => goto(`/${targetId}/play/`)}>
       play_arrowテストを開始
+    </button>
+    <button class="icon beginExam" onclick={() => (showingShareComponent = true)}>
+      ios_share共有
     </button>
     <h3>単語帳</h3>
     <ul>
@@ -150,14 +156,24 @@
     <textarea id="変更ウィンドウのうら" bind:value={currentWord.back}></textarea>
     <br />
     <div>
-      <button class='windowClose' onclick={() => handleRemoveItem(currentWord.id)}>単語を削除</button><br />
-      <button class='windowClose' onclick={() => (wordEditing = 0)}>保存・閉じる</button>
+      <button class="windowClose" onclick={() => handleRemoveItem(currentWord.id)}
+        >単語を削除</button
+      ><br />
+      <button class="windowClose" onclick={() => (wordEditing = 0)}>保存・閉じる</button>
     </div>
   </div>
 {/if}
 
 {#if wordEditing !== 0}
   <div class="pOverlay" transition:fade onclick={() => (wordEditing = 0)}></div>
+{/if}
+
+{#if showingShareComponent}
+  <div class="pOverlay" transition:fade onclick={() => (showingShareComponent = false)}></div>
+{/if}
+
+{#if showingShareComponent}
+  <ShareMenu {targetId} />
 {/if}
 
 <style lang="scss">

@@ -108,6 +108,13 @@ class WordManager {
       await this.save();
     }
   }
+
+  // WordManagerクラス内に追加
+  exportRawData(asString = false): string | Word[] {
+    const data = $state.snapshot(this.words);
+    return asString ? JSON.stringify(data) : data;
+  }
+
   constructor() {
     // クラスがインスタンス化された時に一度だけ実行される
     $effect.root(() => {
