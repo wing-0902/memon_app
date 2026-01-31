@@ -41,8 +41,8 @@
       try {
         await navigator.share({
           files: [file],
-          title: `${displayName}のエクスポート`,
-          text: `${displayName}の単語帳をエクスポートします．`
+          // title: `${displayName}のエクスポート`,
+          // text: `${displayName}の単語帳をエクスポートします．`
         });
       } catch (error) {
         if ((error as Error).name !== 'AbortError') {
