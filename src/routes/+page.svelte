@@ -5,6 +5,20 @@
   import localforage from 'localforage';
 
   let isEditing: string = $state('');
+  let editingName: string = $state('');
+
+  function startEdit(item: { id: string, displayName: string }) {
+    isEditing = item.id;
+    editingName = item.displayName; // 現在の名前を初期値としてコピー
+  }
+
+  function saveEdit() {
+    if (isEditing) {
+      // ここで updateName を呼ぶことで、重複チェックが走る
+      itemStore.updateName(isEditing, editingName);
+    }
+    isEditing = '';
+  }
 
   async function handleRemove(itemId: string) {
     const checkResult = confirm('復元できませんが，本当に削除しますか？');
@@ -40,19 +54,24 @@
 {/if}
 <button onclick={() => goto('/create/')} class="createNewLink">単語帳を作る</button><br />
 <button onclick={() => goto('/import/')} class="createNewLink">インポート</button>
+
 <ul class="allLists">
   {#each itemStore.items as item (item.id)}
     <li class="list">
       {#if isEditing === item.id}
-        <input class="title" bind:value={item.displayName} />
+        <input 
+          class="title" 
+          bind:value={editingName} 
+          onkeydown={(e) => e.key === 'Enter' && saveEdit()}
+        />
         <div class="buttonSlot">
-          <button onclick={() => (isEditing = '')}>edit_off</button>
+          <button onclick={saveEdit}>check</button>
           <button onclick={() => handleRemove(item.id)}>delete</button>
         </div>
       {:else}
         <span onclick={() => goto(`/${item.id}/`)} class="title">{item.displayName}</span>
         <div class="buttonSlot">
-          <button onclick={() => (isEditing = item.id)}>edit</button>
+          <button onclick={() => startEdit(item)}>edit</button>
           <button onclick={() => goto(`/${item.id}/`)}>play_arrow</button>
         </div>
       {/if}

@@ -3,7 +3,7 @@
   "description": "Memon is the best way to memorize something such as English words. Memory On your Memo.",
   "homepage": "https://memon.cards",
   "private": true,
-  "version": "0.3.1 Beta",
+  "version": "0.3.2 Beta",
   "type": "module",
   "license": "BSD-3-Clause",
   "repository": {
