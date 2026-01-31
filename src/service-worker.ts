@@ -51,39 +51,26 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
     const cache = await caches.open(CACHE);
 
-    // `build`/`files`は常にキャッシュから配信して問題ない
-    if (ASSETS.includes(url.pathname)) {
-      const response = await cache.match(url.pathname);
-
-      if (response) {
-        return response;
-      }
+    // 1. まずキャッシュを確認
+    const cachedResponse = await cache.match(event.request);
+    
+    // 2. キャッシュがあればそれを返す（オンラインでもここを通る）
+    if (cachedResponse) {
+      return cachedResponse;
     }
 
-    // とりあえずネットワークから取得するが
-    // オフラインの場合はキャッシュにフォールバック
+    // 3. キャッシュになければネットワークへ
     try {
       const response = await fetch(event.request);
 
-      // オフラインの場合，fetchはリクエストではない応答を返すことがあるので
-      if (!(response instanceof Response)) {
-        throw new Error('invalid response from fetch');
-      }
-
+      // 成功レスポンスなら次回のためにキャッシュに保存
       if (response.status === 200) {
         cache.put(event.request, response.clone());
       }
 
       return response;
     } catch (err) {
-      const response = await cache.match(event.request);
-
-      if (response) {
-        return response;
-      }
-
-      // もしキャッシュがなかったら
-      // どうしようもないのでエラーを返す
+      // ネットワークもダメでキャッシュもなかった場合
       throw err;
     }
   }
