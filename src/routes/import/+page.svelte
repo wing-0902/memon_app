@@ -1,39 +1,47 @@
 <script lang="ts">
   import { wordStore } from '$lib/data/words.svelte';
+  import { itemStore } from '$lib/data/list.svelte';
+  import { goto } from '$app/navigation';
 
-  let fileName = $state('ファイル未選択');
+  let vFileName = $state('ファイル未選択');
 
   async function handleFileImport(event: Event) {
-    const input = event.target as HTMLInputElement;
+    // 1. event.currentTarget を HTMLInputElement 型として取得
+    const input = event.currentTarget as HTMLInputElement;
+    
     if (!input.files || input.files.length === 0) return;
 
     const file = input.files[0];
+    vFileName = file.name; // 表示用変数を更新
+    const fileNameWithoutExt = file.name.replace(/\.[^/.]+$/, ''); 
+
     const reader = new FileReader();
-
-    fileName = file.name;
-
     reader.onload = async (e) => {
       try {
         const content = e.target?.result as string;
         const parsed = JSON.parse(content);
 
-        if (!Array.isArray(parsed)) {
-          throw new Error('Invalid Syntax.');
-        }
+        if (!Array.isArray(parsed)) throw new Error('Invalid format');
 
-        const result = await wordStore.importData(parsed);
-        alert(
-          `${result.success}件のインポートに成功しました。${result.failed > 0 ? `\n※不備のあるデータ${result.failed}件をスキップしました。` : ''}`
-        );
+        // 2. itemStore に追加して ID を取得
+        const newDeckId = itemStore.addItem(fileNameWithoutExt, false);
 
-        // inputをリセット（同じファイルを再度選べるように）
+        // 3. wordStore にデータを流し込んで保存
+        const result = await wordStore.importAsNewDeck(parsed, newDeckId);
+
+        alert(`「${fileNameWithoutExt}」を新しい単語帳として作成し，${result.success}件インポートしました．`);
+
+        // 4. inputをクリア（同じファイルを再度選択できるようにする）
         input.value = '';
+        vFileName = 'ファイル未選択';
+
+        // 5. ホームに戻ろうじゃないか
+        goto('/');
       } catch (err) {
-        console.error('インポート失敗：', err);
-        alert('ファイルの読み込みに失敗しました．正しい形式のファイルか確認してください．');
+        console.error(err);
+        alert('インポートに失敗しました．');
       }
     };
-
     reader.readAsText(file);
   }
 </script>
@@ -42,15 +50,15 @@
   <title>インポート | Memon</title>
 </svelte:head>
 
-<div class='root'>
-  <label>
+<div class="root">
+  <label class="import-label">
     クリックしてインポート（.memondoc）
-    <input type="file" accept=".memondoc,application/json" onchange={handleFileImport} /><br/>
-    <span class='fileName'>{fileName}</span>
+    <input type="file" accept=".memondoc" onchange={handleFileImport} /><br />
+    <span class="fileName">{vFileName}</span>
   </label>
 </div>
 
-<style lang='scss'>
+<style lang="scss">
   .root {
     width: 100%;
     label {

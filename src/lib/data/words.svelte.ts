@@ -116,22 +116,20 @@ class WordManager {
   }
 
   // インポート
-  async importData(data: any[]): Promise<{ success: number; failed: number }> {
-    if (!this.currentDeckId) throw new Error('単語帳が選択されていません。');
+  async importAsNewDeck(data: any[], deckId: string): Promise<{ success: number; failed: number }> {
+    // 1. 指定されたIDをカレントに設定
+    this.currentDeckId = deckId;
 
     const importedWords: Word[] = [];
     let failedCount = 0;
 
     for (const item of data) {
-      // 必須フィールドのチェック
       if (!item || typeof item.front !== 'string' || typeof item.back !== 'string') {
         failedCount++;
         continue;
       }
 
-      // 型エラーを回避しつつオブジェクトを構築
-      const newWord: Word = {
-        // crypto.randomUUID() を string として明示的に扱う
+      importedWords.push({
         id: crypto.randomUUID() as string,
         front: item.front,
         back: item.back,
@@ -140,17 +138,17 @@ class WordManager {
         lastResult: item.lastResult !== undefined ? item.lastResult : null,
         tryTimes: typeof item.tryTimes === 'number' ? item.tryTimes : 0,
         successTimes: typeof item.successTimes === 'number' ? item.successTimes : 0
-      };
-
-      importedWords.push(newWord);
+      });
     }
 
-    // 既存のwordsに追加
-    this.words = [...this.words, ...importedWords];
+    // 2. メモリ上のリストを更新
+    this.words = importedWords;
+
+    // 3. 即座にストレージへ保存 ( snapshot を使って確実に現在の状態を保存 )
+    await localforage.setItem(`words_${deckId}`, $state.snapshot(this.words));
 
     return { success: importedWords.length, failed: failedCount };
   }
-
   constructor() {
     // クラスがインスタンス化された時に一度だけ実行される
     $effect.root(() => {

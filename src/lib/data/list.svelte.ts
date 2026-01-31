@@ -1,6 +1,5 @@
 import localforage from 'localforage';
 import { browser } from '$app/environment';
-import { untrack } from 'svelte';
 
 export interface Item {
   displayName: string;
@@ -54,12 +53,14 @@ class ItemManager {
   }
 
   addItem(name: string, dual: boolean) {
+    const newId = crypto.randomUUID();
     this.items.push({
       displayName: name,
-      id: crypto.randomUUID(),
+      id: newId,
       createdAt: Date.now(),
       is双方向: dual
     });
+    return newId;
   }
 
   removeItem(id: string) {
