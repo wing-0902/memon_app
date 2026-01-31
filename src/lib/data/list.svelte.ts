@@ -52,10 +52,23 @@ class ItemManager {
     });
   }
 
+  // 名前を一意にする関数
+  private getUniqueName(name: string, excludeId?: string): string {
+    let finalName = name;
+    let counter = 1;
+
+    // 自分以外のアイテムと名前が被っているかチェック
+    while (this.items.some(item => item.displayName === finalName && item.id !== excludeId)) {
+      counter++;
+      finalName = `${name} ${counter}`;
+    }
+    return finalName;
+  }
+
   addItem(name: string, dual: boolean) {
     const newId = crypto.randomUUID();
     this.items.push({
-      displayName: name,
+      displayName: this.getUniqueName(name),
       id: newId,
       createdAt: Date.now(),
       is双方向: dual
@@ -70,7 +83,7 @@ class ItemManager {
   updateName(id: string, newName: string) {
     const item = this.items.find((i) => i.id === id);
     if (item) {
-      item.displayName = newName;
+      item.displayName = this.getUniqueName(newName, id);
     }
   }
 }
