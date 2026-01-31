@@ -78,7 +78,7 @@
   <br />
 
   {#if elementHeight >= windowHeight}
-    <button onclick={saveAndFin} class='saveFin'>保存して終了</button>
+    <button onclick={saveAndFin} class="saveFin">保存して終了</button>
   {/if}
 
   <section bind:clientHeight={elementHeight} class="resultT">
@@ -126,7 +126,7 @@
     {/if}
   </section>
 
-  <button onclick={saveAndFin} class='saveFin'>保存して終了</button>
+  <button onclick={saveAndFin} class="saveFin">保存して終了</button>
 </div>
 
 <style lang="scss">

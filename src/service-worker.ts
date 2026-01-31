@@ -53,7 +53,7 @@ self.addEventListener('fetch', (event) => {
 
     // 1. まずキャッシュを確認
     const cachedResponse = await cache.match(event.request);
-    
+
     // 2. キャッシュがあればそれを返す（オンラインでもここを通る）
     if (cachedResponse) {
       return cachedResponse;

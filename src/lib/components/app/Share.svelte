@@ -8,7 +8,7 @@
   import { onMount } from 'svelte';
 
   let displayName = $derived(itemStore.items.find((i) => i.id === targetId)?.displayName);
-  let removeStudyDataToggle = $state(false);
+  let dataRedaction = $state(false);
 
   onMount(() => {
     wordStore.load(targetId);
@@ -16,8 +16,17 @@
 
   async function shareAsFile() {
     const rawData = wordStore.exportRawData(false) as Word[];
-    const cleanedData = rawData.map(({ id, ...rest }) => rest);
+    const cleanedData = rawData.map(({ id, ...rest }) => {
+      // idは常に除外済み（...restに含まれない）
 
+      if (dataRedaction) {
+        const { createdAt, lastSeen, lastResult, tryTimes, successTimes, ...withoutDates } = rest;
+        return withoutDates;
+      }
+
+      return rest;
+    });
+    
     // 1. データを取得（文字列形式）
     const dataString = JSON.stringify(cleanedData);
     const fileName = `${displayName}.memondoc`;
@@ -56,9 +65,9 @@
 <div class="root" transition:fly={{ y: 200, duration: 500 }}>
   <h3>{displayName}を共有</h3>
   <label>
-    <input type='checkbox' bind:checked={removeStudyDataToggle} />
+    <input type="checkbox" bind:checked={dataRedaction} />
     学習データを含めない
-  </label><br/>
+  </label><br />
   <div class="buttonSlot">
     <button onclick={shareAsFile}>データを書き出す</button><br />
     <button disabled>QRコードで転送</button>
