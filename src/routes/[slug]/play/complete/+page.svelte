@@ -62,6 +62,10 @@
 
 <svelte:window bind:innerHeight={windowHeight} />
 
+<svelte:head>
+  <title>テスト結果 - {targetItem?.displayName} | Memon</title>
+</svelte:head>
+
 <div class="root">
   <h2>結果</h2>
   <p>{targetItem?.displayName || ''}</p>
@@ -74,7 +78,7 @@
   <br />
 
   {#if elementHeight >= windowHeight}
-    <button onclick={saveAndFin}>保存して終了</button>
+    <button onclick={saveAndFin} class='saveFin'>保存して終了</button>
   {/if}
 
   <section bind:clientHeight={elementHeight} class="resultT">
@@ -122,12 +126,24 @@
     {/if}
   </section>
 
-  <button onclick={saveAndFin}>保存して終了</button>
+  <button onclick={saveAndFin} class='saveFin'>保存して終了</button>
 </div>
 
 <style lang="scss">
   div.root {
     width: 100%;
+    button.saveFin {
+      border: 1px solid var(--theme);
+      color: var(--theme);
+      background-color: transparent;
+      height: 40px;
+      border-radius: 20px;
+      width: 210px;
+      &:hover {
+        background-color: var(--theme);
+        color: var(--background);
+      }
+    }
     section.resultT {
       width: 100%;
       table {

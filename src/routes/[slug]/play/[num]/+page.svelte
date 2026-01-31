@@ -167,6 +167,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>{quizNum}問目 - {targetItem?.displayName} | Memon</title>
+</svelte:head>
+
 <div class="root">
   <h2>Q.{quizNum}</h2>
 
