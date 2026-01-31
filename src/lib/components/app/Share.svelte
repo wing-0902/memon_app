@@ -26,7 +26,7 @@
 
       return rest;
     });
-    
+
     // 1. データを取得（文字列形式）
     const dataString = JSON.stringify(cleanedData);
     const fileName = `${displayName}.memondoc`;

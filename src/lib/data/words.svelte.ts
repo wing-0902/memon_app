@@ -109,10 +109,46 @@ class WordManager {
     }
   }
 
-  // WordManagerクラス内に追加
+  // 書き出し
   exportRawData(asString = false): string | Word[] {
     const data = $state.snapshot(this.words);
     return asString ? JSON.stringify(data) : data;
+  }
+
+  // インポート
+  async importData(data: any[]): Promise<{ success: number; failed: number }> {
+    if (!this.currentDeckId) throw new Error('単語帳が選択されていません。');
+
+    const importedWords: Word[] = [];
+    let failedCount = 0;
+
+    for (const item of data) {
+      // 必須フィールドのチェック
+      if (!item || typeof item.front !== 'string' || typeof item.back !== 'string') {
+        failedCount++;
+        continue;
+      }
+
+      // 型エラーを回避しつつオブジェクトを構築
+      const newWord: Word = {
+        // crypto.randomUUID() を string として明示的に扱う
+        id: crypto.randomUUID() as string,
+        front: item.front,
+        back: item.back,
+        createdAt: typeof item.createdAt === 'number' ? item.createdAt : Date.now(),
+        lastSeen: typeof item.lastSeen === 'number' ? item.lastSeen : undefined,
+        lastResult: item.lastResult !== undefined ? item.lastResult : null,
+        tryTimes: typeof item.tryTimes === 'number' ? item.tryTimes : 0,
+        successTimes: typeof item.successTimes === 'number' ? item.successTimes : 0
+      };
+
+      importedWords.push(newWord);
+    }
+
+    // 既存のwordsに追加
+    this.words = [...this.words, ...importedWords];
+
+    return { success: importedWords.length, failed: failedCount };
   }
 
   constructor() {
