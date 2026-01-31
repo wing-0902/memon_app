@@ -38,7 +38,8 @@
 {:else}
   <p>まだ単語帳がありません．</p>
 {/if}
-<a href="/create/">単語帳を作る</a>
+<button onclick={() => goto('/create/')} class="createNewLink">単語帳を作る</button><br />
+<button onclick={() => goto('/import/')} class="createNewLink">インポート</button>
 <ul class="allLists">
   {#each itemStore.items as item (item.id)}
     <li class="list">
@@ -60,6 +61,15 @@
 </ul>
 
 <style lang="scss">
+  .createNewLink {
+    height: 40px;
+    width: 420px;
+    max-width: 100%;
+    color: var(--theme);
+    background-color: transparent;
+    border: 1px solid var(--theme);
+    border-radius: 20px;
+  }
   ul.allLists {
     margin: auto 0;
     display: flex;
