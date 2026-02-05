@@ -3,8 +3,6 @@
   import { itemStore } from '$lib/data/list.svelte';
   import { goto } from '$app/navigation';
 
-  let dual = $state(false);
-
   function handleClick() {
     if (newName) {
       itemStore.addItem(newName);
@@ -35,10 +33,6 @@
     bind:value={newName}
     onkeydown={handleKeyDown}
   /><br />
-  <label>
-    <input bind:checked={dual} type="checkbox" />
-    双方向に出題
-  </label><br />
   <button disabled={!newName} onclick={() => handleClick()} class="create">作成</button>
 </div>
 
