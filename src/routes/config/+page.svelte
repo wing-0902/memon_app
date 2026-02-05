@@ -6,7 +6,7 @@
   let isPWA = $state(false);
   let v4Ip = $state('0.0.0.0');
   let v6Ip = $state('::1');
-  let persistentMessage: string = $state('無効')
+  let persistentMessage: string = $state('無効');
 
   onMount(() => {
     isPWA =
@@ -68,7 +68,7 @@
           </p>
         </button>
       {/if}
-      <button class="row">
+      <button class="row" onclick={async () => navigator.storage.persist()}>
         <h4>ストレージ永続化</h4>
         <p>{persistentMessage}</p>
       </button>

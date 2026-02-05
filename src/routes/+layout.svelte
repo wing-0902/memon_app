@@ -14,13 +14,6 @@
   // レイアウト
   import Header from '$lib/components/layouts/Header.svelte';
   import Footer from '$lib/components/layouts/Footer.svelte';
-
-  // onMount
-  import { onMount } from 'svelte';
-
-  onMount(async () => {
-    navigator.storage.persist();
-  })
 </script>
 
 <svelte:head>
