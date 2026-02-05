@@ -7,7 +7,7 @@
   let isEditing: string = $state('');
   let editingName: string = $state('');
 
-  function startEdit(item: { id: string, displayName: string }) {
+  function startEdit(item: { id: string; displayName: string }) {
     isEditing = item.id;
     editingName = item.displayName; // 現在の名前を初期値としてコピー
   }
@@ -59,9 +59,9 @@
   {#each itemStore.items as item (item.id)}
     <li class="list">
       {#if isEditing === item.id}
-        <input 
-          class="title" 
-          bind:value={editingName} 
+        <input
+          class="title"
+          bind:value={editingName}
           onkeydown={(e) => e.key === 'Enter' && saveEdit()}
         />
         <div class="buttonSlot">

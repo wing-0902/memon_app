@@ -8,12 +8,12 @@
   async function handleFileImport(event: Event) {
     // 1. event.currentTarget を HTMLInputElement 型として取得
     const input = event.currentTarget as HTMLInputElement;
-    
+
     if (!input.files || input.files.length === 0) return;
 
     const file = input.files[0];
     vFileName = file.name; // 表示用変数を更新
-    const fileNameWithoutExt = file.name.replace(/\.[^/.]+$/, ''); 
+    const fileNameWithoutExt = file.name.replace(/\.[^/.]+$/, '');
 
     const reader = new FileReader();
     reader.onload = async (e) => {
@@ -24,12 +24,14 @@
         if (!Array.isArray(parsed)) throw new Error('Invalid format');
 
         // 2. itemStore に追加して ID を取得
-        const newDeckId = itemStore.addItem(fileNameWithoutExt, false);
+        const newDeckId = itemStore.addItem(fileNameWithoutExt);
 
         // 3. wordStore にデータを流し込んで保存
         const result = await wordStore.importAsNewDeck(parsed, newDeckId);
 
-        alert(`「${fileNameWithoutExt}」を新しい単語帳として作成し，${result.success}件インポートしました．`);
+        alert(
+          `「${fileNameWithoutExt}」を新しい単語帳として作成し，${result.success}件インポートしました．`
+        );
 
         // 4. inputをクリア（同じファイルを再度選択できるようにする）
         input.value = '';

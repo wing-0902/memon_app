@@ -40,7 +40,7 @@
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       try {
         await navigator.share({
-          files: [file],
+          files: [file]
           // title: `${displayName}のエクスポート`,
           // text: `${displayName}の単語帳をエクスポートします．`
         });

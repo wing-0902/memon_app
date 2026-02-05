@@ -7,7 +7,7 @@
 
   function handleClick() {
     if (newName) {
-      itemStore.addItem(newName, dual);
+      itemStore.addItem(newName);
       goto('/');
     } else {
       alert('作成に失敗しました．');

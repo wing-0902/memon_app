@@ -5,7 +5,6 @@ export interface Item {
   displayName: string;
   id: string;
   createdAt: number;
-  is双方向: boolean;
   lastUsed?: number;
 }
 
@@ -58,20 +57,19 @@ class ItemManager {
     let counter = 1;
 
     // 自分以外のアイテムと名前が被っているかチェック
-    while (this.items.some(item => item.displayName === finalName && item.id !== excludeId)) {
+    while (this.items.some((item) => item.displayName === finalName && item.id !== excludeId)) {
       counter++;
       finalName = `${name} ${counter}`;
     }
     return finalName;
   }
 
-  addItem(name: string, dual: boolean) {
+  addItem(name: string) {
     const newId = crypto.randomUUID();
     this.items.push({
       displayName: this.getUniqueName(name),
       id: newId,
-      createdAt: Date.now(),
-      is双方向: dual
+      createdAt: Date.now()
     });
     return newId;
   }

@@ -52,17 +52,15 @@
     <label for="qCount">問題数</label>
     <input id="qCount" bind:value={qCount} type="number" /><br />
     <br />
-    {#if targetItem.is双方向}
-      <div class="configRow fromTo">
-        <button onclick={() => (qFrom = 'omote')} class:this={qFrom === 'omote'}
-          >おもて<small>から</small>うら</button
-        >
-        <button onclick={() => (qFrom = 'ura')} class:this={qFrom === 'ura'}
-          >うら<small>から</small>おもて</button
-        >
-      </div>
-      <br />
-    {/if}
+    <div class="configRow fromTo">
+      <button onclick={() => (qFrom = 'omote')} class:this={qFrom === 'omote'}
+        >おもて<small>から</small>うら</button
+      >
+      <button onclick={() => (qFrom = 'ura')} class:this={qFrom === 'ura'}
+        >うら<small>から</small>おもて</button
+      >
+    </div>
+    <br />
     <div class="configRow autoMode">
       <button onclick={() => (qMode = '記述')} class:this={qMode === '記述'}>記述</button>
       <button onclick={() => (qMode = '選択肢')} class:this={qMode === '選択肢'}>選択肢</button>

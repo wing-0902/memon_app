@@ -84,9 +84,6 @@
       {:else}
         <li>最終利用：未使用</li>
       {/if}
-      <li>
-        <label><input type="checkbox" bind:checked={targetItem.is双方向} />双方向に出題</label>
-      </li>
     </ul>
     <button class="icon beginExam" onclick={() => goto(`/${targetId}/play/`)}>
       play_arrowテストを開始
