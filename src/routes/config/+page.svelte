@@ -6,6 +6,7 @@
   let isPWA = $state(false);
   let v4Ip = $state('0.0.0.0');
   let v6Ip = $state('::1');
+  let persistentMessage: string = $state('無効')
 
   onMount(() => {
     isPWA =
@@ -23,6 +24,10 @@
 
     v4Ip = ips.ipv4;
     v6Ip = ips.ipv6;
+
+    // 永続化
+    const isPersisted = await navigator.storage.persisted();
+    persistentMessage = isPersisted ? '有効' : '無効';
 
     // ストレージ
     if (typeof navigator !== 'undefined' && navigator.storage?.estimate) {
@@ -63,6 +68,10 @@
           </p>
         </button>
       {/if}
+      <button class="row">
+        <h4>ストレージ永続化</h4>
+        <p>{persistentMessage}</p>
+      </button>
       <button class="row">
         <h4>動作モード</h4>
         <p>

@@ -17,14 +17,10 @@
 
   // onMount
   import { onMount } from 'svelte';
-  import { goto } from '$app/navigation';
-  import { dev } from '$app/environment';
 
-  // オフライン状態の判定
-  /*
-  import { createOnlineStatus } from '$lib/func/online.svelte';
-  const network = createOnlineStatus();
-  */
+  onMount(async () => {
+    navigator.storage.persist();
+  })
 </script>
 
 <svelte:head>
