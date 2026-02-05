@@ -1,8 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { getMoreDetailed } from '$lib/data/getDetail';
+  import { IpService } from '$lib/func/getIp';
 
   let isPWA = $state(false);
+  let v4Ip = $state('0.0.0.0');
+  let v6Ip = $state('::1');
 
   onMount(() => {
     isPWA =
@@ -14,6 +17,14 @@
   let quotaMB: number | null = $state(null);
 
   onMount(async () => {
+    // IP
+    const ipService = new IpService();
+    const ips = await ipService.fetchAllIps();
+
+    v4Ip = ips.ipv4;
+    v6Ip = ips.ipv6;
+
+    // ストレージ
     if (typeof navigator !== 'undefined' && navigator.storage?.estimate) {
       try {
         const estimate = await navigator.storage.estimate();
@@ -43,7 +54,7 @@
 <div class="wrapper">
   <div class="root">
     <section>
-      <h3>環境</h3>
+      <h3>システム</h3>
       {#if usageMB !== null && quotaMB !== null}
         <button class="row">
           <h4>ストレージ</h4>
@@ -56,7 +67,7 @@
         <h4>動作モード</h4>
         <p>
           {#if isPWA}
-            スタンドアロン
+            ウェブアプリ
           {:else}
             ブラウザ
           {/if}
@@ -68,6 +79,29 @@
           <p>Appをインストール</p>
         </button>
       {/if}
+    </section>
+    <section>
+      <h3>情報</h3>
+      <button class="row">
+        <h4>ユーザ環境</h4>
+        <p>{navigator.userAgent}</p>
+      </button>
+      {#if v4Ip !== '0.0.0.0'}
+        <button class="row">
+          <h4>IPv4</h4>
+          <p>{v4Ip}</p>
+        </button>
+        {#if (v6Ip !== '::1') && (v6Ip !== v4Ip)}
+          <button class="row">
+            <h4>IPv6</h4>
+            <p>{v6Ip}</p>
+          </button>
+        {/if}
+      {/if}
+      <button class='row'>
+        <h4>解像度</h4>
+        <p>{window.screen.width} x {window.screen.height}</p>
+      </button>
     </section>
   </div>
 </div>
@@ -87,10 +121,17 @@
           width: 100%;
           display: flex;
           justify-content: space-between;
+          align-items: center;
           backdrop-filter: brightness(1.04);
           background-color: transparent;
           border: none;
           color: var(--foreground);
+          margin: 0;
+          padding: 0 14px;
+          h4 {
+            margin: 0;
+            white-space: nowrap;
+          }
           @media (prefers-color-scheme: dark) {
             backdrop-filter: brightness(1.5);
           }
