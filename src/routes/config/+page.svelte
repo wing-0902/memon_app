@@ -81,24 +81,41 @@
       {/if}
     </section>
     <section>
-      <h3>情報</h3>
+      <h3>環境</h3>
       <button class="row">
-        <h4>ユーザ環境</h4>
+        <h4>エージェント</h4>
         <p>{navigator.userAgent}</p>
       </button>
+      <button class="row">
+        <h4>CPU</h4>
+        <p>
+          {#if navigator.platform}
+            {navigator.platform},
+          {/if}
+          {navigator.hardwareConcurrency} Cores
+        </p>
+      </button>
+      {#if (navigator as any).deviceMemory}
+        <button class="row">
+          <h4>メモリ</h4>
+          <p>
+            {(navigator as any).deviceMemory}GB RAM
+          </p>
+        </button>
+      {/if}
       {#if v4Ip !== '0.0.0.0'}
         <button class="row">
           <h4>IPv4</h4>
           <p>{v4Ip}</p>
         </button>
-        {#if (v6Ip !== '::1') && (v6Ip !== v4Ip)}
+        {#if v6Ip !== '::1' && v6Ip !== v4Ip}
           <button class="row">
             <h4>IPv6</h4>
             <p>{v6Ip}</p>
           </button>
         {/if}
       {/if}
-      <button class='row'>
+      <button class="row">
         <h4>解像度</h4>
         <p>{window.screen.width} x {window.screen.height}</p>
       </button>

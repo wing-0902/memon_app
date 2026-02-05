@@ -6,7 +6,7 @@
   <h1><a href="/">Memon</a></h1>
   <nav>
     <ul>
-      <li><a href="/create/">単語帳を作成</a></li>
+      <li><a href="/create/">作成</a></li>
       <li><a href="/config/">設定</a></li>
       <li>
         <a href="https://memon.cards/docs/" target="_blank">ヘルプ</a>
