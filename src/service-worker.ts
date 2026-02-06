@@ -53,15 +53,17 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  async function respond() {
-    const url = new URL(event.request.url);
-    const cache = await caches.open(CACHE);
+  const url = new URL(event.request.url);
 
-    // Don't cache Hugging Face model files
-    if (url.hostname === 'huggingface.co' || url.hostname.endsWith('.huggingface.co')) {
-      // Just fetch from the network and don't cache
-      return fetch(event.request);
-    }
+  // Ignore requests for Hugging Face models and let the browser handle them.
+  if (url.hostname === 'huggingface.co' || url.hostname.endsWith('.huggingface.co')) {
+    return;
+  }
+
+  event.respondWith(respond());
+
+  async function respond() {
+    const cache = await caches.open(CACHE);
 
     // `build`/`files` can always be served from the cache
     if (ASSETS.includes(url.pathname)) {
@@ -100,6 +102,4 @@ self.addEventListener('fetch', (event) => {
       throw err;
     }
   }
-
-  event.respondWith(respond());
 });
