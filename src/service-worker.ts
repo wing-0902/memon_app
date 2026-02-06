@@ -57,6 +57,12 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
     const cache = await caches.open(CACHE);
 
+    // Don't cache Hugging Face model files
+    if (url.hostname === 'huggingface.co' || url.hostname.endsWith('.huggingface.co')) {
+      // Just fetch from the network and don't cache
+      return fetch(event.request);
+    }
+
     // `build`/`files` can always be served from the cache
     if (ASSETS.includes(url.pathname)) {
       const response = await cache.match(url.pathname);
