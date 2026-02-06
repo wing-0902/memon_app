@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { getMoreDetailed } from '$lib/data/getDetail';
   import { IpService } from '$lib/func/getIp';
+  import { isModelLoaded, initModel } from '$lib/components/app/webllm-model';
 
   let isPWA = $state(false);
   let v4Ip = $state('0.0.0.0');
@@ -48,6 +49,37 @@
       ? Math.min((usageMB / quotaMB) * 100, 100)
       : 0
   );
+
+  // LLM
+  let modelStatus = $state(isModelLoaded() ? 'loaded' : 'idle');
+  let downloadProgress = $state(0);
+
+  async function handleDownload() {
+    if (modelStatus === 'loaded') return;
+    
+    modelStatus = 'downloading';
+    try {
+      await initModel((p) => {
+        if (p.status === 'progress') {
+          downloadProgress = p.progress;
+        }
+      });
+      modelStatus = 'loaded';
+      // ストレージ容量の表示を更新するために再計算
+      updateStorageEstimate(); 
+    } catch (e) {
+      console.error(e);
+      modelStatus = 'error';
+    }
+  }
+
+  // ストレージ情報の更新を関数化
+  async function updateStorageEstimate() {
+    if (typeof navigator !== 'undefined' && navigator.storage?.estimate) {
+      const estimate = await navigator.storage.estimate();
+      usageMB = estimate.usage !== undefined ? estimate.usage / 1024 ** 2 : null;
+    }
+  }
 </script>
 
 <svelte:head>
@@ -58,6 +90,23 @@
 
 <div class="wrapper">
   <div class="root">
+    <section>
+      <h3>一般</h3>
+      <button class="row" onclick={handleDownload} disabled={modelStatus === 'downloading'}>
+        <h4>言語モデル</h4>
+        <p>
+          {#if modelStatus === 'loaded'}
+            Xenova/stsb-xlm-r-multilingual
+          {:else if modelStatus === 'downloading'}
+            ダウンロード中... {downloadProgress.toFixed(1)}%
+          {:else if modelStatus === 'error'}
+            エラー（再試行）
+          {:else}
+            ダウンロード（約50MB）
+          {/if}
+        </p>
+      </button>
+    </section>
     <section>
       <h3>システム</h3>
       {#if usageMB !== null && quotaMB !== null}
