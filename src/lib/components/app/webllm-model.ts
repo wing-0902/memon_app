@@ -9,18 +9,18 @@ let modelInstance: FeatureExtractionPipeline | null = null;
 
 // 生存確認
 export function isModelLoaded(): boolean {
-    return modelInstance !== null;
+  return modelInstance !== null;
 }
 
 // initialize LLM
 export async function initModel(progress_callback?: (progress: any) => void): Promise<void> {
-    if (modelInstance) return;
+  if (modelInstance) return;
 
-    const pipe = await pipeline('feature-extraction', 'Xenova/stsb-xlm-r-multilingual', {
-        progress_callback
-    });
-    
-    modelInstance = pipe as unknown as FeatureExtractionPipeline;
+  const pipe = await pipeline('feature-extraction', 'Xenova/stsb-xlm-r-multilingual', {
+    progress_callback
+  });
+
+  modelInstance = pipe as unknown as FeatureExtractionPipeline;
 }
 
 // 一致度を計算

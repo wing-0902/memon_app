@@ -8,6 +8,8 @@
   import { nowCorrectAnswers } from '$lib/data/answering.svelte';
   import { sleep } from '$lib/func/sleep';
   import Choose from '$lib/components/play/Choose.svelte';
+  import { verifyAnswer } from '$lib/components/app/checkAns';
+  import { isModelLoaded } from '$lib/components/app/webllm-model';
 
   let targetId = $derived(page.params.slug);
   let quizNum = $derived(Number(page.params.num) || 1);
@@ -84,31 +86,42 @@
   });
 
   // onClick
-  function checkAns() {
-    if (遷移中 === true) {
-      return;
-    }
-    const answeringWord = answeringText;
-    if (!answeringWord.trim()) {
-      return;
-    }
-    let correctAns = '';
+  // 正誤判定
+  async function checkAns() {
+    if (遷移中 === true) return;
+
+    const answeringWord = answeringText.trim();
+    if (!answeringWord) return;
+
+    let correctAns = qFrom === 'omote' ? uraAnswer : omoteAnswer;
+
     答え合わせを開始 = true;
     answerDisabled = true;
 
-    if (qFrom === 'omote') {
-      correctAns = uraAnswer;
-    } else {
-      correctAns = omoteAnswer;
-    }
-
+    // 1. 完全一致チェック（これは常に実行）
     if (answeringWord === correctAns) {
       正誤判定 = '正解';
       return '正解';
-    } else {
-      手動判定 = true;
-      return '正解ではありません';
     }
+
+    // 2. AIモデルが使える場合のみ、類似度判定を実行
+    if (isModelLoaded()) {
+      try {
+        const aiResult = await verifyAnswer(answeringWord, correctAns);
+        if (aiResult.isCorrect) {
+          正誤判定 = '正解';
+          return '正解';
+        }
+      } catch (e) {
+        console.error('AI判定中にエラーが発生しました:', e);
+        // エラー時は自動的に次の「手動判定」へ流れるようにする
+      }
+    }
+
+    // 3. モデルがない、またはAIが「不正解」と出した場合
+    // ユーザーに自分で正誤を選ばせるモードへ
+    手動判定 = true;
+    return '正解ではありません';
   }
 
   function handleCorrect() {
@@ -147,7 +160,7 @@
     }
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
-      if (checkAns() === '正解') {
+      if ((await checkAns()) === '正解') {
         遷移中 = true;
         await sleep(700);
         handleNext();
@@ -157,7 +170,7 @@
 
   async function handleChoose(v: string) {
     answeringText = v;
-    if (checkAns() === '正解') {
+    if ((await checkAns()) === '正解') {
       遷移中 = true;
       await sleep(700);
       handleNext();
@@ -182,11 +195,11 @@
   <br />
 
   {#if wordStore.words[quizListNum - 1]}
+    <small>#{quizListNum}</small>
     {#if qFrom === 'omote'}
-      <small>#{quizListNum}</small>
-      <p>{omoteAnswer}</p>
+      <h2>{omoteAnswer}</h2>
     {:else if qFrom === 'ura'}
-      <p>{uraAnswer}</p>
+      <h2>{uraAnswer}</h2>
     {/if}
     {#if localStorage.getItem('採点モード') === '選択肢'}
       <Choose
@@ -215,7 +228,7 @@
     <button class="handleButton skip" onclick={skip}>スキップ</button><br />
     <button class="handleButton check" onclick={checkAns}> 答え合わせ </button><br />
   {:else}
-    <p>
+    <h3>
       正答：
       <strong>
         {#if qFrom === 'omote'}
@@ -224,15 +237,17 @@
           {omoteAnswer}
         {/if}
       </strong>
-    </p>
+    </h3>
   {/if}
 
   <br />
   {正誤判定}<br />
 
   {#if 手動判定}
-    <button onclick={handleCorrect}>正解</button>
-    <button onclick={handleWrong}>間違い</button><br />
+    <div class="manualAnsCheck">
+      <button onclick={handleCorrect}>正解</button>
+      <button onclick={handleWrong}>間違い</button>
+    </div>
   {/if}
 
   {#if 正誤判定 === '正解' || 解き終わりました}
@@ -282,6 +297,36 @@
       &:hover {
         color: var(--background);
         background-color: var(--theme);
+      }
+    }
+    .manualAnsCheck {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        color: var(--theme);
+        width: 210px;
+        max-width: 50%;
+        background-color: transparent;
+        border: 1px solid var(--theme);
+        border-right-width: 0.5px;
+        border-left-width: 0.5px;
+        border-radius: 0;
+        &:nth-child(1) {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-left-width: 1px;
+        }
+        &:nth-last-child(1) {
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-right-width: 1px;
+        }
+        height: 40px;
+        &:hover {
+          color: var(--background);
+          background-color: var(--theme);
+        }
       }
     }
   }

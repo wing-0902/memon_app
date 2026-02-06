@@ -56,7 +56,7 @@
 
   async function handleDownload() {
     if (modelStatus === 'loaded') return;
-    
+
     modelStatus = 'downloading';
     try {
       await initModel((p) => {
@@ -66,7 +66,7 @@
       });
       modelStatus = 'loaded';
       // ストレージ容量の表示を更新するために再計算
-      updateStorageEstimate(); 
+      updateStorageEstimate();
     } catch (e) {
       console.error(e);
       modelStatus = 'error';
