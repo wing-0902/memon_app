@@ -10,8 +10,16 @@ export class IpService {
   async fetchAllIps(): Promise<IpAddressBundle> {
     try {
       const [v4Response, v6Response] = await Promise.all([
-        fetch(this.ipv4Url),
-        fetch(this.ipv6Url)
+        fetch(this.ipv4Url, {
+          headers: {
+            'X-Bypass-Service-Worker': 'true'
+          }
+        }),
+        fetch(this.ipv6Url, {
+          headers: {
+            'X-Bypass-Service-Worker': 'true'
+          }
+        })
       ]);
 
       const v4Data = await v4Response.json();

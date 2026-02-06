@@ -48,6 +48,11 @@ self.addEventListener('fetch', (event) => {
   // ignore POST requests etc
   if (event.request.method !== 'GET') return;
 
+  // bypass worker-specific headers
+  if (event.request.headers.has('X-Bypass-Service-Worker')) {
+    return;
+  }
+
   async function respond() {
     const url = new URL(event.request.url);
     const cache = await caches.open(CACHE);
