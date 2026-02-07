@@ -18,9 +18,11 @@ const self = globalThis.self as unknown as ServiceWorkerGlobalScope;
 // Create a unique cache name for this deployment
 const CACHE = `cache-${version}`;
 
+const filterCondition = (path: string) => !path.startsWith('/bypass-service-worker/');
+
 const ASSETS = [
-  ...build, // the app itself
-  ...files // everything in `static`
+  ...build.filter(filterCondition), // App自身
+  ...files.filter(filterCondition) // `static`の中
 ];
 
 self.addEventListener('install', (event) => {
@@ -51,7 +53,12 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
   // Ignore requests for certain domains
-  if (url.hostname === 'api.ipify.org' || url.hostname === 'api64.ipify.org' || url.hostname === 'huggingface.co' || url.hostname.endsWith('.huggingface.co')) {
+  if (
+    url.hostname === 'api.ipify.org' ||
+    url.hostname === 'api64.ipify.org' ||
+    url.hostname === 'huggingface.co' ||
+    url.hostname.endsWith('.huggingface.co')
+  ) {
     return;
   }
 

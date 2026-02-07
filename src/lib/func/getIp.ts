@@ -15,10 +15,14 @@ export class IpService {
       ]);
 
       if (!v4Response.ok) {
-        throw new Error(`Failed to fetch IPv4 address: ${v4Response.status} ${v4Response.statusText}`);
+        throw new Error(
+          `Failed to fetch IPv4 address: ${v4Response.status} ${v4Response.statusText}`
+        );
       }
       if (!v6Response.ok) {
-        throw new Error(`Failed to fetch IPv6 address: ${v6Response.status} ${v6Response.statusText}`);
+        throw new Error(
+          `Failed to fetch IPv6 address: ${v6Response.status} ${v6Response.statusText}`
+        );
       }
 
       const v4Data = await v4Response.json();

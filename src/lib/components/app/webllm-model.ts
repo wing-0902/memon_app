@@ -1,9 +1,14 @@
 import {
   pipeline,
   cos_sim,
+  env,
   type FeatureExtractionPipeline,
   type Tensor
 } from '@huggingface/transformers';
+
+env.allowRemoteModels = false;
+env.localModelPath = '/bypass-service-worker/webllm-models/';
+env.backends.onnx.wasm.wasmPaths = '/bypass-service-worker/webllm-wasm/';
 
 let modelInstance: FeatureExtractionPipeline | null = null;
 
