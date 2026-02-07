@@ -7,8 +7,8 @@ import {
 } from '@huggingface/transformers';
 
 env.allowRemoteModels = false;
-env.localModelPath = '/bypass-service-worker/webllm-models/';
-env.backends.onnx.wasm.wasmPaths = '/bypass-service-worker/webllm-wasm/';
+env.localModelPath = '/transformers_js/webllm-models/';
+env.backends.onnx.wasm.wasmPaths = '/transformers_js/webllm-wasm/';
 
 let modelInstance: FeatureExtractionPipeline | null = null;
 

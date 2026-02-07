@@ -52,13 +52,16 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
 
-  // Ignore requests for certain domains
+  // Bypass service worker for local model files and specific domains
   if (
+    url.pathname.startsWith('/bypass-service-worker/') ||
     url.hostname === 'api.ipify.org' ||
     url.hostname === 'api64.ipify.org' ||
     url.hostname === 'huggingface.co' ||
     url.hostname.endsWith('.huggingface.co')
   ) {
+    // Respond directly from the network, bypassing the cache
+    event.respondWith(fetch(event.request));
     return;
   }
 
