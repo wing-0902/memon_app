@@ -48,15 +48,10 @@ self.addEventListener('fetch', (event) => {
   // ignore POST requests etc
   if (event.request.method !== 'GET') return;
 
-  // bypass worker-specific headers
-  if (event.request.headers.has('X-Bypass-Service-Worker')) {
-    return;
-  }
-
   const url = new URL(event.request.url);
 
-  // Ignore requests for Hugging Face models and let the browser handle them.
-  if (url.hostname === 'huggingface.co' || url.hostname.endsWith('.huggingface.co')) {
+  // Ignore requests for certain domains
+  if (url.hostname === 'api.ipify.org' || url.hostname === 'api64.ipify.org' || url.hostname === 'huggingface.co' || url.hostname.endsWith('.huggingface.co')) {
     return;
   }
 
