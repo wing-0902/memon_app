@@ -117,7 +117,7 @@
             {getMoreDetailed(usageMB)}MB / {getMoreDetailed(quotaMB)}MB （{percentage.toFixed(1)}%）
           </p>
         </button>
-        <button class='row' onclick={removeCache}>
+        <button class="row" onclick={removeCache}>
           <div></div>
           <p>キャッシュをクリア</p>
         </button>
