@@ -2,8 +2,8 @@
   import { onMount } from 'svelte';
   import { getMoreDetailed } from '$lib/data/getDetail';
   import { IpService } from '$lib/func/getIp';
-  import { isModelLoaded, initModel } from '$lib/components/app/webllm-model';
   import { removeCache } from '$lib/data/restore';
+  import BooleanUi from '$lib/components/app/BooleanUi.svelte';
 
   let isPWA = $state(false);
   let v4Ip = $state('0.0.0.0');
@@ -51,36 +51,19 @@
       : 0
   );
 
-  // LLM
-  let modelStatus = $state(isModelLoaded() ? 'loaded' : 'idle');
-  let downloadProgress = $state(0);
+  // 揺らぎ設定，調整（無視）する場合にtrue
+  let 大文字小文字 = $state(false); // デフォルトで無効にしたい
+  let 括弧を統一 = $state(true); // デフォルトで有効
 
-  async function handleDownload() {
-    if (modelStatus === 'loaded') return;
+  onMount(() => {
+    大文字小文字 = localStorage.getItem('大文字小文字') === 'true';
+    括弧を統一 = localStorage.getItem('括弧を統一') !== 'false';
+  });
 
-    modelStatus = 'downloading';
-    try {
-      await initModel((p) => {
-        if (p.status === 'progress') {
-          downloadProgress = p.progress;
-        }
-      });
-      modelStatus = 'loaded';
-      // ストレージ容量の表示を更新するために再計算
-      updateStorageEstimate();
-    } catch (e) {
-      console.error(e);
-      modelStatus = 'error';
-    }
-  }
-
-  // ストレージ情報の更新を関数化
-  async function updateStorageEstimate() {
-    if (typeof navigator !== 'undefined' && navigator.storage?.estimate) {
-      const estimate = await navigator.storage.estimate();
-      usageMB = estimate.usage !== undefined ? estimate.usage / 1024 ** 2 : null;
-    }
-  }
+  $effect(() => {
+    localStorage.setItem('大文字小文字', 大文字小文字 ? 'true' : 'false');
+    localStorage.setItem('括弧を統一', 括弧を統一 ? 'true' : 'false');
+  });
 </script>
 
 <svelte:head>
@@ -92,20 +75,17 @@
 <div class="wrapper">
   <div class="root">
     <section>
-      <h3>一般</h3>
-      <button class="row" onclick={handleDownload} disabled={modelStatus === 'downloading'}>
-        <h4>言語モデル</h4>
-        <p>
-          {#if modelStatus === 'loaded'}
-            Xenova/stsb-xlm-r-multilingual
-          {:else if modelStatus === 'downloading'}
-            ダウンロード中... {downloadProgress.toFixed(1)}%
-          {:else if modelStatus === 'error'}
-            エラー（再試行）
-          {:else}
-            ダウンロード（約50MB）
-          {/if}
-        </p>
+      <h3>演習設定</h3>
+      <button class="row">
+        <h4>表記揺れの統一</h4>
+      </button>
+      <button class="row">
+        <h5>大文字・小文字を無視</h5>
+        <BooleanUi bind:checked={大文字小文字} />
+      </button>
+      <button class="row">
+        <h5>括弧を統一</h5>
+        <BooleanUi bind:checked={括弧を統一} />
       </button>
     </section>
     <section>
@@ -208,8 +188,13 @@
           color: var(--foreground);
           margin: 0;
           padding: 0 14px;
-          h4 {
-            margin: 0;
+          h4,
+          h5,
+          p {
+            margin: 10px 0;
+          }
+          h4,
+          h5 {
             white-space: nowrap;
           }
           @media (prefers-color-scheme: dark) {

@@ -8,8 +8,6 @@
   import { nowCorrectAnswers } from '$lib/data/answering.svelte';
   import { sleep } from '$lib/func/sleep';
   import Choose from '$lib/components/play/Choose.svelte';
-  import { verifyAnswer } from '$lib/components/app/checkAns';
-  import { isModelLoaded } from '$lib/components/app/webllm-model';
 
   let targetId = $derived(page.params.slug);
   let quizNum = $derived(Number(page.params.num) || 1);
@@ -85,43 +83,58 @@
     遷移中 = false;
   });
 
-  // onClick
   // 正誤判定
   async function checkAns() {
     if (遷移中 === true) return;
 
-    const answeringWord = answeringText.trim();
+    // 比較用の正規化関数
+    const normalize = (str: string) => {
+      let text = str.trim();
+
+      // 1. Unicode正規化 (全角英数・記号を半角に、濁点などを統合)
+      text = text.normalize('NFKC');
+
+      // 2. 括弧の統一（NFKCの後に行うと、全角の（）も半角の () になっているため確実）
+      const 括弧を統一 = localStorage.getItem('括弧を統一') !== 'false';
+      if (括弧を統一) {
+        text = text.replace(/[「{〔\[“]/g, '(').replace(/[」}〕\]”]/g, ')');
+      }
+
+      // 3. 大文字小文字の処理
+      const 大文字を無視 = localStorage.getItem('大文字小文字') === 'true';
+      if (大文字を無視) {
+        text = text.toLowerCase();
+      }
+
+      // 4. 記号とスペースの正規化
+      text = text
+        .replace(/。/g, '. ')
+        .replace(/、/g, ', ')
+        .replace(/([.,])/g, '$1 ')
+        .replace(/[’'’`´]/g, "'")
+        .replace(/[\s　]+/g, ' ');
+
+      return text.trim();
+    };
+    const answeringWord = normalize(answeringText);
     if (!answeringWord) return;
 
-    let correctAns = qFrom === 'omote' ? uraAnswer : omoteAnswer;
+    let correctAnsRaw = qFrom === 'omote' ? uraAnswer : omoteAnswer;
+    let correctAns = normalize(correctAnsRaw);
+
+    console.log('比較用回答：', answeringWord);
+    console.log('比較用模範：', correctAns);
 
     答え合わせを開始 = true;
     answerDisabled = true;
 
-    // 1. 完全一致チェック（これは常に実行）
     if (answeringWord === correctAns) {
       正誤判定 = '正解';
       return '正解';
     }
 
-    // 2. AIモデルが使える場合のみ、類似度判定を実行
-    if (isModelLoaded()) {
-      try {
-        const aiResult = await verifyAnswer(answeringWord, correctAns);
-        if (aiResult.isCorrect) {
-          正誤判定 = '正解';
-          return '正解';
-        }
-      } catch (e) {
-        console.error('AI判定中にエラーが発生しました:', e);
-        // エラー時は自動的に次の「手動判定」へ流れるようにする
-      }
-    }
-
-    // 3. モデルがない、またはAIが「不正解」と出した場合
-    // ユーザーに自分で正誤を選ばせるモードへ
     手動判定 = true;
-    return '正解ではありません';
+    return '自動判定不可';
   }
 
   function handleCorrect() {
