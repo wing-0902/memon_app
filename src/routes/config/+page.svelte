@@ -3,6 +3,7 @@
   import { getMoreDetailed } from '$lib/data/getDetail';
   import { IpService } from '$lib/func/getIp';
   import { isModelLoaded, initModel } from '$lib/components/app/webllm-model';
+  import { removeCache } from '$lib/data/restore';
 
   let isPWA = $state(false);
   let v4Ip = $state('0.0.0.0');
@@ -115,6 +116,10 @@
           <p>
             {getMoreDetailed(usageMB)}MB / {getMoreDetailed(quotaMB)}MB （{percentage.toFixed(1)}%）
           </p>
+        </button>
+        <button class='row' onclick={removeCache}>
+          <div></div>
+          <p>キャッシュをクリア</p>
         </button>
       {/if}
       <button class="row" onclick={async () => navigator.storage.persist()}>
