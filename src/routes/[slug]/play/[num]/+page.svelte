@@ -122,8 +122,8 @@
     let correctAnsRaw = qFrom === 'omote' ? uraAnswer : omoteAnswer;
     let correctAns = normalize(correctAnsRaw);
 
-    console.log('比較用回答：', answeringWord);
-    console.log('比較用模範：', correctAns);
+    console.log('比較用回答：', JSON.stringify(answeringWord));
+    console.log('比較用模範：', JSON.stringify(correctAns));
 
     答え合わせを開始 = true;
     answerDisabled = true;
@@ -191,6 +191,22 @@
       handleWrong();
     }
   }
+
+  // 正誤判定アニメーション
+  let マークを表示 = $state(false);
+  afterNavigate(() => {
+    マークを表示 = false;
+  })
+
+  $effect(() => {
+    if (正誤判定 === '正解' || 正誤判定 === '不正解') {
+      マークを表示 = true;
+      // 0.8秒（アニメーション時間）後にフラグを下ろす
+      setTimeout(() => {
+        マークを表示 = false;
+      }, 800);
+    }
+  });
 </script>
 
 <svelte:head>
@@ -227,12 +243,15 @@
         bind:value={answeringText}
         onkeydown={handleKeyDownToNext}
         bind:this={formInputEl}
-        autocomplete="one-time-code"
+        autocomplete="off"
         autocorrect="off"
         autocapitalize="none"
         spellcheck="false"
         class="ans"
         disabled={answerDisabled}
+        class:正解={正誤判定 === '正解'}
+        class:不正解={正誤判定 === '不正解'}
+        class:警告={手動判定 === true}
       />
     {/if}
   {/if}
@@ -269,6 +288,16 @@
   {/if}
 </div>
 
+{#if マークを表示}
+    <div class="mark-container">
+      {#if 正誤判定 === '正解'}
+        <div class="slide-mark mark-ok">〇</div>
+      {:else if 正誤判定 === '不正解'}
+        <div class="slide-mark mark-ng">×</div>
+      {/if}
+    </div>
+  {/if}
+
 <style lang="scss">
   .root {
     width: 100%;
@@ -279,6 +308,23 @@
     }
     .ans {
       margin-bottom: 4px;
+      &.正解 {
+        color: color-mix(transparent, var(--foreground));
+        border-bottom-color: skyblue;
+        opacity: 1;
+      }
+      &.不正解 {
+        text-decoration: underline wavy red;
+        color: color-mix(transparent, var(--foreground));
+        border-bottom-color: rgb(255, 0, 0);
+        opacity: 1;
+      }
+      &.警告 {
+        text-decoration: underline wavy rgb(255, 140, 0);
+        color: color-mix(transparent, var(--foreground));
+        border-bottom-color: rgb(255, 140, 0);
+        opacity: 1;
+      }
     }
     .handleButton {
       margin: 0;
@@ -340,6 +386,23 @@
           color: var(--background);
           background-color: var(--theme);
         }
+      }
+    }
+  }
+
+  .mark-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    .slide-mark {
+      &.mark-ok {
+
+      }
+      &.mark-ng {
+        color: red;
       }
     }
   }

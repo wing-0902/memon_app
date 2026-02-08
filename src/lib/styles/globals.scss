@@ -73,3 +73,8 @@ button {
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 17px;
 }
+
+// 拡大防止
+html, body, button, a {
+  touch-action: manipulation;
+}
