@@ -19,6 +19,18 @@ const config = {
       precompress: false,
       strict: true
     }),
+    csp: {
+      mode: 'hash',
+      directives: {
+        "default-src": ['self'],
+        "script-src": [
+          'self',
+          'https://static.cloudflareinsights.com'
+        ],
+        "style-src": ['self'],
+        "img-src": ['self', 'data:']
+      }
+    },
     paths: {
       relative: false
     },
