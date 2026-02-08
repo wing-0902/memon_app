@@ -6,7 +6,7 @@
 git config user.name
 git config user.email
 git config --global user.name "Wing"
-git config --global user.email "wing@me.wing.osaka"
+git config --global user.email "git@public.wing.osaka"
 ```
 
 ## コミット履歴の書き換え
@@ -15,9 +15,9 @@ git config --global user.email "wing@me.wing.osaka"
 git filter-branch -f --env-filter '
 # 条件なしで現在のセッションのAuthorとCommitterを強制上書き
 export GIT_AUTHOR_NAME="Wing"
-export GIT_AUTHOR_EMAIL="wing@me.wing.osaka"
+export GIT_AUTHOR_EMAIL="git@public.wing.osaka"
 export GIT_COMMITTER_NAME="Wing"
-export GIT_COMMITTER_EMAIL="wing@me.wing.osaka"
+export GIT_COMMITTER_EMAIL="git@public.wing.osaka"
 ' --tag-name-filter cat -- --branches --tags
 ```
 

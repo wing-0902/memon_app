@@ -75,6 +75,9 @@ button {
 }
 
 // 拡大防止
-html, body, button, a {
+html,
+body,
+button,
+a {
   touch-action: manipulation;
 }

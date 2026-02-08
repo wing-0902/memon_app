@@ -10,6 +10,7 @@
   import '@fontsource/zen-kaku-gothic-new';
   import '@fontsource/zen-maru-gothic';
   import '@fontsource/material-icons-round';
+  import '@fontsource-variable/material-symbols-outlined';
 
   // レイアウト
   import Header from '$lib/components/layouts/Header.svelte';

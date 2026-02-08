@@ -196,7 +196,7 @@
   let マークを表示 = $state(false);
   afterNavigate(() => {
     マークを表示 = false;
-  })
+  });
 
   $effect(() => {
     if (正誤判定 === '正解' || 正誤判定 === '不正解') {
@@ -259,7 +259,7 @@
   {#if !答え合わせを開始}
     <button class="handleButton skip" onclick={skip}>スキップ</button><br />
     <button class="handleButton check" onclick={checkAns}> 答え合わせ </button><br />
-  {:else}
+  {:else if localStorage.getItem('採点モード') !== '選択肢'}
     <h3>
       正答：
       <strong>
@@ -273,7 +273,6 @@
   {/if}
 
   <br />
-  {正誤判定}<br />
 
   {#if 手動判定}
     <div class="manualAnsCheck">
@@ -289,14 +288,14 @@
 </div>
 
 {#if マークを表示}
-    <div class="mark-container">
-      {#if 正誤判定 === '正解'}
-        <div class="slide-mark mark-ok">〇</div>
-      {:else if 正誤判定 === '不正解'}
-        <div class="slide-mark mark-ng">×</div>
-      {/if}
-    </div>
-  {/if}
+  <div class="mark-container">
+    {#if 正誤判定 === '正解'}
+      <div class="slide-mark mark-ok">circle</div>
+    {:else if 正誤判定 === '不正解'}
+      <div class="slide-mark mark-ng">close</div>
+    {/if}
+  </div>
+{/if}
 
 <style lang="scss">
   .root {
@@ -398,12 +397,33 @@
     transform: translate(-50%, -50%);
     z-index: 100;
     .slide-mark {
+      font-size: 200px;
+      font-family: 'Material Symbols Outlined Variable', sans-serif;
+      animation: slideInOut 0.8s ease-in-out forwards;
       &.mark-ok {
-
+        color: skyblue;
       }
       &.mark-ng {
         color: red;
       }
+    }
+  }
+  @keyframes slideInOut {
+    0% {
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+    30% {
+      transform: translateX(0);
+      opacity: 0.8;
+    }
+    70% {
+      transform: translateX(0);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(-100vw);
+      opacity: 0;
     }
   }
 </style>
