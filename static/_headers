@@ -1,8 +1,13 @@
 /*
+  Content-Security-Policy:
+    default-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    frame-ancestors https://memon.cards https://*.memon.cards https://wing.osaka https://*.wing.osaka;
   Permissions-Policy: camera=(), geolocation=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), payment=(), usb=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
+  X-Frame-Options: SAMEORIGIN
 
 
 https://:project.pages.dev/*
