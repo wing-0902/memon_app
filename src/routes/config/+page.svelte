@@ -128,12 +128,14 @@
       <button class="row">
         <h4>エージェント</h4>
         <p>{navigator.userAgent}</p>
+        <!-- Ex. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15 -->
       </button>
       <button class="row">
         <h4>CPU</h4>
         <p>
           {#if navigator.platform}
             {navigator.platform},
+            <!-- Ex. MacIntel -->
           {/if}
           {navigator.hardwareConcurrency} Cores
         </p>
