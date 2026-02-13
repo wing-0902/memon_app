@@ -1,3 +1,5 @@
+// `/bypass-service-worker/`ディレクトリはキャッシュ無効
+
 // Disables access to DOM typings like `HTMLElement` which are not available
 // inside a service worker and instantiates the correct globals
 /// <reference no-default-lib="true"/>
@@ -56,9 +58,7 @@ self.addEventListener('fetch', (event) => {
   if (
     url.pathname.startsWith('/bypass-service-worker/') ||
     url.hostname === 'api.ipify.org' ||
-    url.hostname === 'api64.ipify.org' ||
-    url.hostname === 'huggingface.co' ||
-    url.hostname.endsWith('.huggingface.co')
+    url.hostname === 'api64.ipify.org'
   ) {
     // Respond directly from the network, bypassing the cache
     event.respondWith(fetch(event.request));
