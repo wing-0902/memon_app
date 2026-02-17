@@ -16,3 +16,6 @@ This project includes third-party software.
   Licenses of all dependencies, including development dependencies, provided for completeness.
 - [License List without DevDependencies](./THIRD_PARTY_PROD.txt)  
   Licenses of dependencies expected to be included in the production/runtime environment.
+
+## ライセンス本文
+LICENSEファイルとか，アイコンの判定ロジックを拝借する？
