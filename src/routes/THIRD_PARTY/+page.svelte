@@ -88,7 +88,7 @@
             }
           }
           .ico {
-            font-family: 'Material Symbols Outlined Variable', sans-serif;
+            font-family: 'Material Icons Round', sans-serif;
           }
 
           border-radius: 0;
