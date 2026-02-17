@@ -18,4 +18,5 @@ This project includes third-party software.
   Licenses of dependencies expected to be included in the production/runtime environment.
 
 ## ライセンス本文
+
 LICENSEファイルとか，アイコンの判定ロジックを拝借する？
