@@ -1,9 +1,15 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import { fade } from 'svelte/transition';
+  import LicenseDetail from '$lib/components/app/LicenseDetail.svelte';
 
   let { data }: { data: PageData } = $props();
 
   const licenseTypes = Object.entries(data.licenses);
+
+  type PnpmPackage = PageData['licenses'][string][number];
+
+  let selectedPkg = $state<PnpmPackage | null>(null);
 </script>
 
 <svelte:head>
@@ -23,7 +29,7 @@
         <h3 class="title">{licenseName}</h3>
         <div class="any">
           {#each packages as pkg}
-            <button class="slot">
+            <button class="slot" onclick={() => (selectedPkg = pkg)}>
               <div class="main">
                 <div class="pkgName">
                   <h4>{pkg.name}</h4>
@@ -41,6 +47,14 @@
     {/each}
   {/if}
 </div>
+
+{#if selectedPkg}
+  <LicenseDetail pkg={selectedPkg} onclose={() => (selectedPkg = null)} />
+{/if}
+
+{#if selectedPkg}
+  <div class="overray" onclick={() => (selectedPkg = null)} transition:fade></div>
+{/if}
 
 <style lang="scss">
   .wrapper {
@@ -103,5 +117,16 @@
         }
       }
     }
+  }
+
+  .overray {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100vw;
+    background: transparent;
+    backdrop-filter: brightness(50%);
+    x-index: 500;
   }
 </style>

@@ -7,7 +7,7 @@ const execPromise = promisify(exec);
 
 export const load: PageServerLoad = async () => {
   try {
-    const { stdout } = await execPromise('pnpm licenses list --json', {
+    const { stdout } = await execPromise('pnpm licenses list --json --long', {
       maxBuffer: 1024 * 1024 * 10
     });
 

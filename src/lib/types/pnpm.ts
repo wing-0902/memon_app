@@ -1,14 +1,14 @@
+/**
+ * 各パッケージの情報の詳細
+ */
 export interface PnpmLicensePackage {
   name: string;
-  versions: [string];
-  paths: [string];
-  author?: string;
-  description?: string;
+  versions: string[];
+  paths: string[];
   license: string;
-  licenseText?: string;
-  vendorUrl?: string;
-  vendorName?: string;
-  repository?: string;
+  author?: string;
+  homepage: string;
+  description: string;
 }
 
 export type PnpmLicenseResponse = Record<string, PnpmLicensePackage[]>;
