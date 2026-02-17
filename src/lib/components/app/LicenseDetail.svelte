@@ -100,6 +100,14 @@
       </button>
     </section>
     
+    <section>
+      <h3>ライセンス原文</h3>
+      {#if pkg.licenseText}
+        <pre>{pkg.licenseText}</pre>
+      {:else}
+        <p>原文が見つかりませんでした．</p>
+      {/if}
+    </section>
   </div>
 </div>
 

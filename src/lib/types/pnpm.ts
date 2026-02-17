@@ -36,6 +36,7 @@ export interface RawPackageJson {
 // 最終的に frontend で扱う「package.json 情報込み」の型
 export interface PnpmPackageWithDetails extends PnpmLicensePackage {
   rawPackageJson: RawPackageJson | null;
+  licenseText?: string | null;
 }
 
 // API や load 関数が返す全体の構造
