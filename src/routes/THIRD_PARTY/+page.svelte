@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import { fade, fly } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import LicenseDetail from '$lib/components/app/LicenseDetail.svelte';
 
   let { data }: { data: PageData } = $props();
@@ -49,9 +49,7 @@
 </div>
 
 {#if selectedPkg}
-  <div transition:fly={{ y: 200, duration: 500 }}>
-    <LicenseDetail pkg={selectedPkg} onclose={() => (selectedPkg = null)} />
-  </div>
+  <LicenseDetail pkg={selectedPkg} onclose={() => (selectedPkg = null)} />
 {/if}
 
 {#if selectedPkg}
