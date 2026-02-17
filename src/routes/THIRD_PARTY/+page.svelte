@@ -14,13 +14,20 @@
     <p>{data.error}</p>
   {:else}
     {#each licenseTypes as [licenseName, packages]}
-      <section class='typeList'>
-        <h3 class='title'>{licenseName}</h3>
-        <div class='any'>
+      <section class="typeList">
+        <h3 class="title">{licenseName}</h3>
+        <div class="any">
           {#each packages as pkg}
-            <button class='slot'>
-              <div>
-                <h4>{pkg.name}</h4>{pkg.version}
+            <button class="slot">
+              <div class="main">
+                <div class="pkgName">
+                  <h4>{pkg.name}</h4>
+                  <span>@{pkg.versions}</span>
+                </div>
+                <br />
+                {#if pkg.author}
+                  <small>{pkg.author}</small>
+                {/if}
               </div>
             </button>
           {/each}
@@ -45,6 +52,7 @@
       .any {
         .slot {
           width: 100%;
+          min-height: 45px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -54,6 +62,26 @@
           color: var(--foreground);
           margin: 0;
           padding: 0 14px;
+
+          .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            height: 100%;
+            .pkgName {
+              display: flex;
+              margin: 0;
+              padding: 0;
+              h4,
+              span {
+                margin: 0;
+              }
+            }
+            small {
+              margin: 0;
+            }
+          }
 
           border-radius: 0;
           &:nth-child(1) {
@@ -66,6 +94,6 @@
           }
         }
       }
-    }  
+    }
   }
 </style>
