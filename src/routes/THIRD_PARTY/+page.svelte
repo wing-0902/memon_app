@@ -6,6 +6,11 @@
   const licenseTypes = Object.entries(data.licenses);
 </script>
 
+<svelte:head>
+  <title>OSSライセンス | Memon</title>
+  <meta name="robots" content="noindex" />
+</svelte:head>
+
 <h2>OSSライセンス</h2>
 <p>本Appではサードパーティソフトウェアを使用しております．</p>
 
@@ -24,11 +29,11 @@
                   <h4>{pkg.name}</h4>
                   <span>@{pkg.versions}</span>
                 </div>
-                <br />
                 {#if pkg.author}
                   <small>{pkg.author}</small>
                 {/if}
               </div>
+              <span class="ico">arrow_forward_ios</span>
             </button>
           {/each}
         </div>
@@ -61,7 +66,7 @@
           border: none;
           color: var(--foreground);
           margin: 0;
-          padding: 0 14px;
+          padding: 5px 14px;
 
           .main {
             display: flex;
@@ -81,6 +86,9 @@
             small {
               margin: 0;
             }
+          }
+          .ico {
+            font-family: 'Material Symbols Outlined Variable', sans-serif;
           }
 
           border-radius: 0;
