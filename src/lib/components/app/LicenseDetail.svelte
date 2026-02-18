@@ -103,7 +103,7 @@
     <section>
       <h3>ライセンス原文</h3>
       {#if pkg.licenseText}
-        <pre>{pkg.licenseText}</pre>
+        <pre class='license-text'>{pkg.licenseText}</pre>
       {:else}
         <p>原文が見つかりませんでした．</p>
       {/if}
@@ -181,6 +181,8 @@
           margin: 0;
           padding: 0 14px;
 
+          overflow: hidden;
+
           min-height: 45px;
 
           h4,
@@ -205,6 +207,11 @@
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
           }
+        }
+        .license-text {
+          box-sizing: border-box;
+          width: 100%;
+          overflow-x: scroll;
         }
       }
     }

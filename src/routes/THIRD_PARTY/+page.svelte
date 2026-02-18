@@ -76,6 +76,9 @@
           justify-content: space-between;
           align-items: center;
           backdrop-filter: brightness(1.04);
+          @media (prefers-color-scheme: dark) {
+            backdrop-filter: brightness(1.4);
+          }
           background-color: transparent;
           border: none;
           color: var(--foreground);
