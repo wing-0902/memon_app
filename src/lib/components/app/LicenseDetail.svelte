@@ -55,7 +55,7 @@
           {#if pJson.author.email}
             <button>
               <h4>電子メイル</h4>
-              <p>{pJson.author.email}</p>
+              <p>redacted for privacy</p>
             </button>
           {/if}
           {#if pJson.author.url}
@@ -67,7 +67,7 @@
         {:else if typeof pJson.author === 'string'}
           <button>
             <h4>発行者</h4>
-            <p>{pJson.author}</p>
+            <p>{pJson.author.replace(/<[^>]+>/g, '<redacted for privacy>')}</p>
           </button>
         {/if}
       {:else if pkg.author}
