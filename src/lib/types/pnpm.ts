@@ -22,7 +22,7 @@ export interface RawPackageJson {
   bugs?: {
     url: string;
   };
-  author?: {
+  author?: string | {
     name: string;
     email: string;
     url: string;
